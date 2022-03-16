@@ -14,6 +14,7 @@
     Author: https://github.com/jxmot
     Repository: https://github.com/jxmot/website_template-no_bootstrap
 */
+// call our function when the window contents are scrolled
 window.onscroll = function() {onWindowScroll()};
 
 // a percentage of document size, if scrolled past this
