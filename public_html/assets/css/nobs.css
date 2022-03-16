@@ -11,13 +11,21 @@
     --white: #f9f9f9;
     --grey: #85888C;
     --dark-grey: #36383F;
+    --yellowish: #dbcc29;
+
+    --transparent: rgba(0, 0, 0, 0);
 
     --body-bg: var(--white);
-    --nav-bgcolor: var(--dark-grey);
+
+    --nav-header-bgcolor: var(--dark-grey);
     --nav-header-shadow: var(--grey);
-    --nav-menu-hover-bg: var(--grey);
-    --nav-menu-hover: var(--grey);
+
+    --nav-bgcolor: var(--dark-grey);
+
+    --nav-menu-hamb-hover-bg: var(--grey);
+    --nav-menu-text-hover: var(--yellowish);
     --nav-menu-text: var(--white);
+
     --nav-logo-text: var(--white);
     --nav-icon-bg: var(--white);
 
@@ -47,7 +55,7 @@ ul{
 
 /* Header */
 .nav-header{
-    background-color: var(--nav-bgcolor);
+    background-color: var(--nav-header-bgcolor);
     box-shadow: 1px 1px 5px 0px var(--nav-header-shadow);
     position: sticky;
     top: 0;
@@ -125,7 +133,7 @@ ul{
     color: var(--nav-menu-text);
 }
 .menu a:hover{
-    background-color: var(--nav-menu-hover-bg);
+    background-color: var(--nav-menu-hamb-hover-bg);
 }
 
 /* Menu Icon */
@@ -197,8 +205,8 @@ ul{
     
     /* menu item highlight */
     .menu a:hover {
-        background-color: transparent;
-        color: var(--nav-menu-hover);
+        background-color: var(--transparent);
+        color: var(--nav-menu-text-hover);
     }
     
     .nav-icon {
