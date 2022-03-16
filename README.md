@@ -180,6 +180,55 @@ I didn't actually "add" the hamburger. But the way it works is *unique* and wort
 
 It's all done with CSS and I'm in the process of figuring out exactly how it works. I'll update here once that's done.
 
+**"To Top" Button:**
+
+A "to top" button has been added to the template. It is contained in `totop.css` and `totop.js`. The `<footer>` has also been modified to contain the button:
+
+```
+<footer id="page-footer" class="footer">
+    <h3 class="footer-text">footer</h3>
+    <!-- kept in the footer to keep it anchored -->
+    <button id="gototop-button" class="gototop" onclick="jumpToTop()" title="Go to top of page">&#9650;</button>
+</footer>
+```
+
+Unique to this "to top" button is that you can set the amount of travel that the document has to move before the button is made visible.
+
+In **`totop.js`**:
+
+```
+// a percentage of document size, if scrolled past this
+// point the "to top" button will be displayed.
+const scroll_travel = 0.05;
+```
+
+Here is the function used for determining if the button should be shown:
+
+```
+// returns true if the "to top" button should be made visible
+function showToTop() {
+    // the point where the the button appears is based on the 
+    // percentage of the height of the document and NOT the window.
+    if(Math.round(($(document).height() * scroll_travel)) < document.documentElement.scrollTop) return true;
+    else return false;
+}
+```
+
+Each time the document is scrolled the `showToTop()` is called:
+
+```
+// call our function when the window contents are scrolled
+window.onscroll = function() {onWindowScroll()};
+
+function onWindowScroll() {
+    if(showToTop()) {
+        document.getElementById("gototop-button").style.display = "block";
+    } else {
+        document.getElementById("gototop-button").style.display = "none";
+    }
+}
+```
+
 ---
 <img src="http://webexperiment.info/extcounter/mdcount.php?id=website_template-no_bootstrap">
 
