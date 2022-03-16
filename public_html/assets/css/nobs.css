@@ -12,9 +12,9 @@
     --grey: #85888C;
     --dark-grey: #36383F;
     --yellowish: #dbcc29;
-
     --transparent: rgba(0, 0, 0, 0);
 
+    /* Element Colors... */
     --body-bg: var(--white);
 
     --nav-header-bgcolor: var(--dark-grey);
@@ -22,15 +22,16 @@
 
     --nav-bgcolor: var(--dark-grey);
 
-    --nav-menu-hamb-hover-bg: var(--grey);
+    --nav-menu-hamb-hover-bgcolor: var(--grey);
+    --nav-hambicon-bgcolor: var(--white);
+
     --nav-menu-text-hover: var(--yellowish);
     --nav-menu-text: var(--white);
 
     --nav-logo-text: var(--white);
-    --nav-icon-bg: var(--white);
 
     --footer-text: var(--white);
-    --footer-bg: var(--dark-grey);
+    --footer-bgcolor: var(--nav-header-bgcolor);
 }
 
 /* Reset */
@@ -133,7 +134,7 @@ ul{
     color: var(--nav-menu-text);
 }
 .menu a:hover{
-    background-color: var(--nav-menu-hamb-hover-bg);
+    background-color: var(--nav-menu-hamb-hover-bgcolor);
 }
 
 /* Menu Icon */
@@ -144,7 +145,7 @@ ul{
 }
 
 .nav-icon-line {
-    background: var(--nav-icon-bg);
+    background: var(--nav-hambicon-bgcolor);
     display: block;
     height: 2px;
     position: relative;
@@ -153,7 +154,7 @@ ul{
 }
 
 .nav-icon-line::before, .nav-icon-line::after {
-    background: var(--nav-icon-bg);
+    background: var(--nav-hambicon-bgcolor);
     content: '';
     display: block;
     height: 100%;
@@ -234,7 +235,7 @@ ul{
 .footer {
     bottom: 0;
     position: fixed;
-    background-color: var(--footer-bg);
+    background-color: var(--footer-bgcolor);
     width: 100vw;
 }
 
