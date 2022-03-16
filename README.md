@@ -176,6 +176,8 @@ I didn't actually "add" the hamburger. But the way it works is *unique* and wort
 * Special characters
 * Magic (*maybe it does?*)
 
+It's all done with CSS and I'm in the process of figuring out exactly how it works. I'll update here once that's done.
+
 ---
 <img src="http://webexperiment.info/extcounter/mdcount.php?id=website_template-no_bootstrap">
 
