@@ -27,7 +27,7 @@ function scrollTo(href) {
         $('html').stop(true).animate({
             scrollTop: ($(goTo).position().top - hdrheight)
         },450); // NOTE: Any value greater than ~450 will cause 
-                // the scroll to miss its target.
+                // the scroll to miss its target. Why?
     } else consolelog('scrollTo() - bad hdrheight');
 };
 
