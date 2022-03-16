@@ -81,6 +81,7 @@ ul{
 .logo-img {
     width: 50px;
     clip-path: circle(25px at center);
+    content: url("../../no_bootstrap.png");
 }
 
 @media (min-width: 768px) {
@@ -122,7 +123,6 @@ ul{
     display: block;
     padding: 10px;
     color: var(--nav-menu-text);
-
 }
 .menu a:hover{
     background-color: var(--nav-menu-hover-bg);
