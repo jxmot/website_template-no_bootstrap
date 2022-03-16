@@ -34,7 +34,7 @@ The rest are related to favicon images.
 
 The only external resource used is jQuery.
 
-Here is a *live* demonstrattion: [Website Template - No Bootstrap](<https://webexperiment.info/portfolio/wtnobs/index.html>)
+Here is a *live* demonstration: [Website Template - No Bootstrap](<https://webexperiment.info/portfolio/wtnobs/>)
 
 ### Navigation
 
