@@ -3,7 +3,7 @@
 After some (*ok, more than just "some"*) frustration getting Bootstrap to cooperate on a number of issues:
 
 * Not all browsers produce the same results
-* Bootstrap CSS is an excellent CSS framework, but too complicated for basic needs
+* Bootstrap CSS is an excellent CSS framework, but too complicated and too much overhead for basic needs
 * I'm tired of it lol
 
 ## The Result
@@ -36,7 +36,7 @@ The only external resource used is jQuery.
 
 ### Navigation
 
-The HTML portion of the navigation is somewhat *unique* when compared to others I've seen. Most were using a `<input type="button">`, what you will find here uses `checkbox` instead of a `button` type.
+The HTML portion of the navigation is somewhat *unique* when compared to others I've seen. Most were using a `<input type="button">`, but what you will find here uses `checkbox` instead of a `button` type.
 
 ```
     <!-- Navigation Bar -->
@@ -109,6 +109,28 @@ Only one media break is used: `@media (min-width: 768px)`.
 
 **Scrolling:**
 
+Typically scrolling a page to a `#` target is good enough. However, with the navigation bar the targets end up *behind* it. Since the menu selections are handled in `nobs.js` adjusting the scroll is easy:
+
+First the height of the navigation bar is needed (*when it's inactive*) -
+
+```
+var hdrheight = $('#nav-header').height();
+```
+
+When in the menu item event handler:
+
+```
+// scroll to the target ID, and place it just 
+// below nav bar (when inactive).
+var scrollID = event.target.href;
+var tmp = scrollID.split("#");
+$('html').stop(true).animate({
+    scrollTop: ($('#'+tmp[1]).position().top - hdrheight)
+},0);
+```
+
+Basically it will scroll to a position that is *above* the target by a distance equal to the height of the navigation bar.
+
 **Footer:** Personally, I like a footer that sticks to the bottom of the *window*... not at the bottom the page. But that can be problematic. Especially if the content extends below the footer. It won't be seen.
 
 But that is taken care of here. A simple calculation and then changing the `padding-bottom` style of the main content tag:
@@ -139,6 +161,21 @@ It takes the height of the `<footer>` and adds a little, the value is in **px** 
 
 **Closing the Menu:**
 
+As mentioned above in the [Navigation](#navigation) section this menu uses a *checkbox* instead of a button. So to close the menu *programmatically* just clear it:
 
+```
+// let's close the nav menu...
+$('#nav-togg')[0].checked = false;
+```
 
+**Hamburger:**
+
+I didn't actually "add" the hamburger. But the way it works is *unique* and worth mentioning. It **does not** use:
+
+* Fontawesome
+* Special characters
+* Magic (*maybe it does?*)
+
+---
+<img src="http://webexperiment.info/extcounter/mdcount.php?id=website_template-no_bootstrap">
 
