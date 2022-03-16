@@ -32,7 +32,74 @@ There are three *essential* files:
 
 The rest are related to favicon images.
 
+The only external resource used is jQuery.
+
 ### Navigation
+
+The HTML portion of the navigation is somewhat *unique* when compared to others I've seen. Most were using a `<input type="button">`, what you will find here uses `checkbox` instead of a `button` type.
+
+```
+    <!-- Navigation Bar -->
+    <header id="nav-header" class="nav-header">
+        <!-- Logo, reloads the page. -->
+        <a id="nav-logo_link" class="nav-logo-img" href="./index.html">
+            <img class="logo-img" src="./no_bootstrap.png">
+        </a>
+        <!-- Hamburger Icon 
+        -->
+        <input id="nav-togg" type="checkbox"/>
+        <label id="nav-close" class="nav-icon" for="nav-togg">
+            <span class="nav-icon-line"></span>
+        </label>
+        <!-- Menu -->
+        <nav id="nav-menu" class="nav">
+            <ul class="menu">
+                <li><a id="home" class="navitem" href="#main">Home</a></li>
+                <li><a id="nav1" class="navitem" href="#navtarg1">Gallery</a></li>
+                <li><a id="nav2" class="navitem" href="#navtarg2">Blog</a> </li>
+                <li><a id="nav3" class="navitem" href="#navtarg3">About</a></li>
+            </ul>
+        </nav>
+    </header>
+```
+
+The file `nobs.js` contains all of the code that handles the navigation menu. This includes scrolling correctly and not missing the menu item targets.
+
+Here is the menu item handler:
+
+```
+    /*
+        wait for a click from any menu item... 
+    */
+    $('.navitem').click(function(event) {
+        consolelog('navitem target: ' + event.target.id);
+        consolelog('navitem href: ' + event.target.href);
+
+        // Prevent the default action from occuring.
+        event.preventDefault();
+
+        // let's close the nav menu...
+        $('#nav-togg')[0].checked = false;
+
+        // scroll to the target ID, and place it just 
+        // below nav bar (when inactive).
+        var scrollID = event.target.href;
+        var tmp = scrollID.split("#");
+        $('html').stop(true).animate({
+            scrollTop: ($('#'+tmp[1]).position().top - hdrheight)
+        },0);
+    });
+```
+
+The value `hdrheight` is calculated after the page is loaded:
+
+```
+$().ready(() => {
+    // this is the best place to get the height of the 
+    // <header> that contains the nav menu.
+    var hdrheight = $('#nav-header').height();
+});
+```
 
 ### Responsiveness
 
