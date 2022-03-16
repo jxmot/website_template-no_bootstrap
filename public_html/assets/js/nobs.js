@@ -12,6 +12,7 @@ function consolelog(text) {
     if(conlogoutput) console.log(text);
 };
 
+// this will contain the height of #nav-header 
 var hdrheight = -1;
 
 function scrollTo(href) {
