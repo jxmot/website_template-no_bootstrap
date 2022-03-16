@@ -1,3 +1,10 @@
+/*
+    nobs.js - code for the "Website Template - No Bootstrap" project
+
+    Author: https://github.com/jxmot
+    Repository: https://github.com/jxmot/website_template-no_bootstrap
+*/
+
 // A single place to control if calls to 
 // console.log() will produce any output.
 var conlogoutput = true;

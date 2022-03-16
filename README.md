@@ -34,6 +34,8 @@ The rest are related to favicon images.
 
 The only external resource used is jQuery.
 
+Here is a *live* demonstrattion: [Website Template - No Bootstrap](<https://webexperiment.info/portfolio/wtnobs/index.html>)
+
 ### Navigation
 
 The HTML portion of the navigation is somewhat *unique* when compared to others I've seen. Most were using a `<input type="button">`, but what you will find here uses `checkbox` instead of a `button` type.
