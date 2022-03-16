@@ -12,10 +12,32 @@ function consolelog(text) {
     if(conlogoutput) console.log(text);
 };
 
+var hdrheight = -1;
+
+function scrollTo(href) {
+    var goTo = '';
+    // has the header height been obtained yet?
+    if(hdrheight !== -1) {
+        if(href.charAt(0) === '#') {
+            goTo = href;
+        } else {
+            let tmp = href.split("#");
+            goTo = '#'+tmp[1];
+        }
+        $('html').stop(true).animate({
+            scrollTop: ($(goTo).position().top - hdrheight)
+        },
+        {
+            duration: 500,
+            easing: 'swing'
+        });
+    } else consolelog('scrollTo() - bad hdrheight');
+};
+
 $().ready(() => {
     // this is the best place to get the height of the 
     // <header> that contains the nav menu.
-    var hdrheight = $('#nav-header').height();
+    hdrheight = $('#nav-header').height();
     // Set the bottom padding for <main>, all of the pages'
     // content goes inside. The <header> and <footer> must 
     // stay outside of <main>
@@ -36,10 +58,6 @@ $().ready(() => {
 
         // scroll to the target ID, and place it just 
         // below nav bar (when inactive).
-        var scrollID = event.target.href;
-        var tmp = scrollID.split("#");
-        $('html').stop(true).animate({
-            scrollTop: ($('#'+tmp[1]).position().top - hdrheight)
-        },0);
+        scrollTo(event.target.href);
     });
 });
