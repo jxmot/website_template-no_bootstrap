@@ -103,5 +103,42 @@ $().ready(() => {
 
 ### Responsiveness
 
+Only one media break is used: `@media (min-width: 768px)`. 
+
 ### Extras
+
+**Scrolling:**
+
+**Footer:** Personally, I like a footer that sticks to the bottom of the *window*... not at the bottom the page. But that can be problematic. Especially if the content extends below the footer. It won't be seen.
+
+But that is taken care of here. A simple calculation and then changing the `padding-bottom` style of the main content tag:
+
+```
+$('#main').css('padding-bottom', ($('#page-footer').height() + ($('#page-footer').height() * 0.15)) + 'px');
+```
+
+Here's the associated HTML:
+
+```
+<main id="main" class="main-content">
+  <!-- page content goes here -->
+</main>
+
+<footer id="page-footer" class="footer">
+    <h3 class="footer-text">footer</h3>
+</footer>
+```
+
+Here's the calculation:
+
+```
+($('#page-footer').height() + ($('#page-footer').height() * 0.15)) + 'px'
+``` 
+
+It takes the height of the `<footer>` and adds a little, the value is in **px** (pixels). Then that value is placed in the 'padding-bottom' attribute of `<main id="main" class="main-content">`.
+
+**Closing the Menu:**
+
+
+
 
