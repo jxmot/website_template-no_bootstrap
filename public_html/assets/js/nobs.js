@@ -24,7 +24,7 @@ $().ready(() => {
         // Prevent the default action from occuring.
         event.preventDefault();
 
-        // the scroll was started, now let's close the nav menu...
+        // let's close the nav menu...
         $('#nav-togg')[0].checked = false;
 
         // scroll to the target ID, and place it just 
