@@ -59,25 +59,33 @@ function getLogoChoice() {
 */
 function setLogo(choice) {
     if(choice.logo === false) {
+        // NOTE: this code is redundant, because it's 
+        // handled in nobs.js. So it's here in case 
+        // we're called from somewhere else.
         $('#nav-close').addClass('nav-icon-nologo');
+        $('.menu a').addClass('menu-item-pad-no_logo');
         return;
     } else {
+        $('#nav-close').addClass('nav-icon-logo');
+        $('.menu a').addClass('menu-item-pad-logo');
+
         switch(choice.type) {
             case 'icon':
-                $('#nav-close').addClass('nav-icon-logo');
                 // the image is set in nobs.css:.logo-img
                 $('#nav-logo-choice_icon').show();
                 $('#nav-logo-choice_icon').attr('style','display: inline-block;');
+                $('.nav-logo-img').attr('href', ($('.nav-logo-img').attr('href') + '?' + window.location.search.substr(1)))
                 break;
 
             case 'text':
                 $('#nav-logo-choice_text').show();
                 $('#nav-logo-choice_text').attr('style','display: inline-block;');
+                $('.nav-logo').attr('href', ($('.nav-logo').attr('href') + '?' + window.location.search.substr(1)))
                 let txt = getQueryParam('text');
                 if(txt !== null) {
                     // insert this text into the logo
                     // at #nav-logo-text
-                    consolelog('logo text = '+txt);
+                    $('#nav-logo-text').text(decodeURIComponent(txt));
                 }
                 break;
 
