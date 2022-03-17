@@ -19,13 +19,16 @@
     <!-- Navigation Bar -->
     <header id="nav-header" class="nav-header">
         <!-- Logo, reloads the page. -->
-        <!-- <a id="nav-logo_link" class="nav-logo" href="./index.html">NOBS</a> -->
-<!--
-check for presence, if none then adjust CSS on elements
-        <a id="nav-logo_link" class="nav-logo-img" href="./index.html">
-            <img id="logo-img" class="logo-img">
-        </a>
--->
+        <div id="nav-logo-choice_text" style="display:none;">
+            <a id="nav-logo_link" class="nav-logo" href="./index.html">
+                <div id="nav-logo-text">NOBS</div>
+            </a>
+        </div>
+        <div id="nav-logo-choice_icon" style="display:none;">
+            <a id="nav-logo_link" class="nav-logo-img" href="./index.html">
+                <img id="logo-img" class="logo-img">
+            </a>
+        </div>
         <!-- Hamburger Icon -->
         <input id="nav-togg" type="checkbox"/>
         <label id="nav-close" class="nav-icon" for="nav-togg">
@@ -176,6 +179,7 @@ check for presence, if none then adjust CSS on elements
         <button id="gototop-button" class="gototop" onclick="jumpToTop()" title="Go to top of page">&#9650;</button>
     </footer>
     <!-- Stuff that makes it work :) -->
+    <script src="./assets/js/logo.js"></script>
     <script src="./assets/js/nobs.js"></script>
     <script src="./assets/js/totop.js"></script>
 </body>
