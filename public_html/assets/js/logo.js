@@ -67,10 +67,12 @@ function setLogo(choice) {
                 $('#nav-close').addClass('nav-icon-logo');
                 // the image is set in nobs.css:.logo-img
                 $('#nav-logo-choice_icon').show();
+                $('#nav-logo-choice_icon').attr('style','display: inline-block;');
                 break;
 
             case 'text':
                 $('#nav-logo-choice_text').show();
+                $('#nav-logo-choice_text').attr('style','display: inline-block;');
                 let txt = getQueryParam('text');
                 if(txt !== null) {
                     // insert this text into the logo
