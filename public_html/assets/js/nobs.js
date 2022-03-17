@@ -12,6 +12,12 @@ function consolelog(text) {
     if(conlogoutput) console.log(text);
 };
 
+// running with or without the logo?
+var mklogo = getLogoChoice();
+if(mklogo.logo === true) {
+    setLogo(mklogo);
+}
+
 // this will contain the height of #nav-header 
 var hdrheight = -1;
 // this function uses hdrheight to calculate 
