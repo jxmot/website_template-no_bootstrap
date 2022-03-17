@@ -11,7 +11,9 @@ After some (*ok, more than just "some"*) frustration getting Bootstrap to cooper
 After some research, experimentation, and playing around I put together what you see in this repository. Before I even started I had some expectations to fill:
 
 * Must be responsive
-* Must work, the navigation menu must operate and select targets.
+* Must work, the navigation menu must operate and select targets
+* Must work with or without the "logo" component of the navigation bar
+* Must usable as a starting point for other projects
 
 It was also quite frustrating just *finding* **working** examples of a non-Bootstrap "responsive" page with a navigation menu. Too often I'd find something that(*pick one or more of the following...*):
 
@@ -24,11 +26,17 @@ So, here's what I've got now...
 
 ## Details
 
-There are three *essential* files:
+There are four *essential* files:
 
 * `index.html`
-* `nobs.css`
-* `nobs.js`
+* `nobs.css` - page styling
+* `nobs.js` - all of the menu handling, initiating logo or no-logo, and page scrolling
+* `logo.js` - for managing the visibility of the "logo" component of the navigation bar
+
+These manage the "to top" button (optional):
+
+* `totop.css` - button appearance, size, and location
+* `totop.js` - button management, scrolling is accomplished in `nobs.js:scrollTo()`
 
 The rest are related to favicon images.
 
@@ -43,12 +51,7 @@ The HTML portion of the navigation is somewhat *unique* when compared to others 
 ```
     <!-- Navigation Bar -->
     <header id="nav-header" class="nav-header">
-        <!-- Logo, reloads the page. -->
-        <a id="nav-logo_link" class="nav-logo-img" href="./index.html">
-            <img class="logo-img" src="./no_bootstrap.png">
-        </a>
-        <!-- Hamburger Icon 
-        -->
+        <!-- Hamburger Icon -->
         <input id="nav-togg" type="checkbox"/>
         <label id="nav-close" class="nav-icon" for="nav-togg">
             <span class="nav-icon-line"></span>
@@ -85,12 +88,32 @@ Here is the menu item handler:
 
         // scroll to the target ID, and place it just 
         // below nav bar (when inactive).
-        var scrollID = event.target.href;
-        var tmp = scrollID.split("#");
-        $('html').stop(true).animate({
-            scrollTop: ($('#'+tmp[1]).position().top - hdrheight)
-        },0);
+        scrollTo(event.target.href);
     });
+```
+
+Here is the `scrollTo()` function:
+
+```
+// this function uses hdrheight to calculate 
+// where to jump. it allows for the height of 
+// the nav bar.
+function scrollTo(href) {
+    var goTo = '';
+    // has the header height been obtained yet?
+    if(hdrheight !== -1) {
+        if(href.charAt(0) === '#') {
+            goTo = href;
+        } else {
+            let tmp = href.split("#");
+            goTo = '#'+tmp[1];
+        }
+        $('html').stop(true).animate({
+            scrollTop: ($(goTo).position().top - hdrheight)
+        },450); // NOTE: Any value greater than ~450 will cause 
+                // the scroll to miss its target. Why?
+    } else consolelog('scrollTo() - bad hdrheight');
+};
 ```
 
 The value `hdrheight` is calculated after the page is loaded:
@@ -105,7 +128,7 @@ $().ready(() => {
 
 ### Responsiveness
 
-Only one media break is used: `@media (min-width: 768px)`. 
+Only one type of media break is used: `@media (min-width: 768px)`. 
 
 ### Extras
 
@@ -119,19 +142,7 @@ First the height of the navigation bar is needed (*when it's inactive*) -
 var hdrheight = $('#nav-header').height();
 ```
 
-When in the menu item event handler:
-
-```
-// scroll to the target ID, and place it just 
-// below nav bar (when inactive).
-var scrollID = event.target.href;
-var tmp = scrollID.split("#");
-$('html').stop(true).animate({
-    scrollTop: ($('#'+tmp[1]).position().top - hdrheight)
-},0);
-```
-
-Basically it will scroll to a position that is *above* the target by a distance equal to the height of the navigation bar.
+Basically it will scroll to a position that is *above* the target by a distance equal to the height of the navigation bar plus 15% of its original size.
 
 **Footer:** Personally, I like a footer that sticks to the bottom of the *window*... not at the bottom the page. But that can be problematic. Especially if the content extends below the footer. It won't be seen.
 
@@ -228,6 +239,19 @@ function onWindowScroll() {
     }
 }
 ```
+
+**Logo or NO Logo?:**
+
+It's possible to view the page with or without the logo in the navigation bar. There are 2 types to pick from, `'icon'` or `'text'`.
+
+Turning on the logo(icon or text) is done with a *query*. For example:
+
+* `http://server/path/to/index.html` - no logo will be seen, the navigation bar is shorter and the padding is reduced around the menu items.
+* `http://server/path/to/index.html`**`?logo=icon`** - this will enable the *icon* on the left side of the navigation bar.
+* `http://server/path/to/index.html`**`?logo=text`** - this will enable the *text* on the left side of the navigation bar. In addition it is possible to alter the text:
+  *  `http://server/path/to/index.html?logo=text`**`&text=some%20text`** - *uri encoding is required*
+
+When the "logo" is enabled the link it contains will also have the query string attached. Then it will work as expected and when it is clicked you will go to `index.html` using your original query.
 
 ---
 <img src="http://webexperiment.info/extcounter/mdcount.php?id=website_template-no_bootstrap">

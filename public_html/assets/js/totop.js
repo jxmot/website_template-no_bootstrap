@@ -24,7 +24,6 @@ const scroll_travel = 0.05;
 function onWindowScroll() {
     // for debugging
     //dump();
-
     if(showToTop()) {
         document.getElementById("gototop-button").style.display = "block";
     } else {
@@ -35,7 +34,7 @@ function onWindowScroll() {
 // When the user clicks on the button, scroll to the top of the document
 function jumpToTop() {
 // NOTE: modify the argument to use the target 
-// that's the most appropriate for your needs
+// that's the most appropriate for your needs.
     scrollTo('#main');
 } 
 

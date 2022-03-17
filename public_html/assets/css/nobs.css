@@ -46,11 +46,11 @@ body{
     font-family: "Poppins", sans-serif;
 }
 
-a{
+#nav-header a{
     text-decoration: none;
 }
 
-ul{
+#nav-menu ul{
     list-style: none;
 }
 
@@ -61,6 +61,9 @@ ul{
     position: sticky;
     top: 0;
     width: 100%;
+    /* when the logo HTML is removed 
+    this will fix the nav-bar */
+    display: inline-block;
 }
 
 /* Logo Text */
@@ -69,7 +72,7 @@ ul{
     color: var(--nav-logo-text);
     font-size: 30px;
     margin-left: 10px;
-    margin-top: 15px;
+    /* margin-top: 11px; */
 }
 
 @media (min-width: 768px) {
@@ -81,10 +84,15 @@ ul{
 }
 
 /* Logo Image */
-.nav-logo-img{
+.nav-logo-img {
     display: inline-block;
     margin-left: 10px;
-    margin-top: 15px;
+    /* margin-top: 15px; */
+    /* this will hide the link and 
+    image, and disable the <a> but 
+    it will take space. it's not
+    needed if logo html is gone */
+    /* visibility: hidden; */
 }
 
 .logo-img {
@@ -130,18 +138,43 @@ ul{
 /* mobile menu item highlight */
 .menu a{
     display: block;
-    padding: 10px;
     color: var(--nav-menu-text);
 }
 .menu a:hover{
     background-color: var(--nav-menu-hamb-hover-bgcolor);
+}
+.menu-item-pad-logo {
+    padding: 10px 15px 10px 15px;
+}
+.menu-item-pad-no_logo {
+    padding: 10px 30px 10px 30px;
+}
+
+/* Responsiveness */
+@media (min-width: 768px) {
+    .menu-item-pad-logo {
+        padding: 30px 15px 30px 15px;
+    }
+    .menu-item-pad-no_logo {
+        padding: 10px 30px 10px 30px;
+    }
 }
 
 /* Menu Icon */
 .nav-icon {
     cursor: pointer;
     float: right;
-    padding: 40px 20px;
+/* todo: adjust top & bottom for no logo */
+    /* padding: 40px 20px; */
+    /* padding: 20px 20px; */
+}
+
+.nav-icon-nologo {
+    padding: 20px 20px;
+}
+
+.nav-icon-logo {
+    padding: 20px 20px;
 }
 
 .nav-icon-line {
@@ -150,7 +183,6 @@ ul{
     height: 2px;
     position: relative;
     width: 24px;
-    
 }
 
 .nav-icon-line::before, .nav-icon-line::after {
@@ -201,7 +233,8 @@ ul{
     }
 
     .menu a {
-        padding: 30px;
+/* remove for no logo 
+        padding: 30px; */
     }
     
     /* menu item highlight */
