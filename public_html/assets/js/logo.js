@@ -1,7 +1,9 @@
 /*
     Pick whether or not a logo is seen on the navbar, for 
-    a textual logo new text can be used.
+    a textual logo new text can be supplied.
 */
+// look for a specifc query parameter, and if it exists
+// return its value.
 function getQueryParam(param) {
     var arg = null;
     window.location.search.substr(1).split("&").forEach(function(item) {
@@ -12,17 +14,22 @@ function getQueryParam(param) {
     return ((arg === undefined) || (arg === '') ? null : arg);
 };
 
+// returns an object, the values it contains indicate the 
+// choice of logo - none, icon, text
 function getLogoChoice() {
     var ret = {
-        logo: false,
-        type: ''
+        logo: false
+        ,type: ''
+        ,text: ''
     };
     ((ret.type = getQueryParam('logo')) === null ? ret.logo = false : ret.logo = true);
+    ((ret.type === 'text') ? ret.text = getQueryParam('text') : null);
     return ret;
 };
 
 /*
-    setLogo(choice) - 
+    setLogo(choice) - manipulate the DOM to get the 
+    desired logo choice to be visible
 
     choice = {
         logo: true or false,
@@ -66,11 +73,11 @@ function setLogo(choice) {
         $('.menu a').addClass('menu-item-pad-no_logo');
         return;
     } else {
-        $('#nav-close').addClass('nav-icon-logo');
-        $('.menu a').addClass('menu-item-pad-logo');
-
         switch(choice.type) {
             case 'icon':
+                $('#nav-close').addClass('nav-icon-logo');
+                $('.menu a').addClass('menu-item-pad-logo');
+
                 // the image is set in nobs.css:.logo-img
                 $('#nav-logo-choice_icon').show();
                 $('#nav-logo-choice_icon').attr('style','display: inline-block;');
@@ -78,18 +85,21 @@ function setLogo(choice) {
                 break;
 
             case 'text':
+                $('#nav-close').addClass('nav-icon-logo');
+                $('.menu a').addClass('menu-item-pad-logo');
+
                 $('#nav-logo-choice_text').show();
                 $('#nav-logo-choice_text').attr('style','display: inline-block;');
                 $('.nav-logo').attr('href', ($('.nav-logo').attr('href') + '?' + window.location.search.substr(1)))
-                let txt = getQueryParam('text');
-                if(txt !== null) {
-                    // insert this text into the logo
-                    // at #nav-logo-text
-                    $('#nav-logo-text').text(decodeURIComponent(txt));
-                }
+
+                // insert this text into the logo
+                // at #nav-logo-text
+                if(choice.text !== null) $('#nav-logo-text').text(decodeURIComponent(choice.text));
                 break;
 
             default:
+                $('#nav-close').addClass('nav-icon-nologo');
+                $('.menu a').addClass('menu-item-pad-no_logo');
                 break;
         }
     }

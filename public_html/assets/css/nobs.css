@@ -57,7 +57,8 @@ body{
 /* Header */
 .nav-header{
     background-color: var(--nav-header-bgcolor);
-    box-shadow: 1px 1px 5px 0px var(--nav-header-shadow);
+    /* off for now, if uncommented then edit .footer below */
+    /* box-shadow: 1px 1px 5px 0px var(--nav-header-shadow); */
     position: sticky;
     top: 0;
     width: 100%;
@@ -72,7 +73,6 @@ body{
     color: var(--nav-logo-text);
     font-size: 30px;
     margin-left: 10px;
-    /* margin-top: 11px; */
 }
 
 @media (min-width: 768px) {
@@ -87,12 +87,6 @@ body{
 .nav-logo-img {
     display: inline-block;
     margin-left: 10px;
-    /* margin-top: 15px; */
-    /* this will hide the link and 
-    image, and disable the <a> but 
-    it will take space. it's not
-    needed if logo html is gone */
-    /* visibility: hidden; */
 }
 
 .logo-img {
@@ -164,9 +158,6 @@ body{
 .nav-icon {
     cursor: pointer;
     float: right;
-/* todo: adjust top & bottom for no logo */
-    /* padding: 40px 20px; */
-    /* padding: 20px 20px; */
 }
 
 .nav-icon-nologo {
@@ -233,8 +224,7 @@ body{
     }
 
     .menu a {
-/* remove for no logo 
-        padding: 30px; */
+        /* padding is managed in logo.js:setLogo() */
     }
     
     /* menu item highlight */
@@ -251,7 +241,7 @@ body{
 /* Main content */
 .main-content {
     /* This will be changed programmatically to 
-       the height of the footer + .15%
+       the height of the footer + 15%
     */
     padding-bottom: 2rem;
 }
@@ -269,6 +259,8 @@ body{
     bottom: 0;
     position: fixed;
     background-color: var(--footer-bgcolor);
+    /* off for now, if uncommented then edit .nav-header above */
+    /* box-shadow: 1px -1px 5px 0px var(--footer-bgcolor); */
     width: 100vw;
 }
 

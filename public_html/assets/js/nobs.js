@@ -28,6 +28,8 @@ var hdrheight = -1;
 // the nav bar.
 function scrollTo(href) {
     var goTo = '';
+    // let's close the nav menu...
+    $('#nav-togg')[0].checked = false;
     // has the header height been obtained yet?
     if(hdrheight !== -1) {
         if(href.charAt(0) === '#') {
@@ -61,9 +63,6 @@ $().ready(() => {
 
         // Prevent the default action from occuring.
         event.preventDefault();
-
-        // let's close the nav menu...
-        $('#nav-togg')[0].checked = false;
 
         // scroll to the target ID, and place it just 
         // below nav bar (when inactive).
