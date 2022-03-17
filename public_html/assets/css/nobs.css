@@ -46,11 +46,11 @@ body{
     font-family: "Poppins", sans-serif;
 }
 
-a{
+#nav-header a{
     text-decoration: none;
 }
 
-ul{
+#nav-menu ul{
     list-style: none;
 }
 
