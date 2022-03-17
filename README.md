@@ -240,6 +240,8 @@ Turning on the logo(icon or text) is done with a *query*. For example:
 * `http://server/path/to/index.html`**`?logo=text`** - this will enable the *text* on the left side of the navigation bar. In addition it is possible to alter the text:
   *  `http://server/path/to/index.html?logo=text`**`&text=some%20text`** - *uri encoding is required*
 
+When the "logo" is enabled the link it contains will also have the query string attached. Then it will work as expected and when it is clicked you will go to `index.html` using your original query.
+
 ---
 <img src="http://webexperiment.info/extcounter/mdcount.php?id=website_template-no_bootstrap">
 
