@@ -72,7 +72,7 @@ body{
     color: var(--nav-logo-text);
     font-size: 30px;
     margin-left: 10px;
-    margin-top: 15px;
+    margin-top: 11px;
 }
 
 @media (min-width: 768px) {
@@ -87,7 +87,7 @@ body{
 .nav-logo-img {
     display: inline-block;
     margin-left: 10px;
-    margin-top: 15px;
+    /* margin-top: 15px; */
     /* this will hide the link and 
     image, and disable the <a> but 
     it will take space. it's not
@@ -144,10 +144,20 @@ body{
     background-color: var(--nav-menu-hamb-hover-bgcolor);
 }
 .menu-item-pad-logo {
-    padding: 30px 15px 30px 15px;
+    padding: 10px 15px 10px 15px;
 }
 .menu-item-pad-no_logo {
     padding: 10px 30px 10px 30px;
+}
+
+/* Responsiveness */
+@media (min-width: 768px) {
+    .menu-item-pad-logo {
+        padding: 30px 15px 30px 15px;
+    }
+    .menu-item-pad-no_logo {
+        padding: 10px 30px 10px 30px;
+    }
 }
 
 /* Menu Icon */
