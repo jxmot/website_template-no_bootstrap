@@ -144,7 +144,7 @@ body{
     background-color: var(--nav-menu-hamb-hover-bgcolor);
 }
 .menu-item-pad-logo {
-    padding: 10px 15px 10px 15px;
+    padding: 30px 15px 30px 15px;
 }
 .menu-item-pad-no_logo {
     padding: 10px 30px 10px 30px;
