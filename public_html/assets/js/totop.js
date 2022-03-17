@@ -35,7 +35,7 @@ function onWindowScroll() {
 // When the user clicks on the button, scroll to the top of the document
 function jumpToTop() {
 // NOTE: modify the argument to use the target 
-// that's the most appropriate for your needs
+// that's the most appropriate for your needs.
     scrollTo('#main');
 } 
 
