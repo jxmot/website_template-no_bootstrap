@@ -92,7 +92,7 @@ body{
     image, and disable the <a> but 
     it will take space. it's not
     needed if logo html is gone */
-    visibility: hidden;
+    /* visibility: hidden; */
 }
 
 .logo-img {
