@@ -18,6 +18,7 @@ if(mklogo.logo === true) {
     setLogo(mklogo);
 } else {
     $('#nav-close').addClass('nav-icon-nologo');
+    $('.menu a').addClass('menu-item-pad-no_logo');
 }
 
 // this will contain the height of #nav-header 
