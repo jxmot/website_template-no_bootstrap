@@ -14,7 +14,9 @@ function consolelog(text) {
 
 // this will contain the height of #nav-header 
 var hdrheight = -1;
-
+// this function uses hdrheight to calculate 
+// where to jump. it allows for the height of 
+// the nav bar.
 function scrollTo(href) {
     var goTo = '';
     // has the header height been obtained yet?
