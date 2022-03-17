@@ -61,6 +61,9 @@ body{
     position: sticky;
     top: 0;
     width: 100%;
+    /* when the logo HTML is removed 
+    this will fix the nav-bar */
+    display: inline-block;
 }
 
 /* Logo Text */
@@ -81,10 +84,15 @@ body{
 }
 
 /* Logo Image */
-.nav-logo-img{
+.nav-logo-img {
     display: inline-block;
     margin-left: 10px;
     margin-top: 15px;
+    /* this will hide the link and 
+    image, and disable the <a> but 
+    it will take space. it's not
+    needed if logo html is gone */
+    visibility: hidden;
 }
 
 .logo-img {
@@ -141,7 +149,9 @@ body{
 .nav-icon {
     cursor: pointer;
     float: right;
-    padding: 40px 20px;
+/* todo: adjust top & bottom for no logo */
+    /* padding: 40px 20px; */
+    padding: 20px 20px;
 }
 
 .nav-icon-line {
@@ -201,7 +211,8 @@ body{
     }
 
     .menu a {
-        padding: 30px;
+/* remove for no logo 
+        padding: 30px; */
     }
     
     /* menu item highlight */
