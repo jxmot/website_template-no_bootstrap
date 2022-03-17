@@ -138,11 +138,16 @@ body{
 /* mobile menu item highlight */
 .menu a{
     display: block;
-    padding: 10px;
     color: var(--nav-menu-text);
 }
 .menu a:hover{
     background-color: var(--nav-menu-hamb-hover-bgcolor);
+}
+.menu-item-pad-logo {
+    padding: 10px 15px 10px 15px;
+}
+.menu-item-pad-no_logo {
+    padding: 10px 30px 10px 30px;
 }
 
 /* Menu Icon */
@@ -159,7 +164,7 @@ body{
 }
 
 .nav-icon-logo {
-    padding: 40px 20px;
+    padding: 20px 20px;
 }
 
 .nav-icon-line {
