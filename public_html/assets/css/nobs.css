@@ -11,6 +11,7 @@
     --white: #f9f9f9;
     --grey: #85888C;
     --dark-grey: #36383F;
+    --black: #000000;
     --yellowish: #dbcc29;
     --transparent: rgba(0, 0, 0, 0);
 
@@ -23,7 +24,8 @@
     --nav-bgcolor: var(--dark-grey);
 
     --nav-menu-hamb-hover-bgcolor: var(--grey);
-    --nav-hambicon-bgcolor: var(--white);
+    --nav-menu-hamb-hover-color: var(--black);
+    --nav-hambicon-bgcolor: var(--yellowish);
 
     --nav-menu-text-hover: var(--yellowish);
     --nav-menu-text: var(--white);
@@ -136,6 +138,7 @@ body{
 }
 .menu a:hover{
     background-color: var(--nav-menu-hamb-hover-bgcolor);
+    color: var(--nav-menu-hamb-hover-color);
 }
 .menu-item-pad-logo {
     padding: 10px 15px 10px 15px;
