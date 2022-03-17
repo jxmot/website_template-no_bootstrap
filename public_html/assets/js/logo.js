@@ -1,4 +1,6 @@
 /*
+    Pick whether or not a logo is seen on the navbar, for 
+    a textual logo new text can be used.
 */
 function getQueryParam(param) {
     var arg = null;
@@ -42,15 +44,27 @@ function getLogoChoice() {
     Both are located in #nav-header individually within a their own 
     <div> tag:
         <header id="nav-header" class="nav-header">
-
+            <div id="nav-logo-choice_text" style="display:none;">
+                <a id="nav-logo_link" class="nav-logo" href="./index.html">
+                    <div id="nav-logo-text">NOBS</div>
+                </a>
+            </div>
+            <div id="nav-logo-choice_icon" style="display:none;">
+                <a id="nav-logo_link" class="nav-logo-img" href="./index.html">
+                    <img id="logo-img" class="logo-img">
+                </a>
+            </div>
             <!-- remaining navbar HTML goes here -->
         </header>
 */
 function setLogo(choice) {
-    if(choice.logo === false) return;
-    else {
+    if(choice.logo === false) {
+        $('#nav-close').addClass('nav-icon-nologo');
+        return;
+    } else {
         switch(choice.type) {
             case 'icon':
+                $('#nav-close').addClass('nav-icon-logo');
                 // the image is set in nobs.css:.logo-img
                 $('#nav-logo-choice_icon').show();
                 break;

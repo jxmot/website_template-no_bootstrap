@@ -16,6 +16,8 @@ function consolelog(text) {
 var mklogo = getLogoChoice();
 if(mklogo.logo === true) {
     setLogo(mklogo);
+} else {
+    $('#nav-close').addClass('nav-icon-nologo');
 }
 
 // this will contain the height of #nav-header 
