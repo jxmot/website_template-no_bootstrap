@@ -24,7 +24,6 @@ const scroll_travel = 0.05;
 function onWindowScroll() {
     // for debugging
     //dump();
-
     if(showToTop()) {
         document.getElementById("gototop-button").style.display = "block";
     } else {

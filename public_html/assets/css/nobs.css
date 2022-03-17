@@ -72,7 +72,7 @@ body{
     color: var(--nav-logo-text);
     font-size: 30px;
     margin-left: 10px;
-    margin-top: 11px;
+    /* margin-top: 11px; */
 }
 
 @media (min-width: 768px) {
