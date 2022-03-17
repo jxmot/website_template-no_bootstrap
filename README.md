@@ -229,6 +229,17 @@ function onWindowScroll() {
 }
 ```
 
+**Logo or NO Logo?:**
+
+It's possible to view the page with or without the logo in the navigation bar. There are 2 types to pick from, `'icon'` or `'text'`.
+
+Turning on the logo(icon or text) is done with a *query*. For example:
+
+* `http://server/path/to/index.html` - no logo will be seen, the navigation bar is shorter and the padding is reduced around the menu items.
+* `http://server/path/to/index.html`**`?logo=icon`** - this will enable the *icon* on the left side of the navigation bar.
+* `http://server/path/to/index.html`**`?logo=text`** - this will enable the *text* on the left side of the navigation bar. In addition it is possible to alter the text:
+  *  `http://server/path/to/index.html?logo=text`**`&text=some%20text`** - *uri encoding is required*
+
 ---
 <img src="http://webexperiment.info/extcounter/mdcount.php?id=website_template-no_bootstrap">
 
