@@ -181,7 +181,7 @@ ul{
 }
 
 #nav-togg:checked ~ .nav-icon .nav-icon-line {
-    background: transparent;
+    background:  var(--transparent);
 }
 
 #nav-togg:checked ~ .nav-icon .nav-icon-line::before {
