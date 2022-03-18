@@ -7,7 +7,8 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
-/* Reset */
+/* Reset 
+*/
 *{
     margin: 0;
     padding: 0;
@@ -20,6 +21,11 @@ body{
     font-family: "Roboto", sans-serif;
 }
 
+p {
+    padding-bottom: 1rem;
+}
+
+
 #nav-header a{
     text-decoration: none;
 }
@@ -31,8 +37,6 @@ body{
 /* Header */
 .nav-header{
     background-color: var(--nav-header-bgcolor);
-    /* off for now, if uncommented then edit .footer below */
-    /* box-shadow: 1px 1px 5px 0px var(--nav-header-shadow); */
     position: sticky;
     top: 0;
     width: 100%;
@@ -223,6 +227,7 @@ body{
     text-align: center;
 }
 
+
 .article-body {
     margin-left: 2rem;
 }
@@ -232,8 +237,6 @@ body{
     bottom: 0;
     position: fixed;
     background-color: var(--footer-bgcolor);
-    /* off for now, if uncommented then edit .nav-header above */
-    /* box-shadow: 1px -1px 5px 0px var(--footer-bgcolor); */
     width: 100vw;
 }
 
