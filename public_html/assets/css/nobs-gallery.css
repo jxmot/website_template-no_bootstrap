@@ -1,0 +1,57 @@
+/*
+
+
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas
+https://css-tricks.com/introduction-fr-css-unit/
+https://angrytools.com/css-grid/
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
+
+*/
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 20px;
+
+    grid-auto-flow: column;
+    justify-items: center;
+    justify-content: center;
+    align-items: stretch;
+
+    /* position: relative; */
+    /* text-align: center; */
+    /* color: white; */
+}
+
+@media (min-width: 768px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 20px;
+    }
+}
+
+.grid-img-cell {
+    border: 2px solid black;
+
+    position: relative;
+    z-index: -1;
+}
+
+/* centered */
+.text-overimg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+    font-weight: 900;
+    color: red;
+    background-color: black;
+}
