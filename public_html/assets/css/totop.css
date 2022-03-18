@@ -18,8 +18,8 @@
     z-index: 99;  
     border: none; 
     outline: none;
-    background-color: rgba(120, 10, 10, 0.7);
-    color: white;   
+    background-color: var(--totop-inact-bgcolor);
+    color: var(--totop-content-color);
     cursor: pointer;
 
     /* size & shape */
@@ -40,7 +40,7 @@
 }
 
 .gototop:hover {
-    background-color: rgba(10, 120, 10, 0.7);
-    color: white;
+    background-color: var(--totop-act-bgcolor);
+    color: var(--totop-content-color);
 }
 
