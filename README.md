@@ -253,6 +253,65 @@ Turning on the logo(icon or text) is done with a *query*. For example:
 
 When the "logo" is enabled the link it contains will also have the query string attached. Then it will work as expected and when it is clicked you will go to `index.html` using your original query.
 
+Here are examples of each:
+
+**No Logo:**
+
+<p align="center">
+  <img src="./mdimg/nologo.png" style="width:50%"; alt="Default Color Theme Example" txt="Default Color Theme Example"/>
+</p>
+
+**Icon Logo:**
+
+<p align="center">
+  <img src="./mdimg/iconlogo.png" style="width:50%"; alt="Default Color Theme Example" txt="Default Color Theme Example"/>
+</p>
+
+**Text Logo:**
+
+<p align="center">
+  <img src="./mdimg/textlogo.png" style="width:50%"; alt="Default Color Theme Example" txt="Default Color Theme Example"/>
+</p>
+
+**Color Themes:**
+
+I change all of the color related CSS to use *variables*. Then it was easy to put together some *themes* with different colors. 
+
+The CSS files are:
+
+* `nobs_palettes.css` - palettes arranged as groups of CSS color variable.
+* `nobs-default.css` - the default theme
+  * `nobs-alt_1.css`, `nobs-alt_2.css`, `nobs-alt_3.css`, `nobs-alt_4.css` - alternate themes
+* `nobs-totop.css` - "to top" uses colors kept in `nobs_palettes.css`
+
+In `index.html` changing the coloring is done by commenting/uncommenting the desired CSS theme file:
+
+```
+<!-- color palettes -->
+<link rel="stylesheet" href="./assets/css/nobs-palettes.css">
+<!-- "themes", choose & edit as needed -->
+<link rel="stylesheet" href="./assets/css/nobs-default.css">
+<!-- <link rel="stylesheet" href="./assets/css/nobs-alt_1.css"> -->
+<!-- <link rel="stylesheet" href="./assets/css/nobs-alt_2.css"> -->
+<!-- <link rel="stylesheet" href="./assets/css/nobs-alt_3.css"> -->
+<!-- <link rel="stylesheet" href="./assets/css/nobs-alt_4.css"> -->
+<!-- the rest of it... -->
+<link rel="stylesheet" href="./assets/css/nobs.css">
+<link rel="stylesheet" href="./assets/css/nobs-totop.css"/>
+```
+
+Here is the "default" (`nobs-default.css`) theme - 
+
+<p align="center">
+  <img src="./mdimg/theme-default.png" style="width:50%"; alt="Default Color Theme Example" txt="Default Color Theme Example"/>
+</p>
+
+And this is one of the "alternate" (`nobs-alt_1.css`) themes - 
+
+<p align="center">
+  <img src="./mdimg/theme-alt_1.png" style="width:50%"; alt="Alternate #1 Color Theme Example" txt="Alternate #1 Color Theme Example"/>
+</p>
+
 ---
 <img src="http://webexperiment.info/extcounter/mdcount.php?id=website_template-no_bootstrap">
 
