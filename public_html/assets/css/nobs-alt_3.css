@@ -1,0 +1,25 @@
+:root{
+    /* Element Colors... */
+    --body-bg: var(--cultured);
+    --body-text: var(--black);
+
+    --nav-header-bgcolor: var(--rich-black-fogra-39);
+    /* --nav-header-shadow: var(--grey); */
+
+    --nav-menu-text-hover: var(--silver-metallic);
+    --nav-menu-text: var(--cultured);
+
+    --nav-logo-text: var(--cultured);
+
+    --nav-menu-hamb-hover-bgcolor: var(--silver-metallic);
+    --nav-menu-hamb-hover-color: var(--black);
+    /* this actually the color of the hambuger icon */
+    --nav-hambicon-bgcolor: var(--silver-metallic);
+
+    --footer-text: var(--cultured);
+    --footer-bgcolor: var(--nav-header-bgcolor);
+
+    --totop-inact-bgcolor: var(--trans-red);
+    --totop-act-bgcolor: var(--trans-green);
+    --totop-content-color: var(--white);
+}
