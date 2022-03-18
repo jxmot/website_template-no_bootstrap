@@ -1,0 +1,39 @@
+/* Palletes */
+:root{
+    --white: #f9f9f9;
+    --grey: #85888C;
+    --dark-grey: #36383F;
+    --black: #000000;
+    --yellowish: #dbcc29;
+    --transparent: rgba(0, 0, 0, 0);
+    --trans-green: rgba(10, 120, 10, 0.7);
+    --trans-red: rgba(120, 10, 10, 0.7);
+
+    /* https://coolors.co/palette/dad7cd-a3b18a-588157-3a5a40-344e41 */
+    --timberwolf: #dad7cd;
+    --laurel-green: #a3b18a;
+    --fern-green: #588157;
+    --hunter-green: #3a5a40;
+    --brunswick-green: #344e41;
+    
+    /* https://coolors.co/palette/cad2c5-84a98c-52796f-354f52-2f3e46 */
+    --ash-gray: #cad2c5;
+    --dark-sea-green: #84a98c;
+    --hookers-green: #52796f;
+    --dark-slate-gray: #354f52;
+    --charcoal: #2f3e46;
+
+    /* https://coolors.co/palette/f4f7f5-a7a2a9-575a5e-222823-08090a */
+    --cultured: #f4f7f5;
+    --silver-metallic: #a7a2a9;
+    --davys-grey: #575a5e;
+    --dark-jungle-green: #222823;
+    --rich-black-fogra-39: #08090a;
+
+    /* https://coolors.co/palette/eee2df-eed7c5-c89f9c-c97c5d-b36a5e */
+    --seashell: #eee2df;
+    --champagne-pink: #eed7c5;
+    --tuscany: #c89f9c;
+    --copper-red: #c97c5d;
+    --copper-penny: #b36a5e;
+}
