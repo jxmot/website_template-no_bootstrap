@@ -7,24 +7,11 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
-/* Reset 
-*/
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body{
     background-color: var(--body-bg);
     color: var(--body-text);
     font-family: "Roboto", sans-serif;
 }
-
-p {
-    padding-bottom: 1rem;
-}
-
 
 #nav-header a{
     text-decoration: none;
@@ -106,6 +93,9 @@ p {
 }
 
 /* mobile menu item highlight */
+.menu {
+    margin-top: 0;
+}
 .menu a{
     display: block;
     color: var(--nav-menu-text);
@@ -196,6 +186,10 @@ p {
 
 /* Responsiveness */
 @media (min-width: 768px) {
+    .menu {
+        margin-top: 0;
+    }
+
     .menu li {
         float: left;
     }
@@ -227,9 +221,9 @@ p {
     text-align: center;
 }
 
-
 .article-body {
     margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 /* Footer */
