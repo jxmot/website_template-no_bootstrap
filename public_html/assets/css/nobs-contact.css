@@ -38,12 +38,12 @@
 }
 
 .contact-info {
-  background: var( --contact-form-info-bgcolor); /* #4b5195; */
-  color: var(--contact-form-info-color); /* #fff; */
+  background: var( --contact-form-info-bgcolor);
+  color: var(--contact-form-info-color);
 }
 
 .contact-form {
-  color: var(--contact-form-info-color); /* #fff; */
+  color: var(--contact-form-info-color);
 }
 
 .contact-form-body {
