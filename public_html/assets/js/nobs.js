@@ -69,14 +69,14 @@ $().ready(() => {
         scrollTo(event.target.href);
     });
 
-    // clear the contact form message text counter
-    var maxtext = $('form #message').attr('maxlength');
-    $('form #textcount').text('(0 / '+ maxtext+')');
-
-    // update the count when typing occurs
-    $('form #message').keyup(function() {
-        var len = $(this).val().length;
-        var lenstr = '('+len+' / '+ maxtext+')';
-        $('form #textcount').text(lenstr);
-    });
+//    // clear the contact form message text counter
+//    var maxtext = $('form #message').attr('maxlength');
+//    $('form #textcount').text('(0 / '+ maxtext+')');
+//
+//    // update the count when typing occurs
+//    $('form #message').keyup(function() {
+//        var len = $(this).val().length;
+//        var lenstr = '('+len+' / '+ maxtext+')';
+//        $('form #textcount').text(lenstr);
+//    });
 });
