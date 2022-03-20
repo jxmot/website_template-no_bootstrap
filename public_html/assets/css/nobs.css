@@ -228,11 +228,17 @@ body{
     position: fixed;
     background-color: var(--footer-bgcolor);
     width: 100vw;
+
+    text-align: center;
+    height: 3rem;
 }
 
 .footer-text {
-    text-align: center;
     color: var(--footer-text);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /*
