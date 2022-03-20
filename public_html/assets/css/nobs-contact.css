@@ -1,6 +1,6 @@
 /* Contact Form CSS (w/ css grid)
 
-    Oringally found at:
+    Originally found at:
         https://webdesign.tutsplus.com/tutorials/how-to-build-web-form-layouts-with-css-grid--cms-28776
 
     Extensively Modified By: 
@@ -12,6 +12,7 @@
   max-width: 1170px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 1rem;
   padding: 1em;
 }
 
