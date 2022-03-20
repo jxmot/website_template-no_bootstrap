@@ -241,6 +241,11 @@ body{
     transform: translate(-50%, -50%);
 }
 
+.footer-text a {
+    text-decoration: none;
+    color: var(--footer-text);
+}
+
 /*
     Embellishments....
 */
