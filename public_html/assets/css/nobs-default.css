@@ -27,7 +27,7 @@
     --contact-form-info-color: var(--white);
     --contact-form-form-bgcolor: var(--white);
     --contact-form-form-color:  var(--black);
-    --contact-form-form-focus:  var(--gold);
+    --contact-form-form-focus:  var(--bright-green);
     --contact-form-form-input-border:  var(--black);
     --contact-form-form-button-bgcolor: var(--light-grey);
 }
