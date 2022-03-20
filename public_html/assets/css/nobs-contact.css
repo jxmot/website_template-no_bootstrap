@@ -23,11 +23,13 @@
 }
 
 .contact-form-wrapper {
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 5px 0 var(--light-grey);
 }
+
 .contact-form-wrapper > * {
   padding: 1em;
 }
+
 @media (min-width: 700px) {
   .contact-form-wrapper {
     display: grid;
