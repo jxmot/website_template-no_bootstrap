@@ -98,6 +98,31 @@ body{
     background-color: var(--nav-menu-hamb-hover-bgcolor);
     color: var(--nav-menu-hamb-hover-color);
 }
+
+@media (min-width: 768px) {
+    .menu {
+        margin-top: 0;
+    }
+
+    .menu li {
+        float: left;
+    }
+
+    .menu a {
+        /* padding is managed in logo.js:setLogo() */
+    }
+    
+    /* menu item highlight */
+    .menu a:hover {
+        background-color: var(--transparent);
+        color: var(--nav-menu-text-hover);
+    }
+    
+    .nav-icon {
+        display: none;
+    }
+}
+
 .menu-item-pad-logo {
     padding: 10px 15px 10px 15px;
 }
@@ -175,31 +200,6 @@ body{
 #nav-togg:checked ~ .nav-icon .nav-icon-line::after {
     transform: rotate(45deg);
     top:0;
-}
-
-/* Responsiveness */
-@media (min-width: 768px) {
-    .menu {
-        margin-top: 0;
-    }
-
-    .menu li {
-        float: left;
-    }
-
-    .menu a {
-        /* padding is managed in logo.js:setLogo() */
-    }
-    
-    /* menu item highlight */
-    .menu a:hover {
-        background-color: var(--transparent);
-        color: var(--nav-menu-text-hover);
-    }
-    
-    .nav-icon {
-        display: none;
-    }
 }
 
 /* Main content */
