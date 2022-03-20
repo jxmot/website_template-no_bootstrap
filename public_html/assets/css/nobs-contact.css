@@ -20,7 +20,7 @@
 }
 
 .contact-form-wrapper {
-  box-shadow: 0 0 5px 0 var(--light-grey);
+  border: 5px solid var(--light-grey);
 }
 
 .contact-form-wrapper > * {
