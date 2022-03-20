@@ -68,4 +68,14 @@ $().ready(() => {
         // below nav bar (when inactive).
         scrollTo(event.target.href);
     });
+
+    var maxtext = $('form #message').attr('maxlength');
+    $('form #textcount').text('(0 / '+ maxtext+')');
+
+    // update the count when typing occurs
+    $('form #message').keyup(function() {
+        var len = $(this).val().length;
+        var lenstr = '('+len+' / '+ maxtext+')';
+        $('form #textcount').text(lenstr);
+    });
 });
