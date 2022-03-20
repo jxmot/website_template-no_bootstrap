@@ -1,6 +1,12 @@
 /*
 
 
+https://gridbyexample.com/
+https://css-tricks.com/how-to-make-a-css-only-carousel/
+
+
+https://css-tricks.com/snippets/css/complete-guide-grid/
+http://grid-layout.com/index.html
 
 https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas
 https://css-tricks.com/introduction-fr-css-unit/
@@ -8,7 +14,8 @@ https://angrytools.com/css-grid/
 
 https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
-
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout#guides
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid
 */
 .gallery {
     display: grid;
@@ -21,6 +28,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_commo
     justify-content: center;
 
     z-index: -1;
+    padding-top: 1rem;
     padding-bottom: 1rem;
 }
 
@@ -34,7 +42,6 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_commo
 .grid-img-cell {
     position: relative;
     z-index: -1;
-
     text-align:center
 }
 
