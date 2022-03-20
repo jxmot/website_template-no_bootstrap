@@ -22,6 +22,7 @@
     --totop-inact-bgcolor: var(--trans-red);
     --totop-act-bgcolor: var(--trans-green);
     --totop-content-color: var(--white);
+    --totop-border-color: var(--white);
 
     --contact-form-info-bgcolor: var(--nav-header-bgcolor);
     --contact-form-info-color: var(--white);
