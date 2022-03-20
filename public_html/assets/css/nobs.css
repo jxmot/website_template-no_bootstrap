@@ -24,6 +24,7 @@ body{
 /* Header */
 .nav-header {
     background-color: var(--nav-header-bgcolor);
+    box-shadow: 0 5px var(--nav-header-bgcolor);
     position: sticky;
     top: 0;
     width: 100%;
