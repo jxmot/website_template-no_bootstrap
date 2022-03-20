@@ -22,7 +22,7 @@ body{
 }
 
 /* Header */
-.nav-header{
+.nav-header {
     background-color: var(--nav-header-bgcolor);
     position: sticky;
     top: 0;
