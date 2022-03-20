@@ -10,10 +10,7 @@
 */
 .contact-container {
   max-width: 1170px;
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 1rem;
-  padding: 1em;
 }
 
 @media (min-width: 600px) {
