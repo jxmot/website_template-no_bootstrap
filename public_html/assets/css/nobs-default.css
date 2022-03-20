@@ -19,8 +19,8 @@
     --footer-text: var(--white);
     --footer-bgcolor: var(--nav-header-bgcolor);
 
-    --totop-inact-bgcolor: var(--trans-red);
-    --totop-act-bgcolor: var(--trans-green);
+    --totop-inact-bgcolor: var(--bright-red);
+    --totop-act-bgcolor: var(--green);
     --totop-content-color: var(--white);
     --totop-border-color: var(--white);
 
