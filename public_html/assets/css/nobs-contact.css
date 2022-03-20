@@ -21,6 +21,7 @@
 
 .contact-form-wrapper {
   border: 5px solid var(--light-grey);
+  border-radius: 5%;
 }
 
 .contact-form-wrapper > * {
@@ -38,8 +39,18 @@
 }
 
 .contact-info {
-  background: var( --contact-form-info-bgcolor);
+  background: var(--contact-form-info-bgcolor);
   color: var(--contact-form-info-color);
+
+  border-radius: 5% 5% 0 0;
+  box-shadow: 3px -3px 5px var(--contact-form-info-bgcolor), -3px 0 2px var(--contact-form-info-bgcolor);
+}
+
+@media (min-width: 700px) {
+    .contact-info {
+        border-radius: 5% 0 0 5%;
+        box-shadow: 0 3px 2px var(--contact-form-info-bgcolor),-3px -3px 5px var(--contact-form-info-bgcolor);
+    }
 }
 
 .contact-form {
