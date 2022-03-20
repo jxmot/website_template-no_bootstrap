@@ -1,4 +1,10 @@
-/* Palletes */
+/*  Palettes - A collection of colors to use on a site. These
+    colors are referenced in other CSS file. All color use 
+    should use these colors, and not set them directly.
+
+    Author: https://github.com/jxmot
+    Repository: https://github.com/jxmot/website_template-no_bootstrap
+*/
 :root{
     --white: #f9f9f9;
     --light-grey: #c3c4c5;

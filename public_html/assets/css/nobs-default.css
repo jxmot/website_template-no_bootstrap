@@ -1,3 +1,8 @@
+/*  nobs-default.css - The default color scheme
+
+    Author: https://github.com/jxmot
+    Repository: https://github.com/jxmot/website_template-no_bootstrap
+*/
 :root{
     /* Element Colors... */
     --body-bg: var(--white);

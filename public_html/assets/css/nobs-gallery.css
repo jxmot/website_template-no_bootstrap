@@ -1,21 +1,7 @@
-/*
+/*  nobs-gallery.css - CSS for the "Gallery" of images.
 
-
-https://gridbyexample.com/
-https://css-tricks.com/how-to-make-a-css-only-carousel/
-
-
-https://css-tricks.com/snippets/css/complete-guide-grid/
-http://grid-layout.com/index.html
-
-https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas
-https://css-tricks.com/introduction-fr-css-unit/
-https://angrytools.com/css-grid/
-
-https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
-https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
-https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout#guides
-https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid
+    Author: https://github.com/jxmot
+    Repository: https://github.com/jxmot/website_template-no_bootstrap
 */
 .gallery {
     display: grid;

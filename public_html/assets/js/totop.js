@@ -1,15 +1,14 @@
 /*
     totop.js - "To Top" functionality, displays a stylized 
     "to top" button when the document is scrolled past a 
-    specific distance.
+    specific distance determined by the length of the document.
 
     NOTE: The scrollTo() function resides elsewhere. That is 
     because it needs access to the height of the page's nav 
-    bar.
+    bar. See nobs.js
 
     As described at (but with major modifications & improvements) - 
         https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
-
 
     Author: https://github.com/jxmot
     Repository: https://github.com/jxmot/website_template-no_bootstrap

@@ -1,6 +1,9 @@
 /*
     Pick whether or not a logo is seen on the navbar, for 
     a textual logo new text can be supplied.
+
+    Author: https://github.com/jxmot
+    Repository: https://github.com/jxmot/website_template-no_bootstrap
 */
 // look for a specifc query parameter, and if it exists
 // return its value.
