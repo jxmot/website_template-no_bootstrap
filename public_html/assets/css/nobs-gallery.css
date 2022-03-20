@@ -42,7 +42,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid
 .grid-img-cell {
     position: relative;
     z-index: -1;
-    text-align:center
+    text-align:center;
 }
 
 .gallery-img {
