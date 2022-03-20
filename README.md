@@ -1,8 +1,10 @@
 # Website Template - NO BOOTSTRAP
 
+I wanted a *basic*, *simple* and *working* website template. It had to have a navigation bar and be *responsive*... it seems that everyone has a different definition of what *resposive* actually means. 
+
 After some (*ok, more than just "some"*) frustration getting Bootstrap to cooperate on a number of issues:
 
-* Not all browsers produce the same results
+* Not all browsers(or platforms!) produce the same results
 * Bootstrap CSS is an excellent CSS framework, but too complicated and too much overhead for basic needs
 * I'm tired of it lol
 
@@ -26,14 +28,29 @@ So, here's what I've got now...
 
 ## Details
 
-There are four *essential* files:
+There are several *essential* files:
 
 * `index.html`
-* `nobs.css` - page styling
+* `reseter.css` - resets the browsers' CSS and creates a consistent result across multiple browsers and platforms
+* `nobs.css` - overall page styling
 * `nobs.js` - all of the menu handling, initiating logo or no-logo, and page scrolling
 * `logo.js` - for managing the visibility of the "logo" component of the navigation bar
 
-These manage the "to top" button (optional):
+Managing the colors (or "theme") is done with:
+
+* `nobs-palettes.css` - CSS variables containing a number of colors, and some grouped together as *palettes*
+* `nobs-default.css` - a "default" color scheme
+
+These are for the "Gallery":
+
+* `nobs-gallery.css` - 
+
+These are for the "Contact" form:
+
+* `nobs-contact.css` - 
+* `nobs-contact.js` - 
+
+These manage the "to top" button:
 
 * `totop.css` - button appearance, size, and location
 * `totop.js` - button management, scrolling is accomplished in `nobs.js:scrollTo()`
