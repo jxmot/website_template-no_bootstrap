@@ -69,6 +69,7 @@ $().ready(() => {
         scrollTo(event.target.href);
     });
 
+    // clear the contact form message text counter
     var maxtext = $('form #message').attr('maxlength');
     $('form #textcount').text('(0 / '+ maxtext+')');
 
