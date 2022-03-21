@@ -259,8 +259,7 @@ body{
 }
 
 .home-bg-overlay {
-    /* width: 100vw; */
-    background-color: #030404a1!important;
+    background-color: var(--trans-black);
 }
 
 .home-body {
