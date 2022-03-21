@@ -15,7 +15,7 @@ After some research, experimentation, and playing around I put together what you
 * Must be responsive
 * Must work, the navigation menu must operate and select targets
 * Must work with or without the "logo" component of the navigation bar
-* Must usable as a starting point for other projects
+* Must be usable as a *basic* starting point for other projects
 
 It was also quite frustrating just *finding* **working** examples of a non-Bootstrap "responsive" page with a navigation menu. Too often I'd find something that(*pick one or more of the following...*):
 
@@ -31,7 +31,7 @@ So, here's what I've got now...
 There are several *essential* files:
 
 * `index.html`
-* `reseter.css` - resets the browsers' CSS and creates a consistent result across multiple browsers and platforms
+* `reseter.css` - resets the browsers' CSS and creates a consistent result across multiple browsers and platforms, this was obtained from [github.com/resetercss/reseter.css](<https://github.com/resetercss/reseter.css>)
 * `nobs.css` - overall page styling
 * `nobs.js` - all of the menu handling, initiating logo or no-logo, and page scrolling
 * `logo.js` - for managing the visibility of the "logo" component of the navigation bar
@@ -136,10 +136,16 @@ function scrollTo(href) {
 The value `hdrheight` is calculated after the page is loaded:
 
 ```
+// this will contain the height of #nav-header 
+var hdrheight = -1;
+
 $().ready(() => {
     // this is the best place to get the height of the 
     // <header> that contains the nav menu.
     var hdrheight = $('#nav-header').height();
+              .
+              .
+              .
 });
 ```
 
