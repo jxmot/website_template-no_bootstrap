@@ -1,4 +1,4 @@
-/*  nobs-contact.js - Functions for the contact form
+/*  nobs-contact.js - Functions for the contact form:
 
     A counter that counts keystrokes in the form's 
     text area.
