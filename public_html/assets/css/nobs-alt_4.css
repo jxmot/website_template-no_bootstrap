@@ -1,3 +1,8 @@
+/*  nobs-alt-4.css - A color scheme, replaces nobs-default.css
+
+    Author: https://github.com/jxmot
+    Repository: https://github.com/jxmot/website_template-no_bootstrap
+*/
 :root{
     /* Element Colors... */
     --body-bg: var(--seashell);
@@ -22,4 +27,27 @@
     --totop-inact-bgcolor: var(--trans-red);
     --totop-act-bgcolor: var(--trans-green);
     --totop-content-color: var(--white);
+    --totop-border-color: var(--white);
+
+    --contact-form-info-bgcolor: var(--nav-header-bgcolor);
+    --contact-form-info-color: var(--white);
+    --contact-form-form-bgcolor: var(--white);
+    --contact-form-form-color:  var(--black);
+    --contact-form-form-focus:  var(--gold);
+    --contact-form-form-input-border:  var(--black);
+    --contact-form-form-button-bgcolor: var(--light-grey);
+
+    --lightbox-modal-bgcolor: var(--black);
+    --lightbox-modal-content-bgcolor:  var(--white);
+    --lightbox-modal-close: var(--white);
+    --lightbox-modal-close-hover:  var(--light-grey);
+    --lightbox-modal-close-focus: var(--lightbox-modal-close-hover);
+    --lightbox-modal-next: var(--white);
+    --lightbox-modal-prev: var(--lightbox-modal-next);
+    --lightbox-modal-next-hover-bgcolor: rgba(0, 0, 0, 0.8);
+    --lightbox-modal-prev-hover-bgcolor: var(--lightbox-modal-next-hover-bgcolor);
+    --lightbox-modal-numbertext: var(--white);
+    --lightbox-modal-caption-color: var(--white);
+    --lightbox-modal-caption-bgcolor: var(--black);
+    --lightbox-hover-shadow: var(--trans-black);
 }

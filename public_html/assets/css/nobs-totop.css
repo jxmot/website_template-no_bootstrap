@@ -10,14 +10,15 @@
     position: fixed;
 
     /* location on page */
-    bottom: 0;
+    position: absolute;
+    top: 50%;
     right: 10%;
-    margin-bottom: 10%;
+    transform: translate(-50%, -50%);
 
     /* placement and colors */
     z-index: 99;  
-    border: none; 
-    outline: none;
+    
+    border: 1px solid var(--totop-border-color);
     background-color: var(--totop-inact-bgcolor);
     color: var(--totop-content-color);
     cursor: pointer;
@@ -25,18 +26,12 @@
     /* size & shape */
     height: 2em;
     width: 2em;
+
     /* circle 
     border-radius: 50%;
     */
     /* box, rounted corners */
     border-radius: 20%;
-}
-
-@media (min-width: 768px) {
-    .gototop {
-        right: 5%;
-        margin-bottom: 5%;
-    }
 }
 
 .gototop:hover {

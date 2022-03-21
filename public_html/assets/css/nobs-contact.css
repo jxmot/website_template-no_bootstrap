@@ -1,0 +1,122 @@
+/* Contact Form CSS (w/ css grid)
+
+    Originally found at:
+        https://webdesign.tutsplus.com/tutorials/how-to-build-web-form-layouts-with-css-grid--cms-28776
+
+    Extensively Modified By: 
+        https://github.com/jxmot
+
+    Repository: https://github.com/jxmot/website_template-no_bootstrap
+*/
+.contact-container {
+  max-width: 1170px;
+  margin-top: 1rem;
+}
+
+@media (min-width: 600px) {
+  .contact-container {
+    padding: 0;
+  }
+}
+
+.contact-form-wrapper {
+  border: 5px solid var(--light-grey);
+  border-radius: 5%;
+}
+
+.contact-form-wrapper > * {
+  padding: 1em;
+}
+
+@media (min-width: 700px) {
+  .contact-form-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+  .contact-form-wrapper > * {
+    padding: 2em 2em;
+  }
+}
+
+.contact-info {
+  background: var(--contact-form-info-bgcolor);
+  color: var(--contact-form-info-color);
+
+  border-radius: 5% 5% 0 0;
+  box-shadow: 3px -3px 5px var(--contact-form-info-bgcolor), -3px 0 2px var(--contact-form-info-bgcolor);
+}
+
+@media (min-width: 700px) {
+    .contact-info {
+        border-radius: 5% 0 0 5%;
+        box-shadow: 0 3px 2px var(--contact-form-info-bgcolor),-3px -3px 5px var(--contact-form-info-bgcolor);
+    }
+}
+
+.contact-form {
+  color: var(--contact-form-info-color);
+}
+
+.contact-form-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+.contact-form label {
+  display: block;
+  color: var(--body-text);
+}
+.contact-form h3 {
+  color: var(--body-text);
+}
+.contact-form-body p {
+  margin: 0;
+}
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.contact-info li {
+    margin: 0 0 0.5rem 0;
+}
+.contact-info h3, .contact-form h3 {
+  margin: 0 0 1rem 0;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 3px solid var(--contact-form-form-focus);
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  width: 100%;
+  border: 1px solid var(--contact-form-form-input-border);
+  padding: 1em;
+}
+
+.contact-form button {
+  background: var(--contact-form-form-button-bgcolor);
+  width: 100%;
+  border: 0;
+}
+.contact-form button:hover, .contact-form button:focus {
+  background: var(--contact-form-form-focus);
+  outline: 0;
+}
+
+.contact-form-body .full-width {
+  grid-column: 1 / 3;
+}
+
+.contact-form-body .textcount {
+    text-align: right;
+    font-weight: bold;
+    font-size: 0.75rem;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--body-text);
+}
+

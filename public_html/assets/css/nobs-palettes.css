@@ -1,10 +1,22 @@
-/* Palletes */
+/*  Palettes - A collection of colors to use on a site. These
+    colors are referenced in other CSS file. All color use 
+    should use these colors, and not set them directly.
+
+    Author: https://github.com/jxmot
+    Repository: https://github.com/jxmot/website_template-no_bootstrap
+*/
 :root{
     --white: #f9f9f9;
+    --light-grey: #c3c4c5;
     --grey: #85888C;
     --dark-grey: #36383F;
     --black: #000000;
     --yellowish: #dbcc29;
+    --green: green;
+    --bright-green: #27ff0f;
+    --bright-red: #ff0505;
+    --gold: gold;
+    --trans-black: rgba(0, 0, 0, 0.8);
     --transparent: rgba(0, 0, 0, 0);
     --trans-green: rgba(10, 120, 10, 0.7);
     --trans-red: rgba(120, 10, 10, 0.7);

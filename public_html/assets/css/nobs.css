@@ -7,32 +7,18 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
-/* Reset */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body{
     background-color: var(--body-bg);
     color: var(--body-text);
     font-family: "Roboto", sans-serif;
 }
 
-#nav-header a{
-    text-decoration: none;
-}
-
-#nav-menu ul{
-    list-style: none;
-}
-
 /* Header */
-.nav-header{
+.nav-header {
+    z-index: 1;
+
     background-color: var(--nav-header-bgcolor);
-    /* off for now, if uncommented then edit .footer below */
-    /* box-shadow: 1px 1px 5px 0px var(--nav-header-shadow); */
+    box-shadow: 0 5px var(--nav-header-bgcolor);
     position: sticky;
     top: 0;
     width: 100%;
@@ -90,7 +76,6 @@ body{
     transition: max-height .5s ease-out;
 }
 
-/* Nav Responsiveness */
 @media (min-width: 768px) {
     .nav{
         max-height: none;
@@ -102,7 +87,12 @@ body{
 }
 
 /* mobile menu item highlight */
+.menu {
+    list-style: none;
+    margin-top: 0;
+}
 .menu a{
+    text-decoration: none;
     display: block;
     color: var(--nav-menu-text);
 }
@@ -110,6 +100,31 @@ body{
     background-color: var(--nav-menu-hamb-hover-bgcolor);
     color: var(--nav-menu-hamb-hover-color);
 }
+
+@media (min-width: 768px) {
+    .menu {
+        margin-top: 0;
+    }
+
+    .menu li {
+        float: left;
+    }
+
+    .menu a {
+        /* padding is managed in logo.js:setLogo() */
+    }
+    
+    /* menu item highlight */
+    .menu a:hover {
+        background-color: var(--transparent);
+        color: var(--nav-menu-text-hover);
+    }
+    
+    .nav-icon {
+        display: none;
+    }
+}
+
 .menu-item-pad-logo {
     padding: 10px 15px 10px 15px;
 }
@@ -117,7 +132,6 @@ body{
     padding: 10px 30px 10px 30px;
 }
 
-/* Responsiveness */
 @media (min-width: 768px) {
     .menu-item-pad-logo {
         padding: 30px 15px 30px 15px;
@@ -190,27 +204,6 @@ body{
     top:0;
 }
 
-/* Responsiveness */
-@media (min-width: 768px) {
-    .menu li {
-        float: left;
-    }
-
-    .menu a {
-        /* padding is managed in logo.js:setLogo() */
-    }
-    
-    /* menu item highlight */
-    .menu a:hover {
-        background-color: var(--transparent);
-        color: var(--nav-menu-text-hover);
-    }
-    
-    .nav-icon {
-        display: none;
-    }
-}
-
 /* Main content */
 .main-content {
     /* This will be changed programmatically to 
@@ -223,8 +216,12 @@ body{
     text-align: center;
 }
 
-.article-body {
+.section-body {
     margin-left: 2rem;
+    margin-right: 2rem;
+
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 /* Footer */
@@ -232,12 +229,41 @@ body{
     bottom: 0;
     position: fixed;
     background-color: var(--footer-bgcolor);
-    /* off for now, if uncommented then edit .nav-header above */
-    /* box-shadow: 1px -1px 5px 0px var(--footer-bgcolor); */
     width: 100vw;
+
+    text-align: center;
+    height: 3rem;
 }
 
 .footer-text {
-    text-align: center;
     color: var(--footer-text);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.footer-text a {
+    text-decoration: none;
+    color: var(--footer-text);
+}
+
+/*
+    Embellishments....
+*/
+.home-bg {
+    z-index: -1;
+    background:url("https://picsum.photos/1920/1080") no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size:cover;
+}
+
+.home-bg-overlay {
+    background-color: var(--trans-black);
+}
+
+.home-body {
+    color: var(--white);
 }
