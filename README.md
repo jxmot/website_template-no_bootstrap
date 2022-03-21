@@ -329,6 +329,3 @@ And this is one of the "alternate" (`nobs-alt_1.css`) themes -
   <img src="./mdimg/theme-alt_1.png" style="width:50%"; alt="Alternate #1 Color Theme Example" txt="Alternate #1 Color Theme Example"/>
 </p>
 
----
-<img src="http://webexperiment.info/extcounter/mdcount.php?id=website_template-no_bootstrap">
-
