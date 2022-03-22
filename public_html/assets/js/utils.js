@@ -17,6 +17,7 @@ function getQueryParam(param) {
     return ((arg === undefined) || (arg === '') ? null : arg);
 };
 
+// load a javascript file by making a <script>
 function loadJScript(jsfile) {
     var script = document.createElement('script');
     script.src = filename;
@@ -25,6 +26,11 @@ function loadJScript(jsfile) {
     document.getElementsByTagName('head')[0].append(script);
 };
 
+// load a CSS file by making a <link>
+// 
+// NOTE: This is inefficient, for example if loading a 
+// "theme" CSS file and then loading subsequent "theme"  
+// files may require additional resources.
 function loadCSS(cssfile) {
     var style = document.createElement('link');
     style.href = cssfile;
