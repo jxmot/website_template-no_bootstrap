@@ -30,6 +30,7 @@
     <!-- stuff that uses the CSS grid (order is important!) -->
     <link rel="stylesheet" href="./assets/css/nobs-gallery.css"/>
     <link rel="stylesheet" href="./assets/css/nobs-contact.css"/>
+
     <link rel="stylesheet" href="./assets/css/nobs-lightbox.css">
 
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
@@ -197,7 +198,8 @@
             </div>
         </section>
     </div>
-    <!-- This is the modal, it also has clickable thumbnails under the selected image -->
+    <!-- This is the lightbox modal, it also has clickable 
+    thumbnails (commented out) under the selected image -->
     <div id="lb_modal" class="lb-modal">
         <span class="lb-close lb-cursor" onclick="lb_closeModal()">X</span>
         <div class="lb-modal-content">
@@ -270,7 +272,8 @@
         <button id="gototop-button" class="gototop" onclick="jumpToTop()" title="Go to top of page">&#9650;</button>
     </footer>
     <!-- Stuff that makes it work :) -->
-    <script src="./assets/js/logo.js"></script>
+    <script src="./assets/js/utils.js"></script>
+    <script src="./assets/js/nobs_logo.js"></script>
     <script src="./assets/js/nobs.js"></script>
     <script src="./assets/js/nobs-contact.js"></script>
     <script src="./assets/js/nobs-lightbox.js"></script>
