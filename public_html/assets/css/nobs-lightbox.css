@@ -93,6 +93,15 @@
     }
 }
 
+.lb-caption-container {
+    background-color: var(--lightbox-modal-caption-bgcolor);
+    color: var(--lightbox-modal-caption-color);
+}
+
+.lb-caption {
+    margin-top: 0;
+}
+
 /* Next & previous buttons */
 .lb-prev,
 .lb-next {
@@ -124,7 +133,6 @@
     .lb-prev {
         left: 40%;
     }
-    
     /* Position the "next button" to the right */
     .lb-next {
         right: 40%;
@@ -135,13 +143,6 @@
 .lb-prev:hover,
 .lb-next:hover {
     background-color: var(--lightbox-modal-next-hover-bgcolor);
-}
-
-.lb-caption-container {
-    text-align: center;
-    background-color: var(--lightbox-modal-caption-bgcolor);
-    padding: 2px 16px;
-    color: var(--lightbox-modal-caption-color);
 }
 
 .lb-modal-thumb-select {

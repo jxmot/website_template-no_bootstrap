@@ -43,13 +43,16 @@ function lb_showSlides(n) {
 		slides[i].style.display = 'none';
 	}
 	slides[lb_slideIndex - 1].style.display = 'block';
+    var alt = slides[lb_slideIndex - 1].children[1].alt;
+    if((alt !== undefined) && (alt.length > 0)) {
+        $('#lb_caption').html(alt);
+    } else $('#lb_caption').html('');
 
 	if ($('.lb-modal-thumb-select').length > 0) {
-		var dots = $('.lb-modal-thumb-select');
-		for (i = 0; i < dots.length; i++) {
-			dots[i].className = dots[i].className.replace(' lb-active', '');
+		var thumbs = $('.lb-modal-thumb-select');
+		for (i = 0; i < thumbs.length; i++) {
+			thumbs[i].className = thumbs[i].className.replace(' lb-active', '');
 		}
-		dots[lb_slideIndex - 1].className += ' lb-active';
-		$('#lb_caption').html(dots[lb_slideIndex - 1].alt);
+		thumbs[lb_slideIndex - 1].className += ' lb-active';
 	}
 }
