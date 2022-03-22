@@ -26,11 +26,16 @@ function loadJScript(jsfile) {
     document.getElementsByTagName('head')[0].append(script);
 };
 
-// load a CSS file by making a <link>
+// load a CSS file by making a <link> and loading it 
+// after all previously loaded CSS files.
 // 
 // NOTE: This is inefficient, for example if loading a 
 // "theme" CSS file and then loading subsequent "theme"  
-// files may require additional resources.
+// files may require additional resources. Something 
+// like `CSSStyleSheet` could work if it was available
+// in ALL browsers. Some, like Firefox require that 
+// settings are changed in the browser first. See - 
+// https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet
 function loadCSS(cssfile) {
     var style = document.createElement('link');
     style.href = cssfile;
