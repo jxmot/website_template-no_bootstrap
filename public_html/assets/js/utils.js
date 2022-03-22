@@ -16,3 +16,20 @@ function getQueryParam(param) {
     });
     return ((arg === undefined) || (arg === '') ? null : arg);
 };
+
+function loadJScript(jsfile) {
+    var script = document.createElement('script');
+    script.src = filename;
+    script.type = 'text/javascript';
+
+    document.getElementsByTagName('head')[0].append(script);
+};
+
+function loadCSS(cssfile) {
+    var style = document.createElement('link');
+    style.href = cssfile;
+    style.type = 'text/css';
+    style.rel = 'stylesheet';
+
+    document.getElementsByTagName('head')[0].append(style);
+};
