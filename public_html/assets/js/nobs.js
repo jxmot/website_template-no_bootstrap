@@ -76,4 +76,9 @@ $().ready(() => {
         // below nav bar (when inactive).
         scrollTo(event.target.href);
     });
+
+    $('.themesw').click(function(event) {
+        consolelog('themesw value: ' + event.target.value);
+        loadCSS(event.target.value)
+    });
 });

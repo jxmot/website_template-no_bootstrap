@@ -267,3 +267,11 @@ body{
 .home-body {
     color: var(--white);
 }
+
+.theme-sw, .themesw {
+    cursor: pointer;
+}
+
+.theme-sw::hover, .themesw::hover {
+    cursor: pointer;
+}
