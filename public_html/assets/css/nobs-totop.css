@@ -17,7 +17,6 @@
 
     /* placement and colors */
     z-index: 99;  
-    
     border: 1px solid var(--totop-border-color);
     background-color: var(--totop-inact-bgcolor);
     color: var(--totop-content-color);

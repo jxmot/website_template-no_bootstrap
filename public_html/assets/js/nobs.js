@@ -12,6 +12,8 @@ function consolelog(text) {
     if(conlogoutput) console.log(text);
 };
 
+const pagetop = '#main';
+
 // running with or without the logo?
 var mklogo = getLogoChoice();
 if(mklogo.logo === true) {
@@ -45,6 +47,12 @@ function scrollTo(href) {
     } else consolelog('scrollTo() - bad hdrheight');
 };
 
+// When the user clicks on the button, scroll to the top of the document
+function jumpToTop() {
+    //scrollTo('#main');
+    scrollTo(`${pagetop}`);
+};
+
 $().ready(() => {
     // this is the best place to get the height of the 
     // <header> that contains the nav menu.
@@ -52,7 +60,7 @@ $().ready(() => {
     // Set the bottom padding for <main>, all of the pages'
     // content goes inside. The <header> and <footer> must 
     // stay outside of <main>
-    $('#main').css('padding-bottom', ($('#page-footer').height() + ($('#page-footer').height() * 0.15)) + 'px');
+    $(`${pagetop}`).css('padding-bottom', ($('#page-footer').height() + ($('#page-footer').height() * 0.15)) + 'px');
 
     /*
         wait for a click from any menu item... 
@@ -69,14 +77,8 @@ $().ready(() => {
         scrollTo(event.target.href);
     });
 
-//    // clear the contact form message text counter
-//    var maxtext = $('form #message').attr('maxlength');
-//    $('form #textcount').text('(0 / '+ maxtext+')');
-//
-//    // update the count when typing occurs
-//    $('form #message').keyup(function() {
-//        var len = $(this).val().length;
-//        var lenstr = '('+len+' / '+ maxtext+')';
-//        $('form #textcount').text(lenstr);
-//    });
+    $('.themesw').click(function(event) {
+        consolelog('themesw value: ' + event.target.value);
+        loadCSS(event.target.value)
+    });
 });

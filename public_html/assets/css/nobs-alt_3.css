@@ -9,7 +9,6 @@
     --body-text: var(--black);
 
     --nav-header-bgcolor: var(--rich-black-fogra-39);
-    /* --nav-header-shadow: var(--grey); */
 
     --nav-menu-text-hover: var(--silver-metallic);
     --nav-menu-text: var(--cultured);
@@ -29,7 +28,7 @@
     --totop-content-color: var(--white);
     --totop-border-color: var(--white);
 
-    --contact-form-info-bgcolor: var(--nav-header-bgcolor);
+    --contact-form-info-bgcolor: var(--davys-grey);
     --contact-form-info-color: var(--white);
     --contact-form-form-bgcolor: var(--white);
     --contact-form-form-color:  var(--black);

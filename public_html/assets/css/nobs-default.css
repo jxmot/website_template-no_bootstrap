@@ -9,7 +9,6 @@
     --body-text: var(--black);
 
     --nav-header-bgcolor: var(--dark-grey);
-    /* --nav-header-shadow: var(--grey); */
 
     --nav-menu-text-hover: var(--yellowish);
     --nav-menu-text: var(--white);
@@ -29,8 +28,8 @@
     --totop-content-color: var(--white);
     --totop-border-color: var(--white);
 
-    --contact-form-info-bgcolor: var(--nav-header-bgcolor);
-    --contact-form-info-color: var(--white);
+    --contact-form-info-bgcolor: var(--light-grey);
+    --contact-form-info-color: var(--black);
     --contact-form-form-bgcolor: var(--white);
     --contact-form-form-color: var(--black);
     --contact-form-form-focus: var(--bright-green);
@@ -42,7 +41,8 @@
     --lightbox-modal-close: var(--white);
     --lightbox-modal-close-hover:  var(--light-grey);
     --lightbox-modal-close-focus: var(--lightbox-modal-close-hover);
-    --lightbox-modal-next: var(--white);
+    /* --lightbox-modal-next: var(--white); */
+    --lightbox-modal-next: var(--bright-green);
     --lightbox-modal-prev: var(--lightbox-modal-next);
     --lightbox-modal-next-hover-bgcolor: rgba(0, 0, 0, 0.8);
     --lightbox-modal-prev-hover-bgcolor: var(--lightbox-modal-next-hover-bgcolor);

@@ -30,6 +30,7 @@
     <!-- stuff that uses the CSS grid (order is important!) -->
     <link rel="stylesheet" href="./assets/css/nobs-gallery.css"/>
     <link rel="stylesheet" href="./assets/css/nobs-contact.css"/>
+
     <link rel="stylesheet" href="./assets/css/nobs-lightbox.css">
 
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
@@ -58,7 +59,7 @@
             <ul class="menu">
                 <li><a id="home" class="navitem" href="#home">Home</a></li>
                 <li><a id="nav1" class="navitem" href="#navtarg1">Gallery</a></li>
-                <li><a id="nav2" class="navitem" href="#navtarg2">Blog</a> </li>
+                <li><a id="nav2" class="navitem" href="#navtarg2">Themes</a> </li>
                 <li><a id="nav3" class="navitem" href="#navtarg3">Contact</a></li>
             </ul>
         </nav>
@@ -135,7 +136,28 @@
             </p>
         </section>
         <section id="navtarg2" class="section-body">
-            <h2>Blog</h2>
+            <h2>Themes</h2>
+            <p>
+                Select a theme below and see the colors change. This demonstrates that CSS files can be loaded programatically.
+            </p>
+            <div id="theme_switch">
+                <form>
+                    <input checked id="th0" class="themesw" type="radio" name="themesw" value="./assets/css/nobs-default.css"> 
+                    <label for="th0" class="theme-sw"> - Default</label>
+                    <br>
+                    <input id="th1" class="themesw" type="radio" name="themesw" value="./assets/css/nobs-alt_1.css">
+                    <label for="th1" class="theme-sw"> - Theme #1</label>
+                    <br>
+                    <input id="th2" class="themesw" type="radio" name="themesw" value="./assets/css/nobs-alt_2.css">
+                    <label for="th2" class="theme-sw"> - Theme #2</label>
+                    <br>
+                    <input id="th3" class="themesw" type="radio" name="themesw" value="./assets/css/nobs-alt_3.css">
+                    <label for="th3" class="theme-sw"> - Theme #3</label>
+                    <br>
+                    <input id="th4" class="themesw" type="radio" name="themesw" value="./assets/css/nobs-alt_4.css">
+                    <label for="th4" class="theme-sw"> - Theme #4</label>
+                </form>
+            </div>
             <p>
                 Biltong do reprehenderit et mollit porchetta officia drumstick, t-bone pariatur exercitation nulla nostrud. Aliqua ea ut aliquip tongue nisi. Dolore magna elit ball tip doner qui ribeye culpa proident leberkas short loin. Chuck dolor ut excepteur, eiusmod brisket esse eu ham hock veniam ea kielbasa ball tip meatball bacon.
             </p>
@@ -197,68 +219,69 @@
             </div>
         </section>
     </div>
-    <!-- This is the modal, it also has clickable thumbnails under the selected image -->
+    <!-- This is the lightbox modal, it also has clickable 
+    thumbnails (commented out) under the selected image -->
     <div id="lb_modal" class="lb-modal">
         <span class="lb-close lb-cursor" onclick="lb_closeModal()">X</span>
         <div class="lb-modal-content">
             <!-- images shown in modal -->
-            <div class="lb-mySlides">
+            <div class="lb-slides">
                 <div class="lb-numbertext">1 / 7</div>
-                <img class="lb-img" src="https://picsum.photos/seed/abcd/300/200" style="width:100%">
+                <img class="lb-img" src="https://picsum.photos/seed/abcd/300/200" alt="">
             </div>
-            <div class="lb-mySlides">
+            <div class="lb-slides">
                 <div class="lb-numbertext">2 / 7</div>
-                <img class="lb-img" src="https://picsum.photos/seed/efgh/300/200" style="width:100%">
+                <img class="lb-img" src="https://picsum.photos/seed/efgh/300/200" alt="Padlocks on a Fence">
             </div>
-            <div class="lb-mySlides">
+            <div class="lb-slides">
                 <div class="lb-numbertext">3 / 7</div>
-                <img class="lb-img" src="https://picsum.photos/seed/ijkl/300/200" style="width:100%">
+                <img class="lb-img" src="https://picsum.photos/seed/ijkl/300/200" alt="">
             </div>
-            <div class="lb-mySlides">
+            <div class="lb-slides">
                 <div class="lb-numbertext">4 / 7</div>
-                <img class="lb-img" src="https://picsum.photos/seed/mnop/300/200" style="width:100%">
+                <img class="lb-img" src="https://picsum.photos/seed/mnop/300/200" alt="">
             </div>
-            <div class="lb-mySlides">
+            <div class="lb-slides">
                 <div class="lb-numbertext">5 / 7</div>
-                <img class="lb-img" src="https://picsum.photos/seed/qrst/300/200" style="width:100%">
+                <img class="lb-img" src="https://picsum.photos/seed/qrst/300/200" alt="">
             </div>
-            <div class="lb-mySlides">
+            <div class="lb-slides">
                 <div class="lb-numbertext">6 / 7</div>
-                <img class="lb-img" src="https://picsum.photos/seed/uvwx/300/200" style="width:100%">
+                <img class="lb-img" src="https://picsum.photos/seed/uvwx/300/200">
             </div>
-            <div class="lb-mySlides">
+            <div class="lb-slides">
                 <div class="lb-numbertext">7 / 7</div>
-                <img class="lb-img" src="https://picsum.photos/seed/yzyz/300/200" style="width:100%">
+                <img class="lb-img" src="https://picsum.photos/seed/yzyz/300/200">
             </div>
             <!-- left & right buttons -->
-            <a class="lb-prev" onclick="lb_plusSlides(-1)">&#10094;</a>
-            <a class="lb-next" onclick="lb_plusSlides(1)">&#10095;</a>
+            <a class="lb-prev" onclick="lb_plusSlides(-1)">&#10094;<small>&#10094;&#10094;&#10094;</small></a>
+            <a class="lb-next" onclick="lb_plusSlides(1)"><small>&#10095;&#10095;&#10095;</small>&#10095;</a>
             <!-- caption under the image -->
             <div class="lb-caption-container">
-                <p id="lb_caption"></p>
+                <p id="lb_caption" class="lb-caption"></p>
             </div>
             <!-- here are the modal thumbnails -->
 <!--
             <div class="lb-column">
-                <img class="lb-demo lb-cursor" src="https://picsum.photos/seed/abcd/300/200" style="width:100%" onclick="lb_currentSlide(1)" alt="seed/abcd">
+                <img class="lb-modal-thumb-select lb-cursor" src="https://picsum.photos/seed/abcd/300/200" style="width:100%" onclick="lb_currentSlide(1)">
             </div>
             <div class="lb-column">
-                <img class="lb-demo lb-cursor" src="https://picsum.photos/seed/efgh/300/200" style="width:100%" onclick="lb_currentSlide(2)" alt="seed/efgh">
+                <img class="lb-modal-thumb-select lb-cursor" src="https://picsum.photos/seed/efgh/300/200" style="width:100%" onclick="lb_currentSlide(2)">
             </div>
             <div class="lb-column">
-                <img class="lb-demo lb-cursor" src="https://picsum.photos/seed/ijkl/300/200" style="width:100%" onclick="lb_currentSlide(3)" alt="seed/ijkl">
+                <img class="lb-modal-thumb-select lb-cursor" src="https://picsum.photos/seed/ijkl/300/200" style="width:100%" onclick="lb_currentSlide(3)">
             </div>
             <div class="lb-column">
-                <img class="lb-demo lb-cursor" src="https://picsum.photos/seed/mnop/300/200" style="width:100%" onclick="lb_currentSlide(4)" alt="seed/mnop">
+                <img class="lb-modal-thumb-select lb-cursor" src="https://picsum.photos/seed/mnop/300/200" style="width:100%" onclick="lb_currentSlide(4)">
             </div>
             <div class="lb-column">
-                <img class="lb-demo lb-cursor" src="https://picsum.photos/seed/qrst/300/200" style="width:100%" onclick="lb_currentSlide(5)" alt="seed/qrst">
+                <img class="lb-modal-thumb-select lb-cursor" src="https://picsum.photos/seed/qrst/300/200" style="width:100%" onclick="lb_currentSlide(5)">
             </div>
             <div class="lb-column">
-                <img class="lb-demo lb-cursor" src="https://picsum.photos/seed/uvwx/300/200" style="width:100%" onclick="lb_currentSlide(6)" alt="seed/uvwx">
+                <img class="lb-modal-thumb-select lb-cursor" src="https://picsum.photos/seed/uvwx/300/200" style="width:100%" onclick="lb_currentSlide(6)">
             </div>
             <div class="lb-column">
-                <img class="lb-demo lb-cursor" src="https://picsum.photos/seed/yzyz/300/200" style="width:100%" onclick="lb_currentSlide(7)" alt="seed/yzyz">
+                <img class="lb-modal-thumb-select lb-cursor" src="https://picsum.photos/seed/yzyz/300/200" style="width:100%" onclick="lb_currentSlide(7)">
             </div>
 -->
         </div>
@@ -270,7 +293,8 @@
         <button id="gototop-button" class="gototop" onclick="jumpToTop()" title="Go to top of page">&#9650;</button>
     </footer>
     <!-- Stuff that makes it work :) -->
-    <script src="./assets/js/logo.js"></script>
+    <script src="./assets/js/utils.js"></script>
+    <script src="./assets/js/nobs_logo.js"></script>
     <script src="./assets/js/nobs.js"></script>
     <script src="./assets/js/nobs-contact.js"></script>
     <script src="./assets/js/nobs-lightbox.js"></script>
