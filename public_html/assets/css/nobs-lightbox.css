@@ -7,11 +7,6 @@
         https://github.com/jxmot
 
     Repository: https://github.com/jxmot/website_template-no_bootstrap
-
-    To Do:
-        * change positions in pixels to rem's 
-        * 
-
 */
 .lb-row > .lb-column {
     padding: 0 8px;
@@ -47,11 +42,13 @@
 /* Modal Content */
 .lb-modal-content {
     position: relative;
-    background-color: var(--lightbox-modal-content-bgcolor);
+    /* background-color: var(--lightbox-modal-content-bgcolor); */
     margin: auto;
     padding: 0;
     width: 90%;
     max-width: 1200px;
+    /* center the image inside */
+    text-align: center;
 }
 
 /* The Close Button */
@@ -79,15 +76,38 @@
     cursor: pointer;
 }
 
+/* Number text (1/3 etc) */
+.lb-numbertext {
+    color: var(--lightbox-modal-numbertext);
+    /* font-size: 12px; */
+    padding: 8px 12px;
+    /* position: absolute; */
+    /* top: 0; */
+}
+
+.lb-img {
+    /* margin-bottom: -4px; */
+    width: 80%;
+    height: 80%;
+}
+
+@media (min-width: 768px) {
+    .lb-img {
+        /* margin-bottom: -4px; */
+        width: 60%;
+        height: 60%;
+    }
+}
+
 /* Next & previous buttons */
 .lb-prev,
 .lb-next {
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    /* top: 50%; */
     width: auto;
-    padding: 16px;
-    margin-top: -50px;
+    /* padding: 0 16px 0 16px; */
+    margin-top: 2.5%;
     color: var(--lightbox-modal-next);
     font-weight: bold;
     font-size: 20px;
@@ -97,29 +117,32 @@
     -webkit-user-select: none;
 }
 
+/* Position the "previous button" to the left */
+.lb-prev {
+    left: 35%;
+}
+
 /* Position the "next button" to the right */
 .lb-next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+    right: 35%;
+}
+
+@media (min-width: 768px) {
+    /* Position the "previous button" to the left */
+    .lb-prev {
+        left: 40%;
+    }
+    
+    /* Position the "next button" to the right */
+    .lb-next {
+        right: 40%;
+    }
 }
 
 /* On hover, add a black background color with a little bit see-through */
 .lb-prev:hover,
 .lb-next:hover {
     background-color: var(--lightbox-modal-next-hover-bgcolor);
-}
-
-/* Number text (1/3 etc) */
-.lb-numbertext {
-    color: var(--lightbox-modal-numbertext);
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
-
-.lb-img {
-    margin-bottom: -4px;
 }
 
 .lb-caption-container {
