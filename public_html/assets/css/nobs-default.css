@@ -28,8 +28,8 @@
     --totop-content-color: var(--white);
     --totop-border-color: var(--white);
 
-    --contact-form-info-bgcolor: var(--nav-header-bgcolor);
-    --contact-form-info-color: var(--white);
+    --contact-form-info-bgcolor: var(--light-grey);
+    --contact-form-info-color: var(--black);
     --contact-form-form-bgcolor: var(--white);
     --contact-form-form-color: var(--black);
     --contact-form-form-focus: var(--bright-green);
