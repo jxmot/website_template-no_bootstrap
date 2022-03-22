@@ -32,16 +32,20 @@ function lb_currentSlide(n) {
 function lb_showSlides(n) {
   var i;
   var slides = $('.lb-mySlides');
-  var dots = $('.lb-demo');
   if (n > slides.length) {lb_slideIndex = 1}
   if (n < 1) {lb_slideIndex = slides.length}
+
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = 'none';
   }
+  slides[lb_slideIndex-1].style.display = 'block';
+
+  if($('#lb_modal_thumbs').length > 0) {
+  var dots = $('.lb-demo');
   for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(' lb-active', '');
   }
-  slides[lb_slideIndex-1].style.display = 'block';
   dots[lb_slideIndex-1].className += ' lb-active';
   $('#lb_caption').html(dots[lb_slideIndex-1].alt);
+  }
 }
