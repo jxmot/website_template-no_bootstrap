@@ -19,7 +19,7 @@ function lb_closeModal() {
 }
 
 var lb_slideIndex = 1;
-lb_showSlides(lb_slideIndex);
+// lb_showSlides(lb_slideIndex);
 
 function lb_plusSlides(n) {
 	lb_showSlides(lb_slideIndex += n);
