@@ -31,7 +31,7 @@ function lb_currentSlide(n) {
 
 function lb_showSlides(n) {
   var i;
-  var slides = $('.lb-mySlides');
+  var slides = $('.lb-slides');
   if (n > slides.length) {lb_slideIndex = 1}
   if (n < 1) {lb_slideIndex = slides.length}
 
