@@ -129,12 +129,12 @@
     color: var(--lightbox-modal-caption-color);
 }
 
-.lb-demo {
+.lb-modal-thumb-select {
     opacity: 0.6;
 }
 
 .lb-active,
-.lb-demo:hover {
+.lb-modal-thumb-select:hover {
     opacity: 1;
 }
 

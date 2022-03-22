@@ -40,8 +40,8 @@ function lb_showSlides(n) {
   }
   slides[lb_slideIndex-1].style.display = 'block';
 
-  if($('#lb_modal_thumbs').length > 0) {
-  var dots = $('.lb-demo');
+  if($('.lb-modal-thumb-select').length > 0) {
+  var dots = $('.lb-modal-thumb-select');
   for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(' lb-active', '');
   }
