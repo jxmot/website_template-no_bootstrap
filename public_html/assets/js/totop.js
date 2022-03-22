@@ -16,8 +16,9 @@
 // call our function when the window contents are scrolled
 window.onscroll = function() {onWindowScroll()};
 
-// a percentage of document size, if scrolled past this
-// point the "to top" button will be displayed.
+// A percentage of document size, if scrolled past this
+// point the "to top" button will be displayed. Adjust 
+// as needed.
 const scroll_travel = 0.05;
 
 function onWindowScroll() {
@@ -29,13 +30,6 @@ function onWindowScroll() {
         document.getElementById("gototop-button").style.display = "none";
     }
 }
-
-// When the user clicks on the button, scroll to the top of the document
-function jumpToTop() {
-// NOTE: modify the argument to use the target 
-// that's the most appropriate for your needs.
-    scrollTo('#main');
-} 
 
 // returns true if the "to top" button should be made visible
 function showToTop() {
