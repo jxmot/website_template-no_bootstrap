@@ -3,9 +3,7 @@
     Originally found at:
         https://www.w3schools.com/howto/howto_js_lightbox.asp
 
-    Extensively Modified By: 
-        https://github.com/jxmot
-
+    Extensively Modified By: https://github.com/jxmot
         * functions renamed, all are prepended with "lb_".
         * global variables renamed, all are prepended with "lb_".
         * refactored lb_showSlides() - 
@@ -13,7 +11,6 @@
 
     Repository: https://github.com/jxmot/website_template-no_bootstrap
 */
-
 function lb_openModal() {
 	// TODO: emit a signal that will close the menu
 	$('#lb_modal').css('display', 'block');;
