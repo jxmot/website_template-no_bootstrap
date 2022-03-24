@@ -93,13 +93,14 @@
     }
 }
 
-.lb-caption-container {
-    background-color: var(--lightbox-modal-caption-bgcolor);
-    color: var(--lightbox-modal-caption-color);
-}
+/* .lb-caption-container { */
+    /* background-color: var(--lightbox-modal-caption-bgcolor); */
+    /* color: var(--lightbox-modal-caption-color); */
+/* } */
 
 .lb-caption {
-    margin-top: 0;
+    background-color: var(--lightbox-modal-caption-bgcolor);
+    color: var(--lightbox-modal-caption-color);
 }
 
 /* Next & previous buttons */
