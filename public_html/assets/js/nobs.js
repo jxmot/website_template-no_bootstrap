@@ -4,15 +4,39 @@
     Author: https://github.com/jxmot
     Repository: https://github.com/jxmot/website_template-no_bootstrap
 */
-
 const pagetop = '#main';
 
 // turn on debug stuff? 
 if(isQueryParam('devdebug') === true) {
     $('#devdebug').show();
 
+    // https://code-boxx.com/detect-browser-with-javascript/
+    // OPERA 8.0+
+    var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+    // FIREFOX 1.0+
+    var isFirefox = typeof InstallTrigger !== 'undefined';
+    // SAFARI 3.0+
+    var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === '[object SafariRemoteNotification]'; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
+    // INTERNET EXPLORER 6-11
+    var isIE = /*@cc_on!@*/false || !!document.documentMode;
+    // EDGE 20+
+    var isEdge = !isIE && !!window.StyleMedia;
+    // CHROME 1+
+    var isChrome = !!window.chrome;
+    // BLINK ENGINE DETECTION
+    var isBlink = (isChrome || isOpera) && !!window.CSS;
 
-const pagetop = '#main';
+    var browser = 'UNK';
+    if(isOpera) browser = 'Opera';
+    if(isFirefox) browser = 'Firefox';
+    if(isSafari) browser = 'Safari';
+    if(isIE) browser = 'IE';
+    if(isEdge) browser = 'Edge';
+    if(isChrome) browser = 'Chrome';
+    if(isBlink) browser = browser + ' Blink';
+
+    document.getElementById('whobrowse').children[0].innerText = browser;
+}
 
 // running with or without the logo?
 var mklogo = getLogoChoice();
