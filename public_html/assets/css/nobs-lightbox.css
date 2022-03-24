@@ -121,22 +121,22 @@
 
 /* Position the "previous button" to the left */
 .lb-prev {
-    left: 35%;
+    left: 10%;
 }
 
 /* Position the "next button" to the right */
 .lb-next {
-    right: 35%;
+    right: 10%;
 }
 
 @media (min-width: 768px) {
     /* Position the "previous button" to the left */
     .lb-prev {
-        left: 40%;
+        left: 20%;
     }
     /* Position the "next button" to the right */
     .lb-next {
-        right: 40%;
+        right: 20%;
     }
 }
 
