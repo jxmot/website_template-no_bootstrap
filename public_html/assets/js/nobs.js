@@ -5,12 +5,14 @@
     Repository: https://github.com/jxmot/website_template-no_bootstrap
 */
 const pagetop = '#main';
+const browserinfo = getBrowser();
+const badbrowser = (browserMasks[FIREFOX][BMASK] | browserMasks[MOBILE][BMASK]);
 
 // turn on debug stuff? 
 if(isQueryParam('devdebug') === true) {
     $('#devdebug').show();
 
-    var binfo = getBrowser();
+    var binfo = browserinfo;
     document.getElementById('whobrowse').children[0].innerText = binfo.browser;
     document.getElementById('device').children[0].innerText = binfo.device;
     var mstr = '';
@@ -21,6 +23,7 @@ if(isQueryParam('devdebug') === true) {
         mstr = mstr + binfo.mask.toString(2);
     } else mstr = binfo.mask.toString(2);
     document.getElementById('mask').children[0].innerText = mstr + ' - 0x' + binfo.mask.toString(16);
+    document.getElementById('isgood').children[0].innerText = (badbrowser === binfo.mask ? 'BAD' : 'GOOD');
 };
 
 // running with or without the logo?
