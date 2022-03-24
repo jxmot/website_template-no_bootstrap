@@ -1,6 +1,6 @@
 /*
-    totop.js - "To Top" functionality, displays a stylized 
-    "to top" button when the document is scrolled past a 
+    totop.js - 'To Top' functionality, displays a stylized 
+    'to top' button when the document is scrolled past a 
     specific distance determined by the length of the document.
 
     NOTE: The scrollTo() function resides elsewhere. That is 
@@ -16,22 +16,37 @@
 // call our function when the window contents are scrolled
 window.onscroll = function() {onWindowScroll()};
 
+// https://linuxhint.com/disable-scrolling-javascript/
+
 // A percentage of document size, if scrolled past this
-// point the "to top" button will be displayed. Adjust 
+// point the 'to top' button will be displayed. Adjust 
 // as needed.
 const scroll_travel = 0.05;
+var isToTop = false;
 
 function onWindowScroll() {
     // for debugging
     //dump();
     if(showToTop()) {
-        document.getElementById("gototop-button").style.display = "block";
+        if(isToTop === false) {
+            document.getElementById('gototop-button').style.display = 'block';
+            isToTop = true;
+
+            if(document.getElementById('devdebug').style.display === '') {
+                document.getElementById('totop_w').children[0].innerText = document.getElementById('gototop-button').offsetWidth;
+                document.getElementById('totop_h').children[0].innerText = document.getElementById('gototop-button').offsetHeight;
+                document.getElementById('totop_r').children[0].innerText = JSON.stringify(document.getElementById('gototop-button').getBoundingClientRect(), null, 4);
+            }
+        }
     } else {
-        document.getElementById("gototop-button").style.display = "none";
+        if(isToTop === true) {
+            document.getElementById('gototop-button').style.display = 'none';
+            isToTop = false;
+        }
     }
 }
 
-// returns true if the "to top" button should be made visible
+// returns true if the 'to top' button should be made visible
 function showToTop() {
     // the point where the the button appears is based on the 
     // percentage of the height of the document and NOT the window.
