@@ -50,7 +50,11 @@ function lb_showSlides(n) {
     var alt = slides[lb_slideIndex - 1].children[1].alt;
     if((alt !== undefined) && (alt.length > 0)) {
         $('#lb_caption').html(alt);
-    } else $('#lb_caption').html('');
+        $('#lb_caption').css('color','var(--lightbox-modal-caption-color)');
+    } else {
+        $('#lb_caption').css('color','var(--lightbox-modal-caption-bgcolor)');
+        $('#lb_caption').html('.');
+    }
 
 	if ($('.lb-modal-thumb-select').length > 0) {
 		var thumbs = $('.lb-modal-thumb-select');
