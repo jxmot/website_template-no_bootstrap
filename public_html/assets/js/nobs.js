@@ -10,48 +10,17 @@ const pagetop = '#main';
 if(isQueryParam('devdebug') === true) {
     $('#devdebug').show();
 
-    // Find the browser...
-    // https://code-boxx.com/detect-browser-with-javascript/
-    // OPERA 8.0+
-    var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
-    // FIREFOX 1.0+
-    var isFirefox = typeof InstallTrigger !== 'undefined';
-    // SAFARI 3.0+
-    var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === '[object SafariRemoteNotification]'; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
-    // INTERNET EXPLORER 6-11
-    var isIE = /*@cc_on!@*/false || !!document.documentMode;
-    // EDGE 20+
-    var isEdge = !isIE && !!window.StyleMedia;
-    // CHROME 1+
-    var isChrome = !!window.chrome;
-    // BLINK ENGINE DETECTION
-    var isBlink = (isChrome || isOpera) && !!window.CSS;
-
-    var browser = '';
-    // show which browser is in use...
-    if(isOpera) browser = 'Opera';
-    if(isFirefox) browser = browser + ' Firefox';
-    if(isSafari) browser = browser + ' Safari';
-    if(isIE) {
-        browser = browser + ' IE';
-        alert('You appear to be using Internet Exploror, it is obsolete. Please use something newer.');
-    }
-    if(isEdge) browser = browser + ' Edge';
-    if(isChrome) browser = browser + ' Chrome';
-    if(isBlink) browser = browser + ' Blink';
-
-    document.getElementById('whobrowse').children[0].innerText = browser;
-
-    var device = '';
-    const ua = navigator.userAgent;
-    if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
-        device = 'tablet';
-    }
-    else if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
-        device = 'mobile';
-    } else device = 'desktop';
-
-    document.getElementById('device').children[0].innerText = device;
+    var binfo = getBrowser();
+    document.getElementById('whobrowse').children[0].innerText = binfo.browser;
+    document.getElementById('device').children[0].innerText = binfo.device;
+    var mstr = '';
+    if(binfo.mask.toString(2).length < 16) {
+        for(x = 0; x < (16 - binfo.mask.toString(2).length); x++) {
+            mstr = mstr + '0';
+        }
+        mstr = mstr + binfo.mask.toString(2);
+    } else mstr = binfo.mask.toString(2);
+    document.getElementById('mask').children[0].innerText = mstr + ' - 0x' + binfo.mask.toString(16);
 };
 
 // running with or without the logo?
