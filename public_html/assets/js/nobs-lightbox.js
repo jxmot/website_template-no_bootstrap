@@ -6,6 +6,11 @@
     Extensively Modified By: 
         https://github.com/jxmot
 
+        * functions renamed, all are prepended with "lb_".
+        * global variables renamed, all are prepended with "lb_".
+        * refactored lb_showSlides() - 
+            * 
+
     Repository: https://github.com/jxmot/website_template-no_bootstrap
 */
 
