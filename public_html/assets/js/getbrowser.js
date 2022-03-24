@@ -22,8 +22,6 @@ function getBrowser() {
         mask: 0x0000
     };
 
-    var mask = 0x0000;
-
     // Find the browser...
     // OPERA 8.0+ [mask 0x0001]
     var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
@@ -40,36 +38,30 @@ function getBrowser() {
     // BLINK ENGINE DETECTION [mask 0x0040]
     var isBlink = (isChrome || isOpera) && !!window.CSS;
 
-    var browser = '';
-    // show which browser is in use...
-    if(isOpera) {browser = 'Opera'; mask |= 0x0001;}
-    if(isFirefox) {browser = browser + ' Firefox'; mask |= 0x0002;}
-    if(isSafari) {browser = browser + ' Safari'; mask |= 0x0004;}
+    // which browser is in use?
+    if(isOpera) {ret.browser = 'Opera'; ret.mask |= 0x0001;}
+    if(isFirefox) {ret.browser = ret.browser + ' Firefox'; ret.mask |= 0x0002;}
+    if(isSafari) {ret.browser = ret.browser + ' Safari'; ret.mask |= 0x0004;}
     if(isIE) {
-        browser = browser + ' IE';
-        mask |= 0x0008;
+        ret.browser = ret.browser + ' IE';
+        ret.mask |= 0x0008;
         alert('You appear to be using Internet Exploror, it is obsolete. Please use something newer.');
     }
-    if(isEdge) {browser = browser + ' Edge'; mask |= 0x0010;}
-    if(isChrome) {browser = browser + ' Chrome';  mask |= 0x0020;}
-    if(isBlink) {browser = browser + ' Blink'; mask |= 0x0040;}
+    if(isEdge) {ret.browser = ret.browser + ' Edge'; ret.mask |= 0x0010;}
+    if(isChrome) {ret.browser = ret.browser + ' Chrome';  ret.mask |= 0x0020;}
+    if(isBlink) {ret.browser = ret.browser + ' Blink'; ret.mask |= 0x0040;}
 
-    // show the device type...
-    var device = '';
+    // get the device type...
     var ua = navigator.userAgent;
     if(/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
-        device = 'tablet'; // [mask 0x0100]
-        mask |= 0x0100;
+        ret.device = 'tablet'; // [mask 0x0100]
+        ret.mask |= 0x0100;
     } else if(/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
-        device = 'mobile'; // [mask 0x0200]
-        mask |= 0x0200;
+        ret.device = 'mobile'; // [mask 0x0200]
+        ret.mask |= 0x0200;
     } else {
-        device = 'desktop'; // [mask 0x0400]
-        mask |= 0x0400;
+        ret.device = 'desktop'; // [mask 0x0400]
+        ret.mask |= 0x0400;
     }
-
-    ret.browser = browser;
-    ret.device = device;
-    ret.mask = mask;
     return ret;
 };
