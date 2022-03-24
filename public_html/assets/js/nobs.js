@@ -10,6 +10,7 @@ const pagetop = '#main';
 if(isQueryParam('devdebug') === true) {
     $('#devdebug').show();
 
+    // Find the browser...
     // https://code-boxx.com/detect-browser-with-javascript/
     // OPERA 8.0+
     var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
@@ -27,7 +28,7 @@ if(isQueryParam('devdebug') === true) {
     var isBlink = (isChrome || isOpera) && !!window.CSS;
 
     var browser = '';
-
+    // show which browser is in use...
     if(isOpera) browser = 'Opera';
     if(isFirefox) browser = browser + ' Firefox';
     if(isSafari) browser = browser + ' Safari';
@@ -40,7 +41,18 @@ if(isQueryParam('devdebug') === true) {
     if(isBlink) browser = browser + ' Blink';
 
     document.getElementById('whobrowse').children[0].innerText = browser;
-}
+
+    var device = '';
+    const ua = navigator.userAgent;
+    if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+        device = 'tablet';
+    }
+    else if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
+        device = 'mobile';
+    } else device = 'desktop';
+
+    document.getElementById('device').children[0].innerText = device;
+};
 
 // running with or without the logo?
 var mklogo = getLogoChoice();
