@@ -26,13 +26,17 @@ if(isQueryParam('devdebug') === true) {
     // BLINK ENGINE DETECTION
     var isBlink = (isChrome || isOpera) && !!window.CSS;
 
-    var browser = 'UNK';
+    var browser = '';
+
     if(isOpera) browser = 'Opera';
-    if(isFirefox) browser = 'Firefox';
-    if(isSafari) browser = 'Safari';
-    if(isIE) browser = 'IE';
-    if(isEdge) browser = 'Edge';
-    if(isChrome) browser = 'Chrome';
+    if(isFirefox) browser = browser + ' Firefox';
+    if(isSafari) browser = browser + ' Safari';
+    if(isIE) {
+        browser = browser + ' IE';
+        alert('You appear to be using Internet Exploror, it is obsolete. Please use something newer.');
+    }
+    if(isEdge) browser = browser + ' Edge';
+    if(isChrome) browser = browser + ' Chrome';
     if(isBlink) browser = browser + ' Blink';
 
     document.getElementById('whobrowse').children[0].innerText = browser;
