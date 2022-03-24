@@ -5,12 +5,12 @@
     Repository: https://github.com/jxmot/website_template-no_bootstrap
 */
 
-// A single place to control if calls to 
-// console.log() will produce any output.
-var conlogoutput = true;
-function consolelog(text) {
-    if(conlogoutput) console.log(text);
-};
+const pagetop = '#main';
+
+// turn on debug stuff? 
+if(isQueryParam('devdebug') === true) {
+    $('#devdebug').show();
+
 
 const pagetop = '#main';
 

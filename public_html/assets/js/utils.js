@@ -5,6 +5,13 @@
     Author: https://github.com/jxmot
     Repository: https://github.com/jxmot/website_template-no_bootstrap
 */
+// A single place to control if calls to 
+// console.log() will produce any output.
+var conlogoutput = true;
+function consolelog(text) {
+    if(conlogoutput) console.log(text);
+};
+
 // look for a specifc query parameter, and if it exists
 // return its value.
 function getQueryParam(param) {
