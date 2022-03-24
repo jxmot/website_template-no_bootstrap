@@ -10,7 +10,7 @@
             {
                 browser: a string with the browser name(s)
                 device: a string with the device type 
-                mask: a bitmask indicagting browser & device 
+                mask: a bitmask indicating browser & device 
             }
 
     Repository: https://github.com/jxmot/website_template-no_bootstrap
@@ -70,7 +70,7 @@ function getBrowser() {
     if(isOpera)   {ret.browser = browserMasks[OPERA][BSTRING]; ret.mask |= browserMasks[OPERA][BMASK];}
     if(isFirefox) {ret.browser = ret.browser + ' ' + browserMasks[FIREFOX][BSTRING]; ret.mask |= browserMasks[FIREFOX][BMASK];}
     if(isSafari)  {ret.browser = ret.browser + ' ' + browserMasks[SAFARI][BSTRING]; ret.mask |= browserMasks[SAFARI][BMASK];}
-    if(isIE)      {
+    if(isIE) {
         ret.browser = ' ' + ret.browser + browserMasks[IE][BSTRING]; 
         ret.mask |= browserMasks[IE][BMASK];
         alert('You appear to be using Internet Exploror, it is obsolete. Please use something newer.');
