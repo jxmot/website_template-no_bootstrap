@@ -12,16 +12,41 @@ function consolelog(text) {
     if(conlogoutput) console.log(text);
 };
 
+// https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams
+function getQuerys(query) {
+    const params = new URLSearchParams(query);
+    var ret = [];
+    for (const entry of params.entries()) {
+        consolelog(entry);
+        ret.push(entry);
+    }
+    return ret;
+};
+
 // look for a specifc query parameter, and if it exists
 // return its value.
 function getQueryParam(param) {
-    var arg = null;
-    window.location.search.substr(1).split("&").forEach(function(item) {
-        if (param === item.split("=")[0]) {
-            arg = item.split("=")[1];
+    var result = getQuerys(window.location.search);
+    if(result.length > 0) {
+        for(var ix = 0; ix < result.length; ix++) {
+            if(result[ix][0] === param) {
+                return ((result[ix][1] === undefined) || (result[ix][1] === '') ? null : result[ix][1]);
+            }
         }
-    });
-    return ((arg === undefined) || (arg === '') ? null : arg);
+    }
+    return null;
+};
+
+function isQueryParam(param) {
+    var result = getQuerys(window.location.search);
+    if(result.length > 0) {
+        for(var ix = 0; ix < result.length; ix++) {
+            if(result[ix][0] === param) {
+                return true;
+            }
+        }
+    }
+    return false;
 };
 
 // load a javascript file by making a <script>
@@ -37,7 +62,7 @@ function loadJScript(jsfile) {
 // after all previously loaded CSS files.
 // 
 // NOTE: This is inefficient, for example if loading a 
-// "theme" CSS file and then loading subsequent "theme"  
+// 'theme' CSS file and then loading subsequent 'theme'  
 // files may require additional resources. Something 
 // like `CSSStyleSheet` could work if it was available
 // in ALL browsers. Some, like Firefox require that 
