@@ -1,6 +1,6 @@
 /* Get Browser & Device Information
 
-    Originally found at:
+    Some code originally found at:
         https://code-boxx.com/detect-browser-with-javascript/
 
     Extensively Modified By: https://github.com/jxmot
@@ -15,6 +15,34 @@
 
     Repository: https://github.com/jxmot/website_template-no_bootstrap
 */
+// browser name, device types, and corresponding bit masks
+const browserMasks = [
+     ['Opera', 0x0001]
+    ,['Firefox',0x0002]
+    ,['Safari',0x0004]
+    ,['IE',0x0008]
+    ,['Edge',0x0010]
+    ,['Chrome',0x0020]
+    ,['Blink',0x0040]
+    ,['tablet',0x0100]
+    ,['mobile',0x0200]
+    ,['desktop',0x0400]
+];
+// indices for browserMasks[]
+const OPERA   = 0;
+const FIREFOX = 1;
+const SAFARI  = 2;
+const IE      = 3;
+const EDGE    = 4;
+const CHROME  = 5;
+const BLINK   = 6;
+const TABLET  = 7;
+const MOBILE  = 8;
+const DESKTOP = 9;
+// indices for browserMasks[][]
+const BSTRING = 0;
+const BMASK   = 1;
+
 function getBrowser() {
     var ret = {
         browser: '',
@@ -39,29 +67,29 @@ function getBrowser() {
     var isBlink = (isChrome || isOpera) && !!window.CSS;
 
     // which browser is in use?
-    if(isOpera) {ret.browser = 'Opera'; ret.mask |= 0x0001;}
-    if(isFirefox) {ret.browser = ret.browser + ' Firefox'; ret.mask |= 0x0002;}
-    if(isSafari) {ret.browser = ret.browser + ' Safari'; ret.mask |= 0x0004;}
-    if(isIE) {
-        ret.browser = ret.browser + ' IE';
-        ret.mask |= 0x0008;
+    if(isOpera)   {ret.browser = browserMasks[OPERA][BSTRING]; ret.mask |= browserMasks[OPERA][BMASK];}
+    if(isFirefox) {ret.browser = ret.browser + ' ' + browserMasks[FIREFOX][BSTRING]; ret.mask |= browserMasks[FIREFOX][BMASK];}
+    if(isSafari)  {ret.browser = ret.browser + ' ' + browserMasks[SAFARI][BSTRING]; ret.mask |= browserMasks[SAFARI][BMASK];}
+    if(isIE)      {
+        ret.browser = ' ' + ret.browser + browserMasks[IE][BSTRING]; 
+        ret.mask |= browserMasks[IE][BMASK];
         alert('You appear to be using Internet Exploror, it is obsolete. Please use something newer.');
     }
-    if(isEdge) {ret.browser = ret.browser + ' Edge'; ret.mask |= 0x0010;}
-    if(isChrome) {ret.browser = ret.browser + ' Chrome';  ret.mask |= 0x0020;}
-    if(isBlink) {ret.browser = ret.browser + ' Blink'; ret.mask |= 0x0040;}
+    if(isEdge)    {ret.browser = ret.browser + ' ' + browserMasks[EDGE][BSTRING]; ret.mask |= browserMasks[EDGE][BMASK];}
+    if(isChrome)  {ret.browser = ret.browser + ' ' + browserMasks[CHROME][BSTRING]; ret.mask |= browserMasks[CHROME][BMASK];}
+    if(isBlink)   {ret.browser = ret.browser + ' ' + browserMasks[BLINK][BSTRING]; ret.mask |= browserMasks[BLINK][BMASK];}
 
     // get the device type...
     var ua = navigator.userAgent;
     if(/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
-        ret.device = 'tablet'; // [mask 0x0100]
-        ret.mask |= 0x0100;
+        ret.device = browserMasks[TABLET][BSTRING];
+        ret.mask  |= browserMasks[TABLET][BMASK];
     } else if(/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
-        ret.device = 'mobile'; // [mask 0x0200]
-        ret.mask |= 0x0200;
+        ret.device = browserMasks[MOBILE][BSTRING];
+        ret.mask  |= browserMasks[MOBILE][BMASK];
     } else {
-        ret.device = 'desktop'; // [mask 0x0400]
-        ret.mask |= 0x0400;
+        ret.device = browserMasks[DESKTOP][BSTRING];
+        ret.mask  |= browserMasks[DESKTOP][BMASK];
     }
     return ret;
 };
