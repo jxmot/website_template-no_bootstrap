@@ -17,7 +17,6 @@ function getQuerys(query) {
     const params = new URLSearchParams(query);
     var ret = [];
     for (const entry of params.entries()) {
-        consolelog(entry);
         ret.push(entry);
     }
     return ret;
