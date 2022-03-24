@@ -24,7 +24,7 @@ function getQuerys(query) {
 };
 
 // look for a specifc query parameter, and if it exists
-// return its value.
+// return its value otherwise return null.
 function getQueryParam(param) {
     var result = getQuerys(window.location.search);
     if(result.length > 0) {
@@ -37,6 +37,8 @@ function getQueryParam(param) {
     return null;
 };
 
+// does a specific parameter exist? if yes then return 
+// true, else false. Useful for things like: ?param1&param2%...
 function isQueryParam(param) {
     var result = getQuerys(window.location.search);
     if(result.length > 0) {
