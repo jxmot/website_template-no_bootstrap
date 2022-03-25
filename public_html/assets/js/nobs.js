@@ -82,7 +82,7 @@ $().ready(() => {
 
     // if we're being viewed in a "bad" browser 
     // then make the necessary adjustments
-    if(badbrowser === binfo.mask) {
+    if(badbrowser === browserinfo.mask) {
         // to-top button
         adjustToTop();
         // footer text <h3> size adjust
