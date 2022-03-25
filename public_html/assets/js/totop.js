@@ -52,7 +52,17 @@ function showToTop() {
     // percentage of the height of the document and NOT the window.
     if(Math.round(($(document).height() * scroll_travel)) < document.documentElement.scrollTop) return true;
     else return false;
-}
+};
+
+// called as needed after the page has loaded, this will 
+// adjust the size of the to-top button.
+function adjustToTop() {
+    // the values of these adjustments are dependant 
+    // on the values in .gototop(totop.css)
+    document.getElementById('gototop-button').style.right = '5%';
+    document.getElementById('gototop-button').style.width = '1.5em';
+    document.getElementById('gototop-button').style.height = '1.5em';
+};
 
 // for debugging
 function dump() {
