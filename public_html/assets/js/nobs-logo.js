@@ -60,7 +60,7 @@ function setLogo(choice) {
         // NOTE: this code is redundant, because it's 
         // handled in nobs.js. So it's here in case 
         // we're called from somewhere else.
-        $('#nav-close').addClass('nav-icon-nologo');
+        $('#nav-close').addClass('nav-icon-no_logo');
         $('.menu a').addClass('menu-item-pad-no_logo');
         return;
     } else {
@@ -89,7 +89,7 @@ function setLogo(choice) {
                 break;
 
             default:
-                $('#nav-close').addClass('nav-icon-nologo');
+                $('#nav-close').addClass('nav-icon-no_logo');
                 $('.menu a').addClass('menu-item-pad-no_logo');
                 break;
         }

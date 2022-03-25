@@ -40,7 +40,7 @@ var mklogo = getLogoChoice();
 if(mklogo.logo === true) {
     setLogo(mklogo);
 } else {
-    $('#nav-close').addClass('nav-icon-nologo');
+    $('#nav-close').addClass('nav-icon-no_logo');
     $('.menu a').addClass('menu-item-pad-no_logo');
 }
 
