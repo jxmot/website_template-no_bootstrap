@@ -74,6 +74,15 @@ $().ready(() => {
     // stay outside of <main>
     $(`${pagetop}`).css('padding-bottom', ($('#page-footer').height() + ($('#page-footer').height() * 0.15)) + 'px');
 
+    // if we're being viewed in a "bad" browser 
+    // then make the necessary adjustments
+    if(badbrowser === binfo.mask) {
+        // to-top button
+        adjustToTop();
+        // footer text <h3> size adjust
+        $('.footer-text').css('font-size', '1em');
+    }
+
     /*
         wait for a click from any menu item... 
     */
