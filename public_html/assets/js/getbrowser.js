@@ -73,6 +73,7 @@ function getBrowser() {
     if(isIE) {
         ret.browser = ' ' + ret.browser + browserMasks[IE][BSTRING]; 
         ret.mask |= browserMasks[IE][BMASK];
+        // IE-10 doesn't even make it this far.
         alert('You appear to be using Internet Exploror, it is obsolete. Please use something newer.');
     }
     if(isEdge)    {ret.browser = ret.browser + ' ' + browserMasks[EDGE][BSTRING]; ret.mask |= browserMasks[EDGE][BMASK];}

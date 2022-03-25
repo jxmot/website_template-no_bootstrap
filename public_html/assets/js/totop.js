@@ -22,16 +22,18 @@ window.onscroll = function() {onWindowScroll()};
 // point the 'to top' button will be displayed. Adjust 
 // as needed.
 const scroll_travel = 0.05;
+// keeps redundant execution to a minimum
 var isToTop = false;
 
 function onWindowScroll() {
     // for debugging
     //dump();
     if(showToTop()) {
+        // has the button been enabled yet?
         if(isToTop === false) {
             document.getElementById('gototop-button').style.display = 'block';
             isToTop = true;
-
+            // if #devdebug is enabled then display some data
             if(document.getElementById('devdebug').style.display === '') {
                 document.getElementById('totop_w').children[0].innerText = document.getElementById('gototop-button').offsetWidth;
                 document.getElementById('totop_h').children[0].innerText = document.getElementById('gototop-button').offsetHeight;
@@ -39,12 +41,13 @@ function onWindowScroll() {
             }
         }
     } else {
+        // has the button been disabled yet?
         if(isToTop === true) {
             document.getElementById('gototop-button').style.display = 'none';
             isToTop = false;
         }
     }
-}
+};
 
 // returns true if the 'to top' button should be made visible
 function showToTop() {
@@ -74,4 +77,4 @@ function dump() {
     console.log('-------');
     console.log(document.body.scrollTop);
     console.log('=======');
-}
+};

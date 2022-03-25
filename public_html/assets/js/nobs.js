@@ -5,7 +5,11 @@
     Repository: https://github.com/jxmot/website_template-no_bootstrap
 */
 const pagetop = '#main';
+// let's see which browser is being used
 const browserinfo = getBrowser();
+// FireFox mobile is an oddball. It does not render 
+// pages the same as Chrome mobile. When #devdebug is 
+// enabled the differences can be seen in the data.
 const badbrowser = (browserMasks[FIREFOX][BMASK] | browserMasks[MOBILE][BMASK]);
 
 // turn on debug stuff? 

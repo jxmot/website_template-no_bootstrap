@@ -37,7 +37,7 @@ function getQueryParam(param) {
 };
 
 // does a specific parameter exist? if yes then return 
-// true, else false. Useful for things like: ?param1&param2%...
+// true, else false. Useful for things like: ?param1&param2&...
 function isQueryParam(param) {
     var result = getQuerys(window.location.search);
     if(result.length > 0) {
@@ -50,7 +50,8 @@ function isQueryParam(param) {
     return false;
 };
 
-// load a javascript file by making a <script>
+// load a javascript file by making a <script> tag 
+// and append it to the <head>
 function loadJScript(jsfile) {
     var script = document.createElement('script');
     script.src = filename;
