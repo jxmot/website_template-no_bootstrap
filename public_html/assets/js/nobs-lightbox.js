@@ -6,8 +6,8 @@
     Extensively Modified By: https://github.com/jxmot
         * functions renamed, all are prepended with "lb_".
         * global variables renamed, all are prepended with "lb_".
-        * refactored lb_showSlides() - 
-            * 
+        * refactored lb_showSlides()
+        * added programmatic adjustments to CSS
 
     Repository: https://github.com/jxmot/website_template-no_bootstrap
 */
@@ -62,6 +62,7 @@ function lb_showSlides(n) {
 	}
 }
 
+// fine tune the lightbox when necessary
 function adjustLBox() {
     $('.lb-prev').css('margin-top', '6.5%');
     $('.lb-next').css('margin-top', '6.5%');

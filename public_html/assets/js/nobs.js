@@ -19,6 +19,7 @@ if(isQueryParam('devdebug') === true) {
     var binfo = browserinfo;
     document.getElementById('whobrowse').children[0].innerText = binfo.browser;
     document.getElementById('device').children[0].innerText = binfo.device;
+    // display the mask value as a zero-padded binary string
     var mstr = '';
     if(binfo.mask.toString(2).length < 16) {
         for(x = 0; x < (16 - binfo.mask.toString(2).length); x++) {
@@ -27,6 +28,7 @@ if(isQueryParam('devdebug') === true) {
         mstr = mstr + binfo.mask.toString(2);
     } else mstr = binfo.mask.toString(2);
     document.getElementById('mask').children[0].innerText = mstr + ' - 0x' + binfo.mask.toString(16);
+    // is it a BAD browser?
     document.getElementById('isgood').children[0].innerText = (badbrowser === binfo.mask ? 'BAD' : 'GOOD');
 };
 
