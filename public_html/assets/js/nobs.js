@@ -90,6 +90,8 @@ $().ready(() => {
         adjustToTop();
         // footer text <h3> size adjust
         $('.footer-text').css('font-size', '1em');
+        // footer height 
+        $('#page-footer').css('height','2em');
         // lightbox adjustments
         adjustLBox();
     }
