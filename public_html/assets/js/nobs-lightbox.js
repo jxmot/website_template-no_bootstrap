@@ -61,3 +61,11 @@ function lb_showSlides(n) {
 		thumbs[lb_slideIndex - 1].className += ' lb-active';
 	}
 }
+
+function adjustLBox() {
+    $('.lb-prev').css('margin-top', '6.5%');
+    $('.lb-next').css('margin-top', '6.5%');
+
+    $('.lb-prev').css('font-size', '1em');
+    $('.lb-next').css('font-size', '1em');
+};
