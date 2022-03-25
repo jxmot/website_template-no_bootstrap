@@ -10,6 +10,9 @@ const browserinfo = getBrowser();
 // FireFox mobile is an oddball. It does not render 
 // pages the same as Chrome mobile. When #devdebug is 
 // enabled the differences can be seen in the data.
+//
+// use this to debug bad browser adjustments
+// const badbrowser = browserinfo.mask;
 const badbrowser = (browserMasks[FIREFOX][BMASK] | browserMasks[MOBILE][BMASK]);
 
 // turn on debug stuff? 
@@ -30,7 +33,7 @@ if(isQueryParam('devdebug') === true) {
     document.getElementById('mask').children[0].innerText = mstr + ' - 0x' + binfo.mask.toString(16);
     // is it a BAD browser?
     document.getElementById('isgood').children[0].innerText = (badbrowser === binfo.mask ? 'BAD' : 'GOOD');
-};
+}
 
 // running with or without the logo?
 var mklogo = getLogoChoice();
