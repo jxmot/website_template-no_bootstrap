@@ -62,9 +62,10 @@ function showToTop() {
 function adjustToTop() {
     // the values of these adjustments are dependant 
     // on the values in .gototop(totop.css)
-    document.getElementById('gototop-button').style.right = '5%';
-    document.getElementById('gototop-button').style.width = '1.5em';
+    document.getElementById('gototop-button').style.right  = '5%';
+    document.getElementById('gototop-button').style.width  = '1.5em';
     document.getElementById('gototop-button').style.height = '1.5em';
+    document.getElementById('gototop_span').style.fontSize = '0.7em';
 };
 
 // for debugging
