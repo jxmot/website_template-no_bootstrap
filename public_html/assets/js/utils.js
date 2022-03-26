@@ -78,3 +78,31 @@ function loadCSS(cssfile) {
 
     document.getElementsByTagName('head')[0].append(style);
 };
+
+// get the ordinal of a number
+function getOrdinal(number) {
+    var ord = '';
+
+    if(number < 0 || (Math.round(number) !== number)) {
+        ord = 'POSITIVE WHOLE NUMBERS ONLY!';
+    } else {
+        if (number > 3 && number < 21) ord = 'th';
+        else {
+            switch (number % 10) {
+                case 1: 
+                    ord = 'st';
+                    break;
+                case 2: 
+                    ord = 'nd';
+                    break;
+                case 3: 
+                    ord = 'rd';
+                    break;
+                default: 
+                    ord = 'th';
+                    break;
+            }
+        }
+    }
+    return ord;
+};
