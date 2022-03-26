@@ -4,30 +4,39 @@
         https://code-boxx.com/detect-browser-with-javascript/
 
     Extensively Modified By: https://github.com/jxmot
+
+    Changes:
         * refactored into a function 
         * added mobile/desktop/tablet detection
         * function returns an object - 
             {
                 browser: a string with the browser name(s)
                 device: a string with the device type 
-                mask: a bitmask indicating browser & device 
+                mask: a bitmask indicating the specific browser & device 
             }
+
+    Usage: 
 
     Repository: https://github.com/jxmot/website_template-no_bootstrap
 */
 // browser name, device types, and corresponding bit masks
 const browserMasks = [
-     ['Opera', 0x0001]
-    ,['Firefox',0x0002]
-    ,['Safari',0x0004]
-    ,['IE',0x0008]
-    ,['Edge',0x0010]
-    ,['Chrome',0x0020]
-    ,['Blink',0x0040]
+// Browser:
+//    String     Mask
+//   (BSTRING)   (BMASK)
+     ['Opera',   0x0001]
+    ,['Firefox', 0x0002]
+    ,['Safari',  0x0004]
+    ,['IE',      0x0008]
+    ,['Edge',    0x0010]
+    ,['Chrome',  0x0020]
+    ,['Blink',   0x0040]
     ,['BYPASS_B',0x0080]
-    ,['tablet',0x0100]
-    ,['mobile',0x0200]
-    ,['desktop',0x0400]
+// Device:
+//    String     Mask
+    ,['tablet',  0x0100]
+    ,['mobile',  0x0200]
+    ,['desktop', 0x0400]
     ,['BYPASS_D',0x0800]
 ];
 // indices for browserMasks[]
@@ -46,8 +55,9 @@ const BYPASS_D = 11;
 // indices for browserMasks[][]
 const BSTRING  = 0;
 const BMASK    = 1;
-
-const BYP_MASK =  (browserMasks[BYPASS_B][BMASK] | browserMasks[BYPASS_D][BMASK]);
+// Bypass mask, used for detecting if the 
+// getBrowser() functionality is bypassed.
+const BYP_MASK = (browserMasks[BYPASS_B][BMASK] | browserMasks[BYPASS_D][BMASK]);
 
 function getBrowser() {
     // this object is returned, it is initialized 
@@ -59,6 +69,8 @@ function getBrowser() {
         mask:    0x0000
     };
 
+    // see if browser detection has been bypassed and 
+    // if not then continue...
     if(isQueryParam('byp') === false) {
         // Find the browser...
         // OPERA 8.0+ [mask 0x0001]
