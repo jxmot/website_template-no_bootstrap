@@ -19,6 +19,10 @@ const badbrowser = (browserMasks[FIREFOX][BMASK] | browserMasks[MOBILE][BMASK]);
 if(isQueryParam('devdebug') === true) {
     $('#devdebug').show();
 
+    loadJScript('./assets/js/loadjscript_test.js', function() {
+        loadjscript_test();
+    });
+
     var binfo = browserinfo;
     document.getElementById('whobrowse').children[0].innerText = binfo.browser;
     document.getElementById('device').children[0].innerText = binfo.device;
