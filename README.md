@@ -1,5 +1,7 @@
 **IMPORTANT: This document is in "DRAFT", and needs to be updated. Most of the content is correct, but recent changes need to be incorporated.**
 
+**NOTE: The demonstration link below will point to a *current* version of this repository. It is used for testing changes so occasionally it may not work.**
+
 # Website Template - NO BOOTSTRAP
 
 I wanted a *basic*, *simple* and *working* website template. It had to have a navigation bar and be *responsive*... it seems that everyone has a different definition of what *resposive* actually means. 
