@@ -5,19 +5,53 @@
     Author: https://github.com/jxmot
     Repository: https://github.com/jxmot/website_template-no_bootstrap
 */
-// look for a specifc query parameter, and if it exists
-// return its value.
-function getQueryParam(param) {
-    var arg = null;
-    window.location.search.substr(1).split("&").forEach(function(item) {
-        if (param === item.split("=")[0]) {
-            arg = item.split("=")[1];
-        }
-    });
-    return ((arg === undefined) || (arg === '') ? null : arg);
+// A single place to control if calls to 
+// console.log() will produce any output.
+var conlogoutput = true;
+function consolelog(text) {
+    if(conlogoutput) console.log(text);
 };
 
-// load a javascript file by making a <script>
+// https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams
+function getQuerys(query) {
+    const params = new URLSearchParams(query);
+    var ret = [];
+    for (const entry of params.entries()) {
+        ret.push(entry);
+    }
+    return ret;
+};
+
+// look for a specifc query parameter, and if it exists
+// return its value otherwise return null.
+function getQueryParam(param) {
+    var result = getQuerys(window.location.search);
+    if(result.length > 0) {
+        for(var ix = 0; ix < result.length; ix++) {
+            if(result[ix][0] === param) {
+                return ((result[ix][1] === undefined) || (result[ix][1] === '') ? null : result[ix][1]);
+            }
+        }
+    }
+    return null;
+};
+
+// does a specific parameter exist? if yes then return 
+// true, else false. Useful for things like: ?param1&param2&...
+function isQueryParam(param) {
+    var result = getQuerys(window.location.search);
+    if(result.length > 0) {
+        for(var ix = 0; ix < result.length; ix++) {
+            if(result[ix][0] === param) {
+                return true;
+            }
+        }
+    }
+    return false;
+};
+
+// load a javascript file by making a <script> tag 
+// and append it to the <head>
 function loadJScript(jsfile) {
     var script = document.createElement('script');
     script.src = filename;
@@ -30,7 +64,7 @@ function loadJScript(jsfile) {
 // after all previously loaded CSS files.
 // 
 // NOTE: This is inefficient, for example if loading a 
-// "theme" CSS file and then loading subsequent "theme"  
+// 'theme' CSS file and then loading subsequent 'theme'  
 // files may require additional resources. Something 
 // like `CSSStyleSheet` could work if it was available
 // in ALL browsers. Some, like Firefox require that 
@@ -43,4 +77,42 @@ function loadCSS(cssfile) {
     style.rel = 'stylesheet';
 
     document.getElementsByTagName('head')[0].append(style);
+};
+
+// get the ordinal of a number
+// Usage:
+//      var ord = getOrdinal(100);
+//
+//      var ord = getOrdinal(1.1);
+//      if(ord.length > 2) ERROR!
+//      else OK!
+//
+//      var ord = getOrdinal(-5);
+//      if(ord.length > 2) ERROR!
+//      else OK!
+function getOrdinal(number) {
+    var ord = '';
+
+    if(number < 0 || (Math.round(number) !== number)) {
+        ord = 'POSITIVE WHOLE NUMBERS ONLY!';
+    } else {
+        if (number > 3 && number < 21) ord = 'th';
+        else {
+            switch (number % 10) {
+                case 1: 
+                    ord = 'st';
+                    break;
+                case 2: 
+                    ord = 'nd';
+                    break;
+                case 3: 
+                    ord = 'rd';
+                    break;
+                default: 
+                    ord = 'th';
+                    break;
+            }
+        }
+    }
+    return ord;
 };

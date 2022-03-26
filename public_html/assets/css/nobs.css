@@ -27,8 +27,12 @@ body{
     display: inline-block;
 }
 
+.nav-header a {
+    text-decoration: none;
+}
+
 /* Logo Text */
-.nav-logo{
+.nav-logo {
     display: inline-block;
     color: var(--nav-logo-text);
     font-size: 30px;
@@ -36,7 +40,7 @@ body{
 }
 
 @media (min-width: 768px) {
-    .nav-logo{
+    .nav-logo {
         font-size: 60px;
         margin-left: 10px;
         margin-top: 0;
@@ -147,7 +151,7 @@ body{
     float: right;
 }
 
-.nav-icon-nologo {
+.nav-icon-no_logo {
     padding: 20px 20px;
 }
 

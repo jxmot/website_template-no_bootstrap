@@ -60,9 +60,8 @@ function setLogo(choice) {
         // NOTE: this code is redundant, because it's 
         // handled in nobs.js. So it's here in case 
         // we're called from somewhere else.
-        $('#nav-close').addClass('nav-icon-nologo');
+        $('#nav-close').addClass('nav-icon-no_logo');
         $('.menu a').addClass('menu-item-pad-no_logo');
-        return;
     } else {
         switch(choice.type) {
             case 'icon':
@@ -83,13 +82,12 @@ function setLogo(choice) {
                 $('#nav-logo-choice_text').attr('style','display: inline-block;');
                 $('.nav-logo').attr('href', ($('.nav-logo').attr('href') + '?' + window.location.search.substr(1)))
 
-                // insert this text into the logo
-                // at #nav-logo-text
+                // insert this text into the logo at #nav-logo-text
                 if(choice.text !== null) $('#nav-logo-text').text(decodeURIComponent(choice.text));
                 break;
 
             default:
-                $('#nav-close').addClass('nav-icon-nologo');
+                $('#nav-close').addClass('nav-icon-no_logo');
                 $('.menu a').addClass('menu-item-pad-no_logo');
                 break;
         }

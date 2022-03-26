@@ -38,3 +38,6 @@
     color: var(--totop-content-color);
 }
 
+.gototop-span {
+    font-size: 1em;
+}

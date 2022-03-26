@@ -4,22 +4,43 @@
     Author: https://github.com/jxmot
     Repository: https://github.com/jxmot/website_template-no_bootstrap
 */
-
-// A single place to control if calls to 
-// console.log() will produce any output.
-var conlogoutput = true;
-function consolelog(text) {
-    if(conlogoutput) console.log(text);
-};
-
 const pagetop = '#main';
+// let's see which browser is being used
+const browserinfo = getBrowser();
+// FireFox mobile is an oddball. It does not render 
+// pages the same as Chrome mobile. When #devdebug is 
+// enabled the differences can be seen in the data.
+//
+// use this to debug bad browser adjustments
+// const badbrowser = browserinfo.mask;
+const badbrowser = (browserMasks[FIREFOX][BMASK] | browserMasks[MOBILE][BMASK]);
+
+// turn on debug stuff? 
+if(isQueryParam('devdebug') === true) {
+    $('#devdebug').show();
+
+    var binfo = browserinfo;
+    document.getElementById('whobrowse').children[0].innerText = binfo.browser;
+    document.getElementById('device').children[0].innerText = binfo.device;
+    // display the mask value as a zero-padded binary string
+    var mstr = '';
+    if(binfo.mask.toString(2).length < 16) {
+        for(x = 0; x < (16 - binfo.mask.toString(2).length); x++) {
+            mstr = mstr + '0';
+        }
+        mstr = mstr + binfo.mask.toString(2);
+    } else mstr = binfo.mask.toString(2);
+    document.getElementById('mask').children[0].innerText = mstr + ' - 0x' + binfo.mask.toString(16);
+    // is it a BAD browser?
+    document.getElementById('isgood').children[0].innerText = (badbrowser === binfo.mask ? 'BAD' : 'GOOD');
+}
 
 // running with or without the logo?
 var mklogo = getLogoChoice();
 if(mklogo.logo === true) {
     setLogo(mklogo);
 } else {
-    $('#nav-close').addClass('nav-icon-nologo');
+    $('#nav-close').addClass('nav-icon-no_logo');
     $('.menu a').addClass('menu-item-pad-no_logo');
 }
 
@@ -53,6 +74,10 @@ function jumpToTop() {
     scrollTo(`${pagetop}`);
 };
 
+function adjustBody() {
+    $('body').css('font-size','95%');
+};
+
 $().ready(() => {
     // this is the best place to get the height of the 
     // <header> that contains the nav menu.
@@ -61,6 +86,21 @@ $().ready(() => {
     // content goes inside. The <header> and <footer> must 
     // stay outside of <main>
     $(`${pagetop}`).css('padding-bottom', ($('#page-footer').height() + ($('#page-footer').height() * 0.15)) + 'px');
+
+    // if we're being viewed in a "bad" browser 
+    // then make the necessary adjustments
+    if(badbrowser === browserinfo.mask) {
+        // <body> adjustments 
+        adjustBody();
+        // to-top button
+        adjustToTop();
+        // footer text <h3> size adjust
+        $('.footer-text').css('font-size', '1em');
+        // footer height 
+        $('#page-footer').css('height','2em');
+        // lightbox adjustments
+        adjustLBox();
+    }
 
     /*
         wait for a click from any menu item... 

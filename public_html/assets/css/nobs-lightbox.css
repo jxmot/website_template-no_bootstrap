@@ -3,8 +3,7 @@
     Originally found at:
         https://www.w3schools.com/howto/howto_js_lightbox.asp
 
-    Extensively Modified By: 
-        https://github.com/jxmot
+    Extensively Modified By: https://github.com/jxmot
 
     Repository: https://github.com/jxmot/website_template-no_bootstrap
 */
@@ -93,11 +92,6 @@
     }
 }
 
-/* .lb-caption-container { */
-    /* background-color: var(--lightbox-modal-caption-bgcolor); */
-    /* color: var(--lightbox-modal-caption-color); */
-/* } */
-
 .lb-caption {
     background-color: var(--lightbox-modal-caption-bgcolor);
     color: var(--lightbox-modal-caption-color);
@@ -112,7 +106,7 @@
     margin-top: 2.5%;
     color: var(--lightbox-modal-next);
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.25em;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
