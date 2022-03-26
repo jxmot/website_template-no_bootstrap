@@ -80,6 +80,16 @@ function loadCSS(cssfile) {
 };
 
 // get the ordinal of a number
+// Usage:
+//      var ord = getOrdinal(100);
+//
+//      var ord = getOrdinal(1.1);
+//      if(ord.length > 2) ERROR!
+//      else OK!
+//
+//      var ord = getOrdinal(-5);
+//      if(ord.length > 2) ERROR!
+//      else OK!
 function getOrdinal(number) {
     var ord = '';
 
