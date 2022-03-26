@@ -74,6 +74,10 @@ function jumpToTop() {
     scrollTo(`${pagetop}`);
 };
 
+function adjustBody() {
+    $('body').css('font-size','95%');
+};
+
 $().ready(() => {
     // this is the best place to get the height of the 
     // <header> that contains the nav menu.
@@ -86,6 +90,8 @@ $().ready(() => {
     // if we're being viewed in a "bad" browser 
     // then make the necessary adjustments
     if(badbrowser === browserinfo.mask) {
+        // <body> adjustments 
+        adjustBody();
         // to-top button
         adjustToTop();
         // footer text <h3> size adjust
