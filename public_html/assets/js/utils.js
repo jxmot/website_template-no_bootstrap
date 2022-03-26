@@ -52,11 +52,14 @@ function isQueryParam(param) {
 
 // load a javascript file by making a <script> tag 
 // and append it to the <head>
-function loadJScript(jsfile) {
-    var script = document.createElement('script');
-    script.src = filename;
+function loadJScript(jsfile, callback) {
+    const script = document.createElement('script');
+    script.src = jsfile;
     script.type = 'text/javascript';
-
+    script.addEventListener('load', function() {
+        // The script is loaded completely
+        callback();
+    });
     document.getElementsByTagName('head')[0].append(script);
 };
 
