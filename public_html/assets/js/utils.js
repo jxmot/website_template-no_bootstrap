@@ -135,3 +135,36 @@ function enableScrolling() {
     window.onscroll = function() {};
 };
 
+/*
+    mediaqueryState() - test if a media query is in 
+    effect, optionally pass a callback function to 
+    be notified of future changes in state.
+
+    Possible Queries:
+        '(orientation: portrait)'
+        '(orientation: landscape)'
+        '(min-width: 768px)' - or some other px values
+        '(max-width: 768px)'
+
+    Usage:
+        if(mediaqueryState('(min-width: 768px)')) 
+            // media query is matched
+        else
+            // media query is not matched
+
+        mediaqueryState('(min-width: 768px)', function(e) {
+            // Check if the media query is true...
+            if (e.matches) {
+                console.log(e.media + ' Matched!');
+            } else {
+                console.log(e.media + ' UNmatched!');
+            }
+        });
+*/
+function mediaqueryState(mqy, callback = null) {
+    var mql = matchMedia(mqy);
+    if(callback !== null) {
+        mql.addListener(callback);
+    }
+    return {match: mql.matches, media: mqy};
+};
