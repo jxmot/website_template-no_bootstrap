@@ -7,21 +7,6 @@
 
     Repository: https://github.com/jxmot/website_template-no_bootstrap
 */
-.lb-row > .lb-column {
-    padding: 0 8px;
-}
-
-.lb-row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.lb-column {
-    float: left;
-    width: 25%;
-}
-
 /* The Modal (background) */
 .lb-modal {
     z-index: 1;
