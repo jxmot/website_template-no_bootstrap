@@ -26,6 +26,18 @@ const all_images = {
         ['https://picsum.photos/seed/uvwx/300/200',''],
         ['https://picsum.photos/seed/yzyz/300/200','Gluten Free???'],
     ],
+/*
+    grid: [
+            [
+                ['grid-template-columns', '1fr 1fr'],
+                ['grid-template-rows', '1fr 1fr 1fr 1fr']
+            ],
+            [   // (min-width: 768px)
+                ['grid-template-columns', '1fr 1fr 1fr'],
+                ['grid-template-rows', '1fr 1fr']
+            ]
+    ],
+*/
     content: [
         // #id              Image URL                TBD
         ['home_bg','https://picsum.photos/1920/1080','']
