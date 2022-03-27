@@ -43,9 +43,8 @@ function lb_showSlides(n) {
 		lb_slideIndex = slides.length
 	}
 
-	for (i = 0; i < slides.length; i++) {
-		slides[i].style.display = 'none';
-	}
+    $('.lb-slides').css('display', 'none');
+
 	slides[lb_slideIndex - 1].style.display = 'block';
     var alt = slides[lb_slideIndex - 1].children[1].alt;
     if((alt !== undefined) && (alt.length > 0)) {
