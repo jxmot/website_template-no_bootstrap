@@ -16,14 +16,12 @@ function lb_openModal(slide) {
 	// TODO: emit a signal that will close the menu
 	$('#lb_modal').css('display', 'block');
     lb_currentSlide(slide);
-
     disableScrolling();
 }
 
 function lb_closeModal() {
 	$('#lb_modal').css('display', 'none');
     unloadSlides();
-
     enableScrolling();
 }
 

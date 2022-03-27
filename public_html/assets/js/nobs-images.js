@@ -73,7 +73,7 @@ function loadGallery() {
 
 function loadSlides() {
     var htmlout = '';
-    $('#modal_slides').html(htmlout);
+    $('#modal_slides').html('');
     for(idx = 0; idx < all_images.gallery.length; idx++) {
         htmlout += indentX4 + '<div class="lb-slides">' + "\n";
         htmlout += indentX4 + `    <div class="lb-numbertext">${idx + 1} / ${all_images.gallery.length}</div>` + "\n";
