@@ -140,6 +140,10 @@ function enableScrolling() {
     effect, optionally pass a callback function to 
     be notified of future changes in state.
 
+    Useful Info:
+        https://caniuse.com/?search=matchMedia
+        (2015) http://www.javascriptkit.com/dhtmltutors/cssmediaqueries.shtml
+
     Possible Queries:
         '(orientation: portrait)'
         '(orientation: landscape)'
