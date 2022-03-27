@@ -39,10 +39,19 @@ const all_images = {
             ]
     ],
 */
+/*
     content: [
-        // #id              Image URL                TBD
-        ['home_bg','https://picsum.photos/1920/1080','']
+        // #id
+        ['home_bg',
+            ['background','https://picsum.photos/1920/1080']
+-- OR? --
+            ['background','url("https://picsum.photos/1920/1080") no-repeat center']
+        ],
+        ['home_bg_overlay',
+            ['background-color','var(--trans-black)']
+        ]
     ]
+*/
 };
 
 const indentX3 = '            ';
