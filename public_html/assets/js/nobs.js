@@ -53,7 +53,7 @@ var hdrheight = -1;
 // this function uses hdrheight to calculate 
 // where to jump. it allows for the height of 
 // the nav bar.
-function scrollTo(href) {
+function nobs_scrollTo(href) {
     var goTo = '';
     // let's close the nav menu...
     $('#nav-togg')[0].checked = false;
@@ -69,13 +69,13 @@ function scrollTo(href) {
             scrollTop: ($(goTo).position().top - hdrheight)
         },450); // NOTE: Any value greater than ~450 will cause 
                 // the scroll to miss its target. Why?
-    } else consolelog('scrollTo() - bad hdrheight');
+    } else consolelog('nobs_scrollTo() - bad hdrheight');
 };
 
 // When the user clicks on the button, scroll to the top of the document
 function jumpToTop() {
-    //scrollTo('#main');
-    scrollTo(`${pagetop}`);
+    //nobs_scrollTo('#main');
+    nobs_scrollTo(`${pagetop}`);
 };
 
 function adjustBody() {
@@ -120,7 +120,7 @@ $().ready(() => {
 
         // scroll to the target ID, and place it just 
         // below nav bar (when inactive).
-        scrollTo(event.target.href);
+        nobs_scrollTo(event.target.href);
     });
 
     $('.themesw').click(function(event) {
