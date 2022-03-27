@@ -119,3 +119,19 @@ function getOrdinal(number) {
     }
     return ord;
 };
+
+function disableScrolling() {
+    // To get the scroll position of current webpage
+    var TopScroll  = window.pageYOffset || document.documentElement.scrollTop;
+    var LeftScroll = window.pageXOffset || document.documentElement.scrollLeft;
+    // if scroll happens, set it to the previous value
+    // and give the illusion that no scrolling is occurring
+    window.onscroll = function() {
+        window.scrollTo(LeftScroll, TopScroll);
+    };
+};
+
+function enableScrolling() {
+    window.onscroll = function() {};
+};
+
