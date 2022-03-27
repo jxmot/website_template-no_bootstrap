@@ -40,10 +40,10 @@ function lb_currentSlide(n) {
 function lb_showSlides(n) {
 	var i;
 	var slides = $('.lb-slides');
-	if (n > slides.length) {
+	if(n > slides.length) {
 		lb_slideIndex = 1
 	}
-	if (n < 1) {
+	if(n < 1) {
 		lb_slideIndex = slides.length
 	}
 
@@ -59,7 +59,7 @@ function lb_showSlides(n) {
         $('#lb_caption').html('.');
     }
 
-	if ($('.lb-modal-thumb-select').length > 0) {
+	if($('.lb-modal-thumb-select').length > 0) {
 		var thumbs = $('.lb-modal-thumb-select');
 		for (i = 0; i < thumbs.length; i++) {
 			thumbs[i].className = thumbs[i].className.replace(' lb-active', '');
