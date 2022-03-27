@@ -1,4 +1,8 @@
 /*
+    nobs-images.js - A list of images that are used by 
+    the containing page. There are also functions for 
+    dynamically creating the HTML for the gallery and 
+    for the lightbox modal.
 
     NOTE: Although dynamic loading of the images seems to 
     work well. There is a problem that needs to be taken 
@@ -7,13 +11,10 @@
     too!) and change the "grid-template-*" values to make 
     sure the gallery looks correct.
 
-    However, it may be possible to break out the "grid-template-*"
-    stuff into separate classes that contain only that. And
-    then use "JavaScript Media Queries" to manage the CSS grid 
-    row and column tempates.
-
-    see - https://css-tricks.com/working-with-javascript-media-queries/
-
+    FUTURE: However, it may be possible to break out the 
+    "grid-template-*" stuff into separate classes that 
+    contain only that. And then use "JavaScript Media Queries" 
+    to manage the CSS grid row and column tempates.
 */
 const all_images = {
     gallery: [
