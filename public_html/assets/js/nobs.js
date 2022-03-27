@@ -106,6 +106,8 @@ $().ready(() => {
         adjustLBox();
     }
 
+    loadGallery();
+
     /*
         wait for a click from any menu item... 
     */

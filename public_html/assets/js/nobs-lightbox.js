@@ -11,13 +11,16 @@
 
     Repository: https://github.com/jxmot/website_template-no_bootstrap
 */
-function lb_openModal() {
+function lb_openModal(slide) {
+    loadSlides();
 	// TODO: emit a signal that will close the menu
-	$('#lb_modal').css('display', 'block');;
+	$('#lb_modal').css('display', 'block');
+    lb_currentSlide(slide);
 }
 
 function lb_closeModal() {
-	$('#lb_modal').css('display', 'none');;
+	$('#lb_modal').css('display', 'none');
+    unloadSlides();
 }
 
 var lb_slideIndex = 1;

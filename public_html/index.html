@@ -97,35 +97,7 @@
                 This was created using CSS grid. Click on any image below and a "lightbox" will open.
             </p>
             <!-- https://picsum.photos/ -->
-            <div class="gallery">
-                <div class="grid-img-cell lb-cursor" onclick="lb_openModal();lb_currentSlide(1)">
-                    <img class="gallery-img" src="https://picsum.photos/seed/abcd/300/200">
-                    <div class="text-overimg">1st</div>
-                </div>
-                <div class="grid-img-cell lb-cursor" onclick="lb_openModal();lb_currentSlide(2)">
-                    <img class="gallery-img" src="https://picsum.photos/seed/efgh/300/200">
-                    <div class="text-overimg">2nd</div>
-                </div>
-                <div class="grid-img-cell lb-cursor" onclick="lb_openModal();lb_currentSlide(3)">
-                    <img class="gallery-img" src="https://picsum.photos/seed/ijkl/300/200">
-                    <div class="text-overimg">3rd</div>
-                </div>
-                <div class="grid-img-cell lb-cursor" onclick="lb_openModal();lb_currentSlide(4)">
-                    <img class="gallery-img" src="https://picsum.photos/seed/mnop/300/200">
-                    <div class="text-overimg">4th</div>
-                </div>
-                <div class="grid-img-cell lb-cursor" onclick="lb_openModal();lb_currentSlide(5)">
-                    <img class="gallery-img" src="https://picsum.photos/seed/qrst/300/200">
-                    <div class="text-overimg">5th</div>
-                </div>
-                <div class="grid-img-cell lb-cursor" onclick="lb_openModal();lb_currentSlide(6)">
-                    <img class="gallery-img" src="https://picsum.photos/seed/uvwx/300/200">
-                    <div class="text-overimg">6th</div>
-                </div>
-                <div class="grid-img-cell lb-cursor" onclick="lb_openModal();lb_currentSlide(7)">
-                    <img class="gallery-img" src="https://picsum.photos/seed/yzyz/300/200">
-                    <div class="text-overimg">7th</div>
-                </div>
+            <div id="gallery" class="gallery">
             </div>
             <p>
                 Bacon ipsum dolor amet tail turkey fugiat, culpa boudin qui shoulder minim ad laboris tempor ea burgdoggen. Fugiat kielbasa pancetta, frankfurter occaecat kevin et chuck biltong turkey anim meatloaf ea short loin. Capicola laboris minim esse, anim ullamco incididunt tail buffalo burgdoggen landjaeger. Venison boudin veniam cillum, nulla tempor eiusmod excepteur flank. Nostrud frankfurter dolore pork loin, sausage ex porchetta fatback. Swine hamburger fugiat eu. Velit reprehenderit culpa non corned beef consectetur sint pancetta salami shoulder meatloaf ut cupim.
@@ -242,65 +214,13 @@
         <span class="lb-close lb-cursor" onclick="lb_closeModal()">X</span>
         <div class="lb-modal-content">
             <!-- images shown in modal -->
-            <div class="lb-slides">
-                <div class="lb-numbertext">1 / 7</div>
-                <img class="lb-img" src="https://picsum.photos/seed/abcd/300/200" alt="">
-            </div>
-            <div class="lb-slides">
-                <div class="lb-numbertext">2 / 7</div>
-                <img class="lb-img" src="https://picsum.photos/seed/efgh/300/200" alt="Padlocks on a Fence">
-            </div>
-            <div class="lb-slides">
-                <div class="lb-numbertext">3 / 7</div>
-                <img class="lb-img" src="https://picsum.photos/seed/ijkl/300/200" alt="">
-            </div>
-            <div class="lb-slides">
-                <div class="lb-numbertext">4 / 7</div>
-                <img class="lb-img" src="https://picsum.photos/seed/mnop/300/200" alt="">
-            </div>
-            <div class="lb-slides">
-                <div class="lb-numbertext">5 / 7</div>
-                <img class="lb-img" src="https://picsum.photos/seed/qrst/300/200" alt="">
-            </div>
-            <div class="lb-slides">
-                <div class="lb-numbertext">6 / 7</div>
-                <img class="lb-img" src="https://picsum.photos/seed/uvwx/300/200" alt="">
-            </div>
-            <div class="lb-slides">
-                <div class="lb-numbertext">7 / 7</div>
-                <img class="lb-img" src="https://picsum.photos/seed/yzyz/300/200" alt="">
+            <div id="modal_slides">
             </div>
             <!-- caption under the image -->
-            <!-- <div class="lb-caption-container"> -->
-                <span id="lb_caption" class="lb-caption">.</span>
-            <!-- </div> -->
+            <span id="lb_caption" class="lb-caption">.</span>
             <!-- left & right buttons -->
             <a class="lb-prev" onclick="lb_plusSlides(-1)">&#10094;<small>&#10094;&#10094;&#10094;</small></a>
             <a class="lb-next" onclick="lb_plusSlides(1)"><small>&#10095;&#10095;&#10095;</small>&#10095;</a>
-            <!-- here are the modal thumbnails -->
-<!--
-            <div class="lb-column">
-                <img class="lb-modal-thumb-select lb-cursor" src="https://picsum.photos/seed/abcd/300/200" style="width:100%" onclick="lb_currentSlide(1)">
-            </div>
-            <div class="lb-column">
-                <img class="lb-modal-thumb-select lb-cursor" src="https://picsum.photos/seed/efgh/300/200" style="width:100%" onclick="lb_currentSlide(2)">
-            </div>
-            <div class="lb-column">
-                <img class="lb-modal-thumb-select lb-cursor" src="https://picsum.photos/seed/ijkl/300/200" style="width:100%" onclick="lb_currentSlide(3)">
-            </div>
-            <div class="lb-column">
-                <img class="lb-modal-thumb-select lb-cursor" src="https://picsum.photos/seed/mnop/300/200" style="width:100%" onclick="lb_currentSlide(4)">
-            </div>
-            <div class="lb-column">
-                <img class="lb-modal-thumb-select lb-cursor" src="https://picsum.photos/seed/qrst/300/200" style="width:100%" onclick="lb_currentSlide(5)">
-            </div>
-            <div class="lb-column">
-                <img class="lb-modal-thumb-select lb-cursor" src="https://picsum.photos/seed/uvwx/300/200" style="width:100%" onclick="lb_currentSlide(6)">
-            </div>
-            <div class="lb-column">
-                <img class="lb-modal-thumb-select lb-cursor" src="https://picsum.photos/seed/yzyz/300/200" style="width:100%" onclick="lb_currentSlide(7)">
-            </div>
--->
         </div>
     </div>
     <!-- Page Footer -->
@@ -317,6 +237,7 @@
     -->
     <script src="./assets/js/utils.js"></script>
     <script src="./assets/js/getbrowser.js"></script>
+    <script src="./assets/js/nobs-images.js"></script>
     <script src="./assets/js/nobs-logo.js"></script>
     <script src="./assets/js/nobs.js"></script>
     <script src="./assets/js/nobs-contact.js"></script>
