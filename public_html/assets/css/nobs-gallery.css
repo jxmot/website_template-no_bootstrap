@@ -8,12 +8,13 @@
 
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+    column-gap: 0.5em;
+    row-gap: 1em;
 
     grid-auto-flow: row;
     justify-items: center;
     justify-content: center;
 
-    /* z-index: -1; */
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
@@ -27,7 +28,6 @@
 
 .grid-img-cell {
     position: relative;
-    /* z-index: -1; */
     text-align:center;
 }
 
