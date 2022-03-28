@@ -131,8 +131,11 @@ function disableScrolling() {
     };
 };
 
-function enableScrolling() {
-    window.onscroll = function() {};
+function enableScrolling(func = null) {
+    if(func === null)
+        window.onscroll = function() {};
+    else
+        window.onscroll = function() {func()};
 };
 
 /*

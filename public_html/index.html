@@ -222,7 +222,7 @@
     <!-- This is the lightbox modal, it also has clickable 
     thumbnails (commented out) under the selected image -->
     <div id="lb_modal" class="lb-modal">
-        <span class="lb-close lb-cursor" onclick="lb_closeModal()">X</span>
+        <span class="lb-close lb-cursor" onclick="lb_closeModal();enableScrolling(onWindowScroll);">X</span>
         <div class="lb-modal-content">
             <!-- images shown in modal -->
             <div id="modal_slides">

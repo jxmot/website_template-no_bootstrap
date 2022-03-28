@@ -16,24 +16,22 @@ function lb_openModal(slide) {
 	// TODO: emit a signal that will close the menu
 	$('#lb_modal').css('display', 'block');
     lb_currentSlide(slide);
-    disableScrolling();
-}
+};
 
 function lb_closeModal() {
 	$('#lb_modal').css('display', 'none');
     unloadSlides();
-    enableScrolling();
-}
+};
 
 var lb_slideIndex = 1;
 
 function lb_plusSlides(n) {
 	lb_showSlides(lb_slideIndex += n);
-}
+};
 
 function lb_currentSlide(n) {
 	lb_showSlides(lb_slideIndex = n);
-}
+};
 
 function lb_showSlides(n) {
 	var i;
