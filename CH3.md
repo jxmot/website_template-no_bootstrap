@@ -19,4 +19,4 @@
 
 # Continue
 
-To [chapter 4](CH4.md)...
+To [chapter 4](CH4.md)... (*get ready, it's a long chapter!*)
