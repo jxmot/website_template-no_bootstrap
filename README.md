@@ -63,10 +63,10 @@ And I'm using those 4 technologies to do things like:
 
 Files have been named so that *common & non-site specific* files are easily located. The *site specific* files are also easy to identify:
 
-* Files names that begin with `nobs_` are specific to this *project* and contain *references* to it.
+* Files names that begin with `nobs_` are specific to this *project* and contain *references* to other *project specific* source file elements within it.
 * Files without `nobs_` are generic and can be easily used with other projects. Some minor editing may be required.
 
-Functions and globally used variables are also named so that their *purpose* and containing *file* can be determined easily.
+Functions and globally used variables are also named so that their *purpose* and containing *file* can be determined easily. 
 
 # Continue
 
