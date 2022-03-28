@@ -1,7 +1,6 @@
 <h1 align="center">Website Template - NO BOOTSTRAP<h1>
 <p align="center">Chapter 1<p>
 
-
 # Overview
 
 This repository contains a website *template*. It is intended as a starting point for the primary page of a website.
