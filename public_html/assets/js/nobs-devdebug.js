@@ -17,6 +17,7 @@ function devDebug() {
             // this function is located in the script above
             loadjscript_test();
         });
+
         // Wait for a media query state change...
         var mqstate_devd = mediaqueryState('(min-width: 768px)', function(e) {
             // Check if the media query is true...
@@ -71,15 +72,8 @@ function devDebug() {
         var binfo = browserinfo;
         document.getElementById('whobrowse').children[0].innerText = binfo.browser;
         document.getElementById('device').children[0].innerText = binfo.device;
-        // display the mask value as a zero-padded binary string
-        var mstr = '';
-        if(binfo.mask.toString(2).length < 16) {
-            for(x = 0; x < (16 - binfo.mask.toString(2).length); x++) {
-                mstr = mstr + '0';
-            }
-            mstr = mstr + binfo.mask.toString(2);
-        } else mstr = binfo.mask.toString(2);
-        document.getElementById('mask').children[0].innerText = mstr + ' - 0x' + binfo.mask.toString(16);
+        var mstr = toBinary(binfo.mask);
+        document.getElementById('mask').children[0].innerText = mstr + ' - ' + toHex(binfo.mask);
         // is it a BAD browser?
         document.getElementById('isgood').children[0].innerText = (badbrowser === binfo.mask ? 'BAD' : 'GOOD');
     }
