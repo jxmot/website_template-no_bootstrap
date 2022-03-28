@@ -34,14 +34,16 @@
 
 .gallery-img {
     border: 2px solid black;
-    max-width: 50%;
+    max-width: 100%;
 }
 
+/*
 @media (min-width: 768px) {
     .gallery-img {
         max-width: 100%;
     }
 }
+*/
 
 /* centered */
 .text-overimg {
