@@ -1,5 +1,6 @@
-<h1 style="text-align:center;">Website Template - NO BOOTSTRAP<h1>
-<h3 style="text-align:center;">Chapter 1<h3>
+  <h1 align="center">Website Template - NO BOOTSTRAP<h1>
+  <p align="center">Chapter 1<p>
+
 
 # Overview
 
