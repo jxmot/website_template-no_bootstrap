@@ -172,3 +172,29 @@ function mediaqueryState(mqy, callback = null) {
     }
     return {match: mql.matches, media: mqy};
 };
+
+// return a value as a zero-padded binary string
+function toBinary(bdata, bitq = 16) {
+    var bstr = '';
+    if(bdata.toString(2).length < bitq) {
+        for(x = 0; x < (bitq - bdata.toString(2).length); x++) {
+            bstr = bstr + '0';
+        }
+        bstr = bstr + bdata.toString(2);
+    } else bstr = bdata.toString(2);
+    return bstr;
+};
+
+// return a value as a zero-padded hexadecimal string
+// nibq is the quantity of "nibbles" (4 bit groups) 
+function toHex(bdata, nibq = 8) {
+    var hstr = '';
+    if(bdata.toString(16).length < nibq) {
+        hstr = '0x';
+        for(x = 0; x < (nibq - bdata.toString(16).length); x++) {
+            hstr = hstr + '0';
+        }
+        hstr = hstr + bdata.toString(16);
+    } else hstr = bdata.toString(16);
+    return hstr;
+};
