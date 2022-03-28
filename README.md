@@ -1,5 +1,5 @@
-  <h1 align="center">Website Template - NO BOOTSTRAP<h1>
-  <p align="center">Chapter 1<p>
+<h1 align="center">Website Template - NO BOOTSTRAP<h1>
+<p align="center">Chapter 1<p>
 
 
 # Overview
@@ -69,3 +69,6 @@ Files have been named so that *common & non-site specific* files are easily loca
 
 Functions and globally used variables are also named so that their *purpose* and containing *file* can be determined easily.
 
+# Continue
+
+To [chapter 2](CH2.md)...
