@@ -43,7 +43,9 @@
     --lightbox-modal-close-focus: var(--lightbox-modal-close-hover);
     --lightbox-modal-next: var(--white);
     --lightbox-modal-prev: var(--lightbox-modal-next);
-    --lightbox-modal-next-hover-bgcolor: rgba(0, 0, 0, 0.8);
+    --lightbox-modal-next-hover: var(--bright-green);
+    --lightbox-modal-prev-hover: var(--lightbox-modal-next-hover);
+    --lightbox-modal-next-hover-bgcolor: var(--transparent);
     --lightbox-modal-prev-hover-bgcolor: var(--lightbox-modal-next-hover-bgcolor);
     --lightbox-modal-numbertext: var(--white);
     --lightbox-modal-caption-color: var(--white);

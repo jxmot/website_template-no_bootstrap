@@ -12,11 +12,12 @@
     --dark-grey: #36383F;
     --black: #000000;
     --yellowish: #dbcc29;
+    --bright-yellow: #fbff12;
     --green: green;
     --bright-green: #27ff0f;
     --bright-red: #ff0505;
     --gold: gold;
-    --trans-black: rgba(0, 0, 0, 0.8);
+    --trans-black: rgba(0, 0, 0, 0.6);
     --transparent: rgba(0, 0, 0, 0);
     --trans-green: rgba(10, 120, 10, 0.7);
     --trans-red: rgba(120, 10, 10, 0.7);

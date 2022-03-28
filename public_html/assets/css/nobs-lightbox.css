@@ -123,6 +123,7 @@
 .lb-prev:hover,
 .lb-next:hover {
     background-color: var(--lightbox-modal-next-hover-bgcolor);
+    color: var(--lightbox-modal-next-hover);
 }
 
 .lb-modal-thumb-select {
