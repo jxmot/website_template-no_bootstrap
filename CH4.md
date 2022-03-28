@@ -39,8 +39,22 @@
 
 ## JavaScript and JQuery 
 
+### Logo Control
+
+### Lightbox
+
+### Contact Form
+
+### To Top
+
+### Get Browser Info
+
+### Utilities
+
+
 ## Miscellaneous
 
+## htaccess
 
 # Continue
 
