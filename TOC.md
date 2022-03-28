@@ -2,7 +2,7 @@ Consider separating README into chapters (individual files):
 
 This is a **DRAFT** outline - 
 
-* CH 1 - Overview
+* CH 1 (**README.md**) - Overview
   * Purpose
   * High Level Details
     * Technologies
