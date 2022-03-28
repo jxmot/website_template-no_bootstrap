@@ -64,9 +64,9 @@ $().ready(() => {
     // this is the best place to get the height of the 
     // <header> that contains the nav menu.
     hdrheight = $('#nav-header').height();
-    // Set the bottom padding for <main>, all of the pages'
+    // Set the bottom padding for ${pagetop}, all of the pages'
     // content goes inside. The <header> and <footer> must 
-    // stay outside of <main>
+    // stay contain all of ${pagetop}
     $(`${pagetop}`).css('padding-bottom', ($('#page-footer').height() + ($('#page-footer').height() * 0.15)) + 'px');
 
     // if we're being viewed in a "bad" browser 
