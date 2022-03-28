@@ -55,15 +55,16 @@ const all_images = {
 */
 };
 
+// Makes the rendered HTML "look nice"
 const indentX3 = '            ';
 const indentX4 = '                ';
 
-function loadGallery() {
+function loadGallery(gallery = all_images.gallery) {
     var htmlout = '';
     $('#gallery').html(htmlout);
-    for(idx = 0; idx < all_images.gallery.length; idx++) {
-        htmlout += indentX3 + `<div class="grid-img-cell lb-cursor" onclick="lb_openModal(${idx + 1});">` + "\n";
-        htmlout += indentX3 + `    <img class="gallery-img" src="${all_images.gallery[idx][0]}">` + "\n";
+    for(idx = 0; idx < gallery.length; idx++) {
+        htmlout += indentX3 + `<div class="grid-img-cell lb-cursor" onclick="disableScrolling();lb_openModal(${idx + 1});">` + "\n";
+        htmlout += indentX3 + `    <img class="gallery-img" src="${gallery[idx][0]}">` + "\n";
         var ovtext = '' + (idx + 1) + getOrdinal(idx + 1);
         htmlout += indentX3 + `    <div class="text-overimg">${ovtext}</div>` + "\n";
         htmlout += indentX3 + '</div>\n';
@@ -71,13 +72,13 @@ function loadGallery() {
     $('#gallery').html(htmlout);
 };
 
-function loadSlides() {
+function loadSlides(slides = all_images.gallery) {
     var htmlout = '';
     $('#modal_slides').html('');
-    for(idx = 0; idx < all_images.gallery.length; idx++) {
+    for(idx = 0; idx < slides.length; idx++) {
         htmlout += indentX4 + '<div class="lb-slides">' + "\n";
-        htmlout += indentX4 + `    <div class="lb-numbertext">${idx + 1} / ${all_images.gallery.length}</div>` + "\n";
-        htmlout += indentX4 + `    <img class="lb-img" src="${all_images.gallery[idx][0]}" alt="${all_images.gallery[idx][1]}">` + "\n";
+        htmlout += indentX4 + `    <div class="lb-numbertext">${idx + 1} / ${slides.length}</div>` + "\n";
+        htmlout += indentX4 + `    <img class="lb-img" src="${slides[idx][0]}" alt="${slides[idx][1]}">` + "\n";
         htmlout += indentX4 + '</div>' + "\n";
     }
     $('#modal_slides').html(htmlout);
