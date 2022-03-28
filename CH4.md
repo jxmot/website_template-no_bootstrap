@@ -58,5 +58,5 @@
 
 # Continue
 
-To [chapter 5](CH5.md)... (*finally, the end is near!*)
+To [chapter 5 - Modification Guidelines](CH5.md)... (*finally, the end is near!*)
 
