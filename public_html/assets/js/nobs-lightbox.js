@@ -56,15 +56,7 @@ function lb_showSlides(n) {
         $('#lb_caption').css('color','var(--lightbox-modal-caption-bgcolor)');
         $('#lb_caption').html('.');
     }
-
-	if($('.lb-modal-thumb-select').length > 0) {
-		var thumbs = $('.lb-modal-thumb-select');
-		for (i = 0; i < thumbs.length; i++) {
-			thumbs[i].className = thumbs[i].className.replace(' lb-active', '');
-		}
-		thumbs[lb_slideIndex - 1].className += ' lb-active';
-	}
-}
+};
 
 // fine tune the lightbox when necessary
 function adjustLBox() {
