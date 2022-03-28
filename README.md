@@ -1,4 +1,5 @@
 <h1 style="text-align:center;">Website Template - NO BOOTSTRAP<h1>
+<h3 style="text-align:center;">Chapter 1<h3>
 
 # Overview
 
@@ -39,8 +40,31 @@ So, here's what I've got now... (*although it's more like a framework*)
 
 ## Technologies Used
 
+Well, there is the *obvious* stuff like HTML, CSS, Javascript & JQuery. Beyond that in CSS I'm using *grid* to align elements on the page. At first it was slightly confusing especially coming from a Bootstrap mindset.
+
+And I'm using those 4 technologies to do things like:
+
+* Manipulate and create DOM objects
+* Dynamically load CSS or JavaScript
+* And more!
+
 ## File Organization
 
 ### Folder Hierarchy
 
+```
+/ ──public_html
+    └───assets
+        ├───css
+        └───js
+```
+
 ### Naming Conventions
+
+Files have been named so that *common & non-site specific* files are easily located. The *site specific* files are also easy to identify:
+
+* Files names that begin with `nobs_` are specific to this *project* and contain *references* to it.
+* Files without `nobs_` are generic and can be easily used with other projects. Some minor editing may be required.
+
+Functions and globally used variables are also named so that their *purpose* and containing *file* can be determined easily.
+
