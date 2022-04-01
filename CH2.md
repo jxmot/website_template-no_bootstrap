@@ -5,6 +5,10 @@
 
 ## Gallery
 
+This is a *dynamically* created gallery. It designed to create the necessary HTML/CSS when the page is loaded. The image URLs are stored in a list. It's only necessary to edit the list and the gallery will change on the next page load.
+
+CSS Grid was used to arrange the images.
+
 <div align="center">
     <figure>
         <img src="./mdimg/sshot-gallery-desktop.jpg" style="width:50%;border: 2px solid black"; alt="Screen Shot Chrome on Android 12" txt="Screen Shot Chrome on Android 12"/>
@@ -14,6 +18,10 @@
 </div>
 
 ## Lightbox
+
+This lightbox is also dynamically created. However, the HTML/CSS is not created until an image is selected from the gallery.
+
+While the lightbox is active page scrolling is disabled.
 
 <div align="center">
     <figure>
@@ -25,6 +33,8 @@
 
 ## Contact Form
 
+This is just a basic contact form without validation or email capability, and the form *fields* were laid out using CSS Grid. There is also a character counter for the message box. 
+
 <div align="center">
     <figure>
         <img src="./mdimg/sshot-contact-desktop.jpg" style="width:50%;border: 2px solid black"; alt="Basic Contact Form" txt="Basic Contact Form"/>
@@ -34,6 +44,8 @@
 </div>
 
 ## Theme Switch
+
+This demonstrates *dynamic loading* of CSS files. There is a collection of CSS files that set the colors.
 
 <div align="center">
     <figure>
@@ -46,6 +58,12 @@
 
 ## Develop and Debug
 
+This was created out of necessity. I was testing on my phone and couldn't find my USB cable for *remote debugging*. And I needed to see some run-time variables and test results. This "devdebug" output is optional and is off by default. To enable it add `devdebug` in the query:
+
+```
+http[s]://your-webserver/path/to/?devdebug
+```
+
 <div align="center">
     <figure>
         <img src="./mdimg/sshot-devdebug-desktop.jpg" style="width:50%;border: 2px solid black"; alt="Optional Debug Data Ouput" txt="Optional Debug Data Ouput"/>
@@ -54,9 +72,44 @@
     </figure>
 </div>
 
-### Purpose
-
 ### Details
+
+From top to bottom the pieces are:
+
+<div align="center">
+    <figure>
+        <img src="./mdimg/ssnip-devdebug-1.png" style="width:25%;border: 2px solid black"; alt="This is some data from the to top button." txt="This is some data from the to top button."/>
+        <br>
+        <figcaption><strong>This is some data from the "to top" button.</strong></figcaption>
+    </figure>
+</div>
+<br>
+
+<div align="center">
+    <figure>
+        <img src="./mdimg/ssnip-devdebug-2.png" style="width:25%;border: 2px solid black"; alt="This is the test result for loading and executing a JavaScript file." txt="This is the test result for loading and executing a JavaScript file."/>
+        <br>
+        <figcaption><strong>This is the test result for loading and executing a JavaScript file.</strong></figcaption>
+    </figure>
+</div>
+<br>
+
+<div align="center">
+    <figure>
+        <img src="./mdimg/ssnip-devdebug-3.png" style="width:25%;border: 2px solid black"; alt="This is the result of detecting the browser." txt="This is the result of detecting the browser."/>
+        <br>
+        <figcaption><strong>This is the result of detecting the browser.</strong></figcaption>
+    </figure>
+</div>
+<br>
+
+<div align="center">
+    <figure>
+        <img src="./mdimg/ssnip-devdebug-4.png" style="width:25%;border: 2px solid black"; alt="TThis is the result of waiting for and respondingto CSS events." txt="This is the result of waiting for and respondingto CSS events."/>
+        <br>
+        <figcaption><strong>This is the result of waiting for and respondingto CSS events.</strong></figcaption>
+    </figure>
+</div>
 
 # Continue
 
