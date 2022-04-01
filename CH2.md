@@ -9,6 +9,7 @@
     <figure>
         <img src="./mdimg/sshot-gallery-desktop.jpg" style="width:50%;border: 2px solid black"; alt="Screen Shot Chrome on Android 12" txt="Screen Shot Chrome on Android 12"/>
         <figcaption><strong>Simple Image Gallery</strong></figcaption>
+        <br>
     </figure>
 </div>
 
@@ -18,6 +19,7 @@
     <figure>
         <img src="./mdimg/sshot-lbox-desktop.jpg" style="width:50%;border: 2px solid black"; alt="Simple Image Lightbox" txt="Simple Image Lightbox"/>
         <figcaption><strong>Simple Image Lightbox</strong></figcaption>
+        <br>
     </figure>
 </div>
 
@@ -26,6 +28,7 @@
 <div align="center">
     <figure>
         <img src="./mdimg/sshot-contact-desktop.jpg" style="width:50%;border: 2px solid black"; alt="Basic Contact Form" txt="Basic Contact Form"/>
+        <br>
         <figcaption><strong>Basic Contact Form</strong></figcaption>
     </figure>
 </div>
@@ -36,6 +39,7 @@
     <figure>
         <img src="./mdimg/sshot-themes_alt_2-desktop.jpg" style="width:40%;border: 2px solid black"; alt="Color Theme Example - Alt 2" txt="Color Theme Example - Alt 2"/>
         <img src="./mdimg/sshot-themes_alt_4-desktop.jpg" style="width:40%;border: 2px solid black"; alt="Color Theme Example - Alt 4" txt="Color Theme Example - Alt 4"/>
+        <br>
         <figcaption><strong>Color Theme Examples</strong></figcaption>
     </figure>
 </div>
@@ -45,6 +49,7 @@
 <div align="center">
     <figure>
         <img src="./mdimg/sshot-devdebug-desktop.jpg" style="width:50%;border: 2px solid black"; alt="Optional Debug Data Ouput" txt="Optional Debug Data Ouput"/>
+        <br>
         <figcaption><strong>Optional Debug Data Ouput</strong></figcaption>
     </figure>
 </div>
