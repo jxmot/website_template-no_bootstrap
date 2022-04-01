@@ -54,6 +54,7 @@ Well, there is the *obvious* stuff like HTML, CSS, Javascript & JQuery. Beyond t
 And I'm using those 4 technologies to do things like:
 
 * Manipulate and create DOM objects
+* Detect browser and device type
 * Dynamically load CSS or JavaScript
 * And more!
 
@@ -70,8 +71,8 @@ The "lorem ipsum" content was obtained at - <https://baconipsum.com/>
         └───js
 ```
 * `public_html` - `index.html` and favicon image files
-* `public_html/assets/css` - 
-* `public_html/assets/js` - 
+* `public_html/assets/css` - all CSS files
+* `public_html/assets/js` - all JavaScript files
 
 ### Naming Conventions
 
