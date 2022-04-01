@@ -8,8 +8,8 @@
 <div align="center">
     <figure>
         <img src="./mdimg/sshot-gallery-desktop.jpg" style="width:50%;border: 2px solid black"; alt="Screen Shot Chrome on Android 12" txt="Screen Shot Chrome on Android 12"/>
-        <figcaption><strong>Simple Image Gallery</strong></figcaption>
         <br>
+        <figcaption><strong>Simple Image Gallery</strong></figcaption>
     </figure>
 </div>
 
@@ -18,8 +18,8 @@
 <div align="center">
     <figure>
         <img src="./mdimg/sshot-lbox-desktop.jpg" style="width:50%;border: 2px solid black"; alt="Simple Image Lightbox" txt="Simple Image Lightbox"/>
-        <figcaption><strong>Simple Image Lightbox</strong></figcaption>
         <br>
+        <figcaption><strong>Simple Image Lightbox</strong></figcaption>
     </figure>
 </div>
 
