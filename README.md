@@ -3,7 +3,7 @@
 
 # Overview
 
-This repository contains a website *template*. It is intended as a starting point for the primary page of a website.
+This repository contains a website *template*. It is intended as a starting point for the primary page of a website. In reality it's more like a *framework*, all of the working pieces are already there.
 
 # Purpose
 
@@ -37,6 +37,14 @@ So, here's what I've got now... (*although it's more like a framework*)
 
 # High Level Details
 
+This repository contains a *single page* site. It has a simple layout that is responsive and if necessary it can dynamically adjust its CSS depending on the browser and device used.
+
+<div align="center">
+    <figure>
+        <img src="./mdimg/sshot-desktop.jpg" style="width:50%;border: 2px solid black"; alt="Desktop Screenshot" txt="Desktop Screenshot"/>
+        <figcaption>Desktop Screenshot</figcaption>
+    </figure>
+</div>
 
 ## Technologies Used
 
@@ -48,6 +56,8 @@ And I'm using those 4 technologies to do things like:
 * Dynamically load CSS or JavaScript
 * And more!
 
+The "lorem ipsum" content was obtained at - <https://baconipsum.com/>
+
 ## File Organization
 
 ### Folder Hierarchy
@@ -58,13 +68,16 @@ And I'm using those 4 technologies to do things like:
         ├───css
         └───js
 ```
+* `public_html` - `index.html` and favicon image files
+* `public_html/assets/css` - 
+* `public_html/assets/js` - 
 
 ### Naming Conventions
 
 Files have been named so that *common & non-site specific* files are easily located. The *site specific* files are also easy to identify:
 
-* Files names that begin with `nobs_` are specific to this *project* and contain *references* to other *project specific* source file elements within it.
-* Files without `nobs_` are generic and can be easily used with other projects. Some minor editing may be required.
+* Files names that begin with **`nobs_`** are specific to this *project* and contain *references* to other *project specific* source file elements within it.
+* Files without **`nobs_`** are generic and can be easily used with other projects. Some minor editing may be required.
 
 Functions and globally used variables are also named so that their *purpose* and containing *file* can be determined easily. 
 
