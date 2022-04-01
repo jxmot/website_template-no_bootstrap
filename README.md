@@ -42,7 +42,8 @@ This repository contains a *single page* site. It has a simple layout that is re
 <div align="center">
     <figure>
         <img src="./mdimg/sshot-desktop.jpg" style="width:50%;border: 2px solid black"; alt="Desktop Screenshot" txt="Desktop Screenshot"/>
-        <figcaption>Desktop Screenshot</figcaption>
+        <br>
+        <figcaption><strong>Desktop Screenshot</strong></figcaption>
     </figure>
 </div>
 
