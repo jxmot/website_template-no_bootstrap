@@ -40,7 +40,7 @@ On desktop, with equally sized view areas there are no noticeable differences. H
         <figcaption><strong>Chrome is on the left, Firefox on the right.</strong></figcaption>
     </figure>
 </div>
-
+<!-- NOTE: When Github renders the images above it will REMOVE the "margin", and ADD "max-width:100%" -->
 <br>
 
 I know the differences may seem subtle, or insignificant. But when you're trying to make both platforms look and *behave* identically those differences will drive you nuts. 
@@ -117,6 +117,10 @@ The "previous" and "next" buttons were too large and placed too high. Image capt
 * `font-size: 1em` from 1.25em
 
 See `nobs-lightbox.js:adjustLBox()`.
+
+### The Result
+
+
 
 ### Adjustments Disclaimer
 
