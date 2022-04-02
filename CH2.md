@@ -49,6 +49,7 @@ This demonstrates *dynamic loading* of CSS files. There is a collection of CSS f
 
 <div align="center">
     <figure>
+<!-- NOTE: When Github renders the images it will REMOVE the "margin", and ADD "max-width:100%" -->
         <img src="./mdimg/sshot-themes_alt_2-desktop.jpg" style="width:40%;border: 2px solid black;margin-right: 1rem;"; alt="Color Theme Example - Alt 2" txt="Color Theme Example - Alt 2"/>
         <img src="./mdimg/sshot-themes_alt_4-desktop.jpg" style="width:40%;border: 2px solid black;margin-left: 1rem;"; alt="Color Theme Example - Alt 4" txt="Color Theme Example - Alt 4"/>
         <br>

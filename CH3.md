@@ -23,6 +23,7 @@ On desktop, with equally sized view areas there are no noticeable differences. H
 
 <div align="center">
     <figure>
+<!-- NOTE: When Github renders the images it will REMOVE the "margin", and ADD "max-width:100%" -->
         <img src="./mdimg/sshot-home-chrome-android-pixel.jpg" style="width:25%;border: 2px solid black;margin-right: 1rem;"; alt="Screen Shot Chrome on Android 12" txt="Screen Shot Chrome on Android 12"/>
         <img src="./mdimg/sshot-home-ffox-android-pixel.jpg" style="width:25%;border: 2px solid black;margin-left: 1rem;"; alt="Screen Shot Firefox on Android 12" txt="Screen Shot Firefox on Android 12"/>
         <br>
@@ -34,13 +35,13 @@ On desktop, with equally sized view areas there are no noticeable differences. H
 
 <div align="center">
     <figure>
+<!-- NOTE: When Github renders the images it will REMOVE the "margin", and ADD "max-width:100%" -->
         <img src="./mdimg/sshot-gallery-chrome-android-pixel.jpg" style="width:25%;border: 2px solid black;margin-right: 1rem;"; alt="Screen Shot Chrome on Android 12" txt="Screen Shot Chrome on Android 12"/>
         <img src="./mdimg/sshot-gallery-ffox-android-pixel.jpg" style="width:25%;border: 2px solid black;margin-left: 1rem;"; alt="Screen Shot Firefox on Android 12" txt="Screen Shot Firefox on Android 12"/>
         <br>
         <figcaption><strong>Chrome is on the left, Firefox on the right.</strong></figcaption>
     </figure>
 </div>
-<!-- NOTE: When Github renders the images above it will REMOVE the "margin", and ADD "max-width:100%" -->
 <br>
 
 I know the differences may seem subtle, or insignificant. But when you're trying to make both platforms look and *behave* identically those differences will drive you nuts. 
@@ -100,7 +101,7 @@ See `nobs.js:adjustSection()`.
 
 ### To Top Button
 
-This button was too large and in the wrong place when viewed in Firefox mobile. See [this](./CH3.md#visible_differences), it's the second pair of images. The CSS adjustments made are - 
+This button was too large and in the wrong place when viewed in Firefox mobile. See [this](CH3.md#visible_differences), it's the second pair of images. The CSS adjustments made are - 
 
 * `right: 5%` from 10%
 * `width: 1.5em` from 2em
