@@ -79,7 +79,7 @@ The browser detection code can be found in `assets/js/getbrowser.js`, and contai
 
 ## On Page Load CSS Changes
 
-An effort has been made to make the necessary "adjustments" to CSS when the Firefox mobile browser has been detected. 
+An effort has been made to make the necessary "adjustments" to CSS when the Firefox mobile browser has been detected. The subsections below will describe the necessary adjustments that have been made. 
 
 ### Body
 
@@ -98,6 +98,12 @@ See `nobs.js:adjustNav()`.
 Every `<section>` that uses the `section-body` class will have the right and left margins adjusted from `2rem` to `1rem`, and the `<ul>` within will have the left margin adjusted from `2rem` to `1.5rem`. 
 
 See `nobs.js:adjustSection()`.
+
+### Page Footer
+
+Adjustments are made to the footer's height and font size. The height is adjusted from `3rem` to `2em`, and the font szie from `<h3>` size to `1em`.
+
+See `nobs.js:adjustFooter()`.
 
 ### To Top Button
 
@@ -121,6 +127,28 @@ See `nobs-lightbox.js:adjustLBox()`.
 
 ### The Result
 
+<div align="center">
+    <figure>
+<!-- NOTE: When Github renders the images it will REMOVE the "margin", and ADD "max-width:100%" -->
+        <img src="./mdimg/sshot-home-ffox-android-pixel.jpg" style="width:25%;border: 2px solid black;margin-right: 1rem;"; alt="Screen Shot Chrome on Android 12" txt="Screen Shot Chrome on Android 12"/>
+        <img src="./mdimg/sshot-home-ffox-android-pixel-adjusted.jpg" style="width:25%;border: 2px solid black;margin-left: 1rem;"; alt="Screen Shot Firefox on Android 12" txt="Screen Shot Firefox on Android 12"/>
+        <br>
+        <figcaption><strong>BAD Firefox is on the left, after "adjustments" is on the right.</strong></figcaption>
+    </figure>
+</div>
+
+<br>
+
+<div align="center">
+    <figure>
+<!-- NOTE: When Github renders the images it will REMOVE the "margin", and ADD "max-width:100%" -->
+        <img src="./mdimg/sshot-gallery-ffox-android-pixel.jpg" style="width:25%;border: 2px solid black;margin-right: 1rem;"; alt="Screen Shot Chrome on Android 12" txt="Screen Shot Chrome on Android 12"/>
+        <img src="./mdimg/sshot-gallery-ffox-android-pixel-adjusted.jpg" style="width:25%;border: 2px solid black;margin-left: 1rem;"; alt="Screen Shot Firefox on Android 12" txt="Screen Shot Firefox on Android 12"/>
+        <br>
+        <figcaption><strong>BAD Firefox is on the left, after "adjustments" is on the right.</strong></figcaption>
+    </figure>
+</div>
+<br>
 
 
 ### Adjustments Disclaimer
