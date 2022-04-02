@@ -101,7 +101,7 @@ See `nobs.js:adjustSection()`.
 
 ### To Top Button
 
-This button was too large and in the wrong place when viewed in Firefox mobile. See [this](CH3.md#visible_differences), it's the second pair of images. The CSS adjustments made are - 
+This button was too large and in the wrong place when viewed in Firefox mobile. See [this](CH3.md#visible-differences), it's the second pair of images. The CSS adjustments made are - 
 
 * `right: 5%` from 10%
 * `width: 1.5em` from 2em
