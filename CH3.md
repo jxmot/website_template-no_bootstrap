@@ -59,24 +59,76 @@ I know the differences may seem subtle, or insignificant. But when you're trying
 
 |   **Property**   | Chrome  | Firefox |   Edge  |  Opera  |
 |:----------------:|:-------:|:-------:|:-------:|:-------:|
-|  **offsetWidth** |    27   |    35   |    27   |    27   |
-| **offsetHeight** |    27   |    35   |    27   |    27   |
+|  **offsetWidth** |    27   |    **35**   |    27   |    27   |
+| **offsetHeight** |    27   |    **35**   |    27   |    27   |
 
 
+**`getComputedStyle(document.documentElement).fontSize`**
+
+| **Font Size** | Chrome | Firefox | Edge | Opera |
+|:-------------:|:------:|:-------:|:----:|:-----:|
+|   **1 rem**   |  16px  | **20.8px**  | 16px | 16px  |
 
 
+So, what does it all mean? Well... compared to the other browsers it appears that Firefox mobile has *scaled up* the font size. **Why?**
 
 ## Browser Detection
 
-## On the Fly CSS Changes
+The browser detection code can be found in `assets/js/getbrowser.js`, and contains a function named `getBrowser()`. It is used for detecting *Firefox mobile*.
+
+## On Page Load CSS Changes
+
+An effort has been made to make the necessary "adjustments" to CSS when the Firefox mobile browser has been detected. 
 
 ### Body
 
+The font size (`font-size`) is set to 95%. That's because in Firefox `1rem` is **20.8** pixels and not **16** as with every other browser.
+
+See `nobs.js:adjustBody()`.
+
+### Navigation
+
+Additional space is required for the mobile navigation menu's closing "**X**". The `<div` that is using the `nav-header` class have `padding-top: 0.5em` added to its CSS.
+
+See `nobs.js:adjustNav()`.
+
+### Sections
+
+Every `<section>` that uses the `section-body` class will have the right and left margins adjusted from `2rem` to `1rem`, and the `<ul>` within will have the left margin adjusted from `2rem` to `1.5rem`. 
+
+See `nobs.js:adjustSection()`.
+
 ### To Top Button
+
+This button was too large and in the wrong place when viewed in Firefox mobile. See [this](./CH3.md#visible_differences), it's the second pair of images. The CSS adjustments made are - 
+
+* `right: 5%` from 10%
+* `width: 1.5em` from 2em
+* `height: 1.5em` from 2em
+* `font-size: 0.7em` from 1em
+
+See `totop.js:adjustToTop()`.
 
 ### Lightbox
 
+The "previous" and "next" buttons were too large and placed too high. Image caption text would collide with the buttons. Both buttons get the following adjustments:
+
+* `margin-top: 6.5%` has been added
+* `font-size: 1em` from 1.25em
+
+See `nobs-lightbox.js:adjustLBox()`.
+
+### Adjustments Disclaimer
+
+I've made the adjustments according to *what looks good to me*. You may disagree, so please feel free to make the changes that you feel are necessary.
+
 ## Bypass the Detection
+
+It is possible to bypass the detection and display the page without any adjustments. The bypass can be enabled with a query:
+
+```
+http[s]://your-webserver/path/to/?byp
+```
 
 # Continue
 
