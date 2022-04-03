@@ -128,9 +128,27 @@ From top to bottom the pieces are:
 
 <div align="center">
     <figure>
-        <img src="./mdimg/ssnip-devdebug-4.png" style="width:25%;border: 2px solid black"; alt="TThis is the result of waiting for and respondingto CSS events." txt="This is the result of waiting for and respondingto CSS events."/>
+        <img src="./mdimg/ssnip-devdebug-4.png" style="width:25%;border: 2px solid black"; alt="This is the result of waiting for and responding to CSS events." txt="This is the result of waiting for and responding to CSS events."/>
         <br>
-        <figcaption><strong>This is the result of waiting for and respondingto CSS events.</strong></figcaption>
+        <figcaption><strong>This is the result of waiting for and responding to CSS events.</strong></figcaption>
+    </figure>
+</div>
+<br>
+
+<div align="center">
+    <figure>
+        <img src="./mdimg/ssnip-devdebug-5.png" style="width:25%;border: 2px solid black"; alt="First page load, no cookies have been saved." txt="First page load, no cookies have been saved."/>
+        <br>
+        <figcaption><strong>First page load, no cookies have been saved.</strong></figcaption>
+    </figure>
+</div>
+<br>
+
+<div align="center">
+    <figure>
+        <img src="./mdimg/ssnip-devdebug-6.png" style="width:25%;border: 2px solid black"; alt="The cookie consent has been accepted and a theme was saved." txt="The cookie consent has been accepted and a theme was saved."/>
+        <br>
+        <figcaption><strong>The cookie consent has been accepted and a theme was saved.</strong></figcaption>
     </figure>
 </div>
 
