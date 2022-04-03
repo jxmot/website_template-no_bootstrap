@@ -30,7 +30,6 @@ On desktop, with equally sized view areas there are no noticeable differences. H
         <figcaption><strong>Chrome is on the left, Firefox on the right.</strong></figcaption>
     </figure>
 </div>
-
 <br>
 
 <div align="center">
@@ -77,7 +76,7 @@ So, what does it all mean? Well... compared to the other browsers it appears tha
 
 The browser detection code can be found in `assets/js/getbrowser.js`, and contains a function named `getBrowser()`. It is used for detecting *Firefox mobile*.
 
-## On Page Load CSS Changes
+## On Page Load CSS Adjustments
 
 An effort has been made to make the necessary "adjustments" to CSS when the Firefox mobile browser has been detected. The subsections below will describe the necessary adjustments that have been made. 
 
@@ -158,7 +157,6 @@ The result of the adjustments can be seen below:
 </div>
 <br>
 
-
 ### Adjustments Disclaimer
 
 I've made the adjustments according to *what looks good to me*. You may disagree, so please feel free to make the changes that you feel are necessary.
@@ -173,4 +171,4 @@ http[s]://your-webserver/path/to/?byp
 
 # Continue
 
-To [chapter 4 - Deep Details](CH4.md)... (*get ready, it's a long chapter!*)
+To [chapter 4 - Modification Guidelines](CH4.md)...
