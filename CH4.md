@@ -35,6 +35,8 @@
 
 **Go to Top Button**
 
+#### Cookie Consent
+
 ## CSS
 
 ## JavaScript and JQuery 
@@ -48,6 +50,8 @@
 ### To Top
 
 ### Get Browser Info
+
+### Cookie Consent
 
 ### Utilities
 

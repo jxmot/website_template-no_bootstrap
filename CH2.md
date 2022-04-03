@@ -3,6 +3,28 @@
 
 # Features
 
+## Cookie Consent
+
+The cookie consent and the use of cookies is independent of the rest of the HTML/CSS/JavaScript. If you want to quickly disable the consent and use of cookies then edit `index.html` and comment out the line - 
+
+```
+    <script src="./assets/js/cookies.js"></script>
+```
+
+Change it to:
+
+```
+    <!-- <script src="./assets/js/cookies.js"></script> -->
+```
+
+<div align="center">
+    <figure>
+        <img src="./mdimg/sshot-home-desktop-cookie.jpg" style="width:50%;border: 2px solid black"; alt="Desktop Screenshot with Cookie Consent" txt="Desktop Screenshot with Cookie Consent"/>
+        <br>
+        <figcaption><strong>Desktop Screenshot with Cookie Consent</strong></figcaption>
+    </figure>
+</div>
+
 ## Gallery
 
 This is a *dynamically* created gallery. It designed to create the necessary HTML/CSS when the page is loaded. The image URLs are stored in a list. It's only necessary to edit the list and the gallery will change on the next page load.

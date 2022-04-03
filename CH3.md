@@ -99,6 +99,12 @@ Every `<section>` that uses the `section-body` class will have the right and lef
 
 See `nobs.js:adjustSection()`.
 
+### Cookie Consent
+
+If enabled, the cookie consent will have its container's left and right margins adjusted from `2rem` to `0.5rem`. And the button font size will be adjusted from `1em` to `0.75rem`.
+
+See `cookies.js:adjustCookies()`.
+
 ### Page Footer
 
 Adjustments are made to the footer's height and font size. The height is adjusted from `3rem` to `2em`, and the font szie from `<h3>` size to `1em`.
@@ -126,6 +132,8 @@ The "previous" and "next" buttons were too large and placed too high. Image capt
 See `nobs-lightbox.js:adjustLBox()`.
 
 ### The Result
+
+The result of the adjustments can be seen below:
 
 <div align="center">
     <figure>
