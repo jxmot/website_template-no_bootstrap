@@ -55,12 +55,9 @@ This is the HTML for the Cookie Consent dialog:
 
 The visibility of the consent dialog and responses to the "Accept" or "DECLINE" buttons are managed in `cookies.js`. 
 
-Using the "theme" selection as an example here is how 
-Checking the consent cookie and 
+Using the "theme" selection as an example, here is how you might check the consent cookie and load theme cookie when the page is ready:
 
-theme cookie when the page is ready:
-
-
+**Pseudo-Code:**
 ```pseudocode
 When the page is ready:
   If hasConsent() is present and it returns true then
@@ -116,6 +113,28 @@ When one of the theme selection radio buttons is selected the `$('.themesw').cli
   "id":"th3"
 }
 ```
+#### Cookies and Devdebug
+
+Under `#devdebug` is a section that displays the current cookies. It will show you if any cookies exist, and if they do it will display the cookie's contents and a button for *deleting all cookies*.
+
+<div align="center">
+    <figure>
+        <img src="./mdimg/ssnip-devdebug-5.png" style="width:25%;border: 2px solid black"; alt="First page load, no cookies have been saved." txt="First page load, no cookies have been saved."/>
+        <br>
+        <figcaption><strong>First page load, no cookies have been saved.</strong></figcaption>
+    </figure>
+</div>
+<br>
+
+<div align="center">
+    <figure>
+        <img src="./mdimg/ssnip-devdebug-6.png" style="width:25%;border: 2px solid black"; alt="The cookie consent has been accepted and a theme was saved." txt="The cookie consent has been accepted and a theme was saved."/>
+        <br>
+        <figcaption><strong>The cookie consent has been accepted and a theme was saved.</strong></figcaption>
+    </figure>
+</div>
+
+The text will update if the "Clear All Cookies" button is clicked. After a short delay the page will reload and anchor at the top of the page.
 
 ### To Top Button
 
