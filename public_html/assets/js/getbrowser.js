@@ -1,28 +1,37 @@
 /* Get Browser & Device Information
 
-    Some code originally found at:
+    Some code originally found at, and adapted from 
+    examples found here:
         https://code-boxx.com/detect-browser-with-javascript/
 
     Extensively Modified By: https://github.com/jxmot
 
     Changes:
-        * refactored into a function 
+        * refactored into functions
         * added mobile/desktop/tablet detection
-        * function returns an object - 
+        * added the use of bits to identify the browser
+        * getBrowser() returns an object - 
             {
                 browser: a string with the browser name(s)
                 device: a string with the device type 
+                uagent: the user agent string
+                prefix: the CSS prefix used by the browser
+                width: value from window.innerWidth
+                height: value from window.innerHeight
                 mask: a bitmask indicating the specific browser & device 
             }
 
-    Usage: 
+    NOTE: This code may require a rewrite because of Chrome - 
+        https://www.chromium.org/updates/ua-reduction/#TOC-Sample-UA-Strings:-Final-Reduced-State
 
     Repository: https://github.com/jxmot/website_template-no_bootstrap
+
+    Requires: utils.js
 */
 // browser name, device types, and corresponding bit masks
 const browserMasks = [
 // Browser:
-//    String     Mask
+//    String      Mask
 //   (BSTRING)   (BMASK)
      ['Opera',   0x0001]
     ,['Firefox', 0x0002]
