@@ -58,17 +58,21 @@ const IE       = 3;
 const EDGE     = 4;
 const CHROME   = 5;
 const BLINK    = 6;
-const BYPASS_B = 7;
-const TABLET   = 8;
-const MOBILE   = 9;
-const DESKTOP  = 10;
-const BYPASS_D = 11;
+const GECKO    = 7;
+const BYPASS_B = 8;
+const TABLET   = 9;
+const MOBILE   = 10;
+const DESKTOP  = 11;
+const BYPASS_D = 12;
 // indices for browserMasks[][]
 const BSTRING  = 0;
 const BMASK    = 1;
 // Bypass mask, used for detecting if the 
 // getBrowser() functionality is bypassed.
 const BYP_MASK = (browserMasks[BYPASS_B][BMASK] | browserMasks[BYPASS_D][BMASK]);
+
+const ALL_BMASK = 0x07FF;
+const ALL_DMASK = 0x7000;
 
 function getBrowser() {
     // this object is returned, it is initialized 
