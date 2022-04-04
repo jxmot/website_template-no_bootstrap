@@ -167,6 +167,8 @@ The "To Top" CSS file has been named with `nobs_` because it references colors i
 **Usage Example:**
 
 ```javascript
+// top of page anchor
+const pagetop = '#main';
 // this will contain the height of .nav-header 
 var hdrheight = -1;
 // this function uses hdrheight to calculate 
@@ -193,7 +195,6 @@ function nobs_scrollTo(href) {
 
 // When the user clicks on the button, scroll to the top of the document
 function jumpToTop() {
-    //nobs_scrollTo('#main');
     nobs_scrollTo(`${pagetop}`);
 };
 ```
@@ -203,6 +204,10 @@ $().ready(() => {
     // this is the best place to get the height of the 
     // <header> that contains the nav menu.
     hdrheight = $('.nav-header').height();
+    // Set the bottom padding for ${pagetop}, all of the pages'
+    // content goes inside. The <header> and <footer> must 
+    // stay contain all of ${pagetop}
+    $(`${pagetop}`).css('padding-bottom', ($('#page_footer').height() + ($('#page_footer').height() * 0.15)) + 'px');
 });
 ```
 
@@ -214,8 +219,6 @@ Browser detection consists of the following:
 * CSS - **none**
 * JavaScript - `getbrowser.js`
 
-
-
 **Edit Before Using:**
 
 #### Acting on Detection Results
@@ -223,16 +226,25 @@ Browser detection consists of the following:
 There are a number of "adjustment" functions that are called when an undesirable browser is detected:
 
 * `nobs.js:adjustBody()` - Currently not used, otherwise it would adjust the font size.
-* `nobs.js:adjustSection()` - 
-* `nobs.js:adjustNav()` - Follow this function call with `hdrheight = $('.nav-header').height();`. 
+* `nobs.js:adjustSection()` - Adjust `<section>` margins.
+* `nobs.js:adjustNav()` - Follow this function call with `hdrheight = $('.nav-header').height();`. Adds some padding to the top.
+* `nobs.js:adjustFooter()` - Adjust `<footer>` font size and height.
 * `totop.js:adjustToTop()` - 
-* `nobs.js:adjustFooter()` - 
 * `nobs-lightbox.js:adjustLBox()` - 
 * `cookies.js:adjustCookies()` - 
 
+The "adjustment" functions are detailed below.
 
 **`nobs.js:`**
 ```javascript
+// let's see which browser is being used (getBrowser() 
+// is found in getbrowser.js)
+const browserinfo = getBrowser();
+// FireFox mobile is an oddball. It does not render 
+// pages the same as Chrome mobile. When #devdebug is 
+// enabled the differences can be seen in the data.
+const badbrowser = (browserMasks[FIREFOX][BMASK] | browserMasks[GECKO][BMASK] | browserMasks[MOBILE][BMASK]);
+
 $().ready(() => {
     // this is the best place to get the height of the 
     // <header> that contains the nav menu.
@@ -265,6 +277,70 @@ $().ready(() => {
         }
     }
 });
+```
+
+The current "adjustment" functions are - 
+
+**`nobs.js`:**
+```javascript
+function adjustBody() {
+    $('body').css('font-size','95%');
+};
+
+function adjustSection() {
+    $('.section-body').css('margin-left','1rem');
+    $('.section-body').css('margin-right','1rem');
+
+    $('.section-body ul').css('margin-left','1.5rem');
+};
+
+function adjustNav() {
+    // pushes the navbar down so that the 
+    // "X" is fully visible.
+    $('.nav-header').css('padding-top','0.5em');
+};
+
+function adjustFooter() {
+    // footer text <h3> size adjust
+    $('.footer-text').css('font-size', '1em');
+    // footer height 
+    $('.footer').css('height','2em');
+};
+```
+
+**`totop.js`:**
+```javascript
+// called as needed after the page has loaded, this will 
+// adjust the size of the to-top button. (Firefox SUCKS!)
+function adjustToTop() {
+    // the values of these adjustments are dependant 
+    // on the values in .gototop(totop.css)
+    document.getElementById('gototop_button').style.right  = '5%';
+    document.getElementById('gototop_button').style.width  = '1.5em';
+    document.getElementById('gototop_button').style.height = '1.5em';
+    document.getElementById('gototop_span').style.fontSize = '0.7em';
+};
+```
+
+**`nobs-lightbox.js`:**
+```javascript
+// fine tune the lightbox when necessary
+function adjustLBox() {
+    $('.lb-prev').css('margin-top', '6.5%');
+    $('.lb-next').css('margin-top', '6.5%');
+
+    $('.lb-prev').css('font-size', '1em');
+    $('.lb-next').css('font-size', '1em');
+};
+```
+
+**`cookies.js`:**
+```javascript
+function adjustCookies() {
+    $('.cookie-con').css('margin-left','0.5rem');
+    $('.cookie-con').css('margin-right','0.5rem');
+    $('.cookie-con-button').css('font-size','0.75rem');
+};
 ```
 
 ## Adding Features
