@@ -108,4 +108,6 @@ $().ready(() => {
         consolelog('themesw value: ' + event.target.value);
         loadCSS(event.target.value)
     });
+    // one last thing to do...
+    jumpToTop();
 });
