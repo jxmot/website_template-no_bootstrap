@@ -89,6 +89,21 @@ $().ready(() => {
     loadGallery();
 
     devDebug();
+
+    // if cookie functionality is loaded then check the consent...
+    if((typeof hasConsent === 'function') && (hasConsent() === true)) {
+        // was the theme set on the last visit?
+        // if it was then change the theme.
+        var thm = getCookie('theme');
+        if(thm !== '') {
+            t = JSON.parse(thm);
+            loadCSS(t.file);
+            // set the radio button
+            $('.themesw').prop('checked', false);
+            $('#'+t.id).prop('checked', true);
+        }
+    }
+
     /*
         wait for a click from any menu item... 
     */
