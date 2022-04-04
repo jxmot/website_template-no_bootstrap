@@ -81,6 +81,10 @@ function getBrowser() {
     var ret = {
         browser: '',
         device:  '',
+        uagent:  '',
+        prefix:  '',
+        width:   0,
+        height:  0,
         mask:    0x0000
     };
 
