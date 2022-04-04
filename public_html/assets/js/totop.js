@@ -31,19 +31,20 @@ function onWindowScroll() {
     if(showToTop()) {
         // has the button been enabled yet?
         if(isToTop === false) {
-            document.getElementById('gototop-button').style.display = 'block';
+            document.getElementById('gototop_button').style.display = 'block';
             isToTop = true;
             // if #devdebug is enabled then display some data
             if(document.getElementById('devdebug').style.display === '') {
-                document.getElementById('totop_w').children[0].innerText = document.getElementById('gototop-button').offsetWidth;
-                document.getElementById('totop_h').children[0].innerText = document.getElementById('gototop-button').offsetHeight;
-                document.getElementById('totop_r').children[0].innerText = JSON.stringify(document.getElementById('gototop-button').getBoundingClientRect(), null, 4);
+                // viewable width & height of an element in pixels, including the padding, border and scrollbar, but not the margin
+                document.getElementById('dd_totop_w').children[0].innerText = document.getElementById('gototop_button').offsetWidth;
+                document.getElementById('dd_totop_h').children[0].innerText = document.getElementById('gototop_button').offsetHeight;
+                document.getElementById('dd_totop_r').children[0].innerText = JSON.stringify(document.getElementById('gototop_button').getBoundingClientRect(), null, 4);
             }
         }
     } else {
         // has the button been disabled yet?
         if(isToTop === true) {
-            document.getElementById('gototop-button').style.display = 'none';
+            document.getElementById('gototop_button').style.display = 'none';
             isToTop = false;
         }
     }
@@ -58,13 +59,13 @@ function showToTop() {
 };
 
 // called as needed after the page has loaded, this will 
-// adjust the size of the to-top button.
+// adjust the size of the to-top button. (Firefox SUCKS!)
 function adjustToTop() {
     // the values of these adjustments are dependant 
     // on the values in .gototop(totop.css)
-    document.getElementById('gototop-button').style.right  = '5%';
-    document.getElementById('gototop-button').style.width  = '1.5em';
-    document.getElementById('gototop-button').style.height = '1.5em';
+    document.getElementById('gototop_button').style.right  = '5%';
+    document.getElementById('gototop_button').style.width  = '1.5em';
+    document.getElementById('gototop_button').style.height = '1.5em';
     document.getElementById('gototop_span').style.fontSize = '0.7em';
 };
 
