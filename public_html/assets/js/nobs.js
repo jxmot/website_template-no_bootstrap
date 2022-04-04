@@ -121,7 +121,12 @@ $().ready(() => {
 
     $('.themesw').click(function(event) {
         consolelog('themesw value: ' + event.target.value);
-        loadCSS(event.target.value)
+        loadCSS(event.target.value);
+        // if cookie functionality is loaded then check the consent...
+        if((typeof hasConsent === 'function') && (hasConsent() === true)) {
+            // when the theme is changed remember it in cookie.
+            makeCookie('theme', {file: event.target.value, id: event.target.id});
+        }
     });
     // one last thing to do...
     jumpToTop();
