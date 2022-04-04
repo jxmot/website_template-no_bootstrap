@@ -62,28 +62,56 @@ function adjustBody() {
     $('body').css('font-size','95%');
 };
 
+function adjustSection() {
+    $('.section-body').css('margin-left','1rem');
+    $('.section-body').css('margin-right','1rem');
+
+    $('.section-body ul').css('margin-left','1.5rem');
+};
+
+function adjustNav() {
+    // pushes the navbar down so that the 
+    // "X" is fully visible.
+    $('.nav-header').css('padding-top','0.5em');
+};
+
+function adjustFooter() {
+    // footer text <h3> size adjust
+    $('.footer-text').css('font-size', '1em');
+    // footer height 
+    $('.footer').css('height','2em');
+};
+
 $().ready(() => {
     // this is the best place to get the height of the 
     // <header> that contains the nav menu.
-    hdrheight = $('#nav-header').height();
+    hdrheight = $('.nav-header').height();
     // Set the bottom padding for ${pagetop}, all of the pages'
     // content goes inside. The <header> and <footer> must 
     // stay contain all of ${pagetop}
-    $(`${pagetop}`).css('padding-bottom', ($('#page-footer').height() + ($('#page-footer').height() * 0.15)) + 'px');
+    $(`${pagetop}`).css('padding-bottom', ($('#page_footer').height() + ($('#page_footer').height() * 0.15)) + 'px');
 
     // if we're being viewed in a "bad" browser 
     // then make the necessary adjustments
     if(badbrowser === browserinfo.mask) {
         // <body> adjustments 
-        adjustBody();
+//        adjustBody();
+        // <section> adjustments
+        adjustSection();
+        // <nav> adjustments 
+        adjustNav();
+        hdrheight = $('.nav-header').height();
         // to-top button
         adjustToTop();
-        // footer text <h3> size adjust
-        $('.footer-text').css('font-size', '1em');
-        // footer height 
-        $('#page-footer').css('height','2em');
+        // <footer> adjustments
+        adjustFooter();
         // lightbox adjustments
         adjustLBox();
+        // don't adjust the cookie consent unless 
+        // it is present
+        if(typeof adjustCookies === 'function') {
+            adjustCookies();
+        }
     }
 
     loadGallery();
@@ -119,6 +147,7 @@ $().ready(() => {
         nobs_scrollTo(event.target.href);
     });
 
+    // handle theme selections...
     $('.themesw').click(function(event) {
         consolelog('themesw value: ' + event.target.value);
         loadCSS(event.target.value);
