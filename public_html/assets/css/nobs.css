@@ -7,7 +7,19 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
-body{
+html {
+/* 
+    Works everywhere, EXCEPT firefox android! 
+
+    Ok, so FF is adding a varying amount (a 
+    percentage?) to the value below. Again...
+    WHY?
+
+*/
+    font-size: 16px;
+}
+
+body {
     background-color: var(--body-bg);
     color: var(--body-text);
     font-family: "Roboto", sans-serif;
@@ -115,7 +127,7 @@ body{
     }
 
     .menu a {
-        /* padding is managed in logo.js:setLogo() */
+        /* padding is managed in nobs-logo.js:setLogo() */
     }
     
     /* menu item highlight */
@@ -226,6 +238,11 @@ body{
 
     padding-top: 1rem;
     padding-bottom: 1rem;
+}
+
+/* needed because reseter.css adjusted <ul> and <ol> */
+.section-body ul {
+    margin-left: 2rem;
 }
 
 /* Footer */

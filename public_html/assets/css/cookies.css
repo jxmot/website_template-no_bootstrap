@@ -1,0 +1,123 @@
+/* https://angrytools.com/css-grid/ */
+
+/* cookies */
+.cookie-con {
+    display: none;
+
+    margin-left: 2rem;
+    margin-right: 2rem;
+    bottom: 3.1rem;
+
+    position: fixed;
+    background-color: lightgrey;
+    border: 3px solid black;
+    border-radius: 1rem;
+}
+
+.cookie-con-body {
+    margin-left: 2rem;
+    margin-right: 2rem;
+
+    display: grid;
+    gap: 0px;
+    /* grid-template-rows: 1fr 1fr; */
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: min-content;
+}
+
+.cookie-con-msg {
+    text-align: center;
+
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.cookie-con-text {
+    font-size: small;
+    font-weight: 900;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.cookie-con-accept {
+    text-align: center;
+
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.cookie-con-decline {
+    text-align: center;
+
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+/* 
+    Button Styles 
+
+    Used https://cssbuttons.app/
+*/
+.cookie-con-button {
+    width: 6em;
+    font-size: 1em;
+    font-weight: 600;
+    color: black;
+    cursor: pointer;
+    margin-bottom: 1.25em;
+    height: 3em;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+
+    moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.cookie-con-button:hover {
+    background-position: 100% 0;
+    moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.cookie-con-button:focus {
+    outline: none;
+}
+
+/* https://cssbuttons.app/buttons/22 */
+.cookie-con-accbutton-bg {
+    background-image: linear-gradient(
+        to right,
+        #0ba360,
+        #3cba92,
+        #30dd8a,
+        #2bb673
+    );
+    box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
+}
+
+/* https://cssbuttons.app/buttons/27 */
+.cookie-con-decbutton-bg {
+    background-image: linear-gradient(
+        to right,
+        #ed6ea0,
+        #ec8c69,
+        #d40834, /* #f7186a, */
+        #fbb03b
+    );
+    box-shadow: 0 4px 15px 0 rgba(211, 29, 77, 0.75);
+    /* box-shadow: 0 4px 15px 0 rgba(236, 116, 149, 0.75); */
+}

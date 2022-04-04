@@ -6,6 +6,6 @@
     Repository: https://github.com/jxmot/website_template-no_bootstrap
 */
 function loadjscript_test() {
-    document.getElementById('ljs_test').children[0].innerText = '';
-    document.getElementById('ljs_test').children[0].innerText = 'loadJScript() is WORKING!!!';
+    document.getElementById('dd_ljs_test').children[0].innerText = '';
+    document.getElementById('dd_ljs_test').children[0].innerText = 'loadJScript() is WORKING!!!';
 }

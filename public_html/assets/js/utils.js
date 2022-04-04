@@ -201,3 +201,41 @@ function toHex(bdata, nibq = 8) {
     } else hstr = bdata.toString(16);
     return hstr;
 };
+
+/*
+    getSizeEM() - Return the size (in pixels) of `em` or 
+    `rem` values for an element.
+
+    The defaults args are - 1em, document.body
+
+    Obtained From: https://stackoverflow.com/a/67349803/6768046
+
+    NOTE: If you're only looking for `1rem` as a pixel value 
+    then this line replaces the function - 
+
+    var pixel_1rem = getComputedStyle(document.documentElement).fontSize;
+
+    Modified By: https://github.com/jxmot
+        * renamed from getSizePrecise() to getSizeEM()
+        * added semicolons
+*/
+function getSizeEM(size = '1em', parent = document.body) {
+    let l = document.createElement('div'), i = 1, s, t;
+    l.style.visibility = 'hidden';
+    l.style.boxSize = 'content-box';
+    l.style.position = 'absolute';
+    l.style.maxHeight = 'none';
+    l.style.height = size;
+    parent.appendChild(l);
+    t = l.clientHeight;
+    do {
+        if (t > 1789569.6)
+            break;
+        s = t;
+        i *= 10;
+        l.style.height = 'calc(' + i + '*' + size + ')';
+        t = l.clientHeight;
+    } while(t !== s * 10)
+    l.remove();
+    return (t / i) + 'px';
+};

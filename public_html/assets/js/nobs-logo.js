@@ -30,30 +30,33 @@ function getLogoChoice() {
     When "logo" is true the "type" will pick which one:
 
     type = 'text' :
-        <a id="nav-logo_link" class="nav-logo" href="./index.html">
-            <div id="nav-logo-text">NOBS</div>
+        <a id="nav_logo_link" class="nav-logo" href="./index.html">
+            <div id="nav_logo_text">NOBS</div>
         </a>
 
     type = 'icon' :
-        <a id="nav-logo_link" class="nav-logo-img" href="./index.html">
-            <img id="logo-img" class="logo-img">
+        <a id="nav_logo_link" class="nav-logo-img" href="./index.html">
+            <img id="logo_img" class="logo-img">
         </a>
 
-    Both are located in #nav-header individually within a their own 
+    Both are located in #nav_header and individually within their own 
     <div> tag:
-        <header id="nav-header" class="nav-header">
-            <div id="nav-logo-choice_text" style="display:none;">
-                <a id="nav-logo_link" class="nav-logo" href="./index.html">
-                    <div id="nav-logo-text">NOBS</div>
-                </a>
-            </div>
-            <div id="nav-logo-choice_icon" style="display:none;">
-                <a id="nav-logo_link" class="nav-logo-img" href="./index.html">
-                    <img id="logo-img" class="logo-img">
-                </a>
-            </div>
+
+    <!-- Navigation Bar -->
+    <div id="nav_header" class="nav-header">
+        <!-- Logo, reloads the page. -->
+        <div id="nav_logo_choice_text" style="display:none;">
+            <a id="nav_logo_link" class="nav-logo" href="./index.html">
+                <div id="nav_logo_text">NOBS</div>
+            </a>
+        </div>
+        <div id="nav_logo_choice_icon" style="display:none;">
+            <a id="nav_logo_link" class="nav-logo-img" href="./index.html">
+                <img id="logo_img" class="logo-img">
+            </a>
+        </div>
             <!-- remaining navbar HTML goes here -->
-        </header>
+    </div>
 */
 function setLogo(choice) {
     if(choice.logo === false) {
@@ -69,8 +72,8 @@ function setLogo(choice) {
                 $('.menu a').addClass('menu-item-pad-logo');
 
                 // the image is set in nobs.css:.logo-img
-                $('#nav-logo-choice_icon').show();
-                $('#nav-logo-choice_icon').attr('style','display: inline-block;');
+                $('#nav_logo_choice_icon').show();
+                $('#nav_logo_choice_icon').attr('style','display: inline-block;');
                 $('.nav-logo-img').attr('href', ($('.nav-logo-img').attr('href') + '?' + window.location.search.substr(1)))
                 break;
 
@@ -78,12 +81,12 @@ function setLogo(choice) {
                 $('#nav-close').addClass('nav-icon-logo');
                 $('.menu a').addClass('menu-item-pad-logo');
 
-                $('#nav-logo-choice_text').show();
-                $('#nav-logo-choice_text').attr('style','display: inline-block;');
+                $('#nav_logo_choice_text').show();
+                $('#nav_logo_choice_text').attr('style','display: inline-block;');
                 $('.nav-logo').attr('href', ($('.nav-logo').attr('href') + '?' + window.location.search.substr(1)))
 
-                // insert this text into the logo at #nav-logo-text
-                if(choice.text !== null) $('#nav-logo-text').text(decodeURIComponent(choice.text));
+                // insert this text into the logo at #nav_logo_text
+                if(choice.text !== null) $('#nav_logo_text').text(decodeURIComponent(choice.text));
                 break;
 
             default:
