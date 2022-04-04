@@ -205,23 +205,43 @@
         <!-- debugging output, edit as needed -->
         <section id="devdebug" class="section-body" style="display:none;">
             <ul>
-                <li id="totop_w">totop w = <span></span></li>
-                <li id="totop_h">totop h = <span></span></li>
-                <li id="totop_r">totop r = <span></span></li>
-                <li id="whobrowse">browser = <span></span></li>
-                <li id="device">device = <span></span></li>
-                <li id="mask">mask = <span></span></li>
-                <li id="isgood">isgood = <span></span></li>
-                <li id="ljs_test">ljs_test = <span></span></li>
-                <li id="mqstate">mqstate = <span></span></li>
-                <li id="portrait">portrait = <span></span></li>
-                <li id="landscape">landscape = <span></span></li>
+                <li id="dd_totop_w">totop w = <span></span></li>
+                <li id="dd_totop_h">totop h = <span></span></li>
+                <li id="dd_totop_r">totop r = <span></span></li>
+            </ul>
+            <ul>
+                <li id="dd_ljs_test">ljs test = <span></span></li>
+            </ul>
+            <ul>
+                <li id="dd_whobrowse">browser = <span></span></li>
+                <li id="dd_device">device = <span></span></li>
+                <li id="dd_prefix">prefix = <span></span></li>
+                <li id="dd_mask">mask = <span></span></li>
+                <li id="dd_isgood">isgood = <span></span></li>
+            </ul>
+            <ul>
+                <li id="dd_iwidth">width = <span></span></li>
+                <li id="dd_iheight">height = <span></span></li>
+                <li id="dd_remtopx">1 rem = <span></span></li>
+            </ul>
+            <textarea id="dd_uagent" rows="10" cols="25" style="resize: none;" readonly>
+            </textarea>
+            <ul>
+                <li id="dd_mqstate">mqstate = <span></span></li>
+                <li id="dd_portrait">portrait = <span></span></li>
+                <li id="dd_landscape">landscape = <span></span></li>
                 <li id="">n/a<span></span></li>
             </ul>
+            <div id="dd_cookies">
+                <ul id="dd_cookies_list">
+                </ul>
+                <p style="margin-left:2em;">
+                    <button id="dd_clrcookies" style="cursor: pointer;">Clear ALL Cookies</button>
+                </p>
+            </div>
         </section>
     </div>
-    <!-- This is the lightbox modal, it also has clickable 
-    thumbnails (commented out) under the selected image -->
+    <!-- This is the lightbox modal -->
     <div id="lb_modal" class="lb-modal">
         <span class="lb-close lb-cursor" onclick="lb_closeModal();enableScrolling(onWindowScroll);">X</span>
         <div class="lb-modal-content">
