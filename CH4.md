@@ -3,7 +3,15 @@
 
 # Modification Guidelines
 
-## Where to Start
+## Where to Start?
+
+A good question! I believe that the first step is to choose the piece(s) you want to modify or reuse. This chapter will mostly cover *reuse*.
+
+## Modifying
+
+Modifying what is here is up to you. Most everything is commented, or documented so that "stuff" is easy to find. 
+
+*Software is like clay. It's malleable(usually) and if designed well then reshaping it is only dependent on one's imagination.*
 
 ## Reusing Features
 
@@ -133,8 +141,9 @@ Under `#devdebug` is a section that displays the current cookies. It will show y
         <figcaption><strong>The cookie consent has been accepted and a theme was saved.</strong></figcaption>
     </figure>
 </div>
+<br>
 
-The text will update if the "Clear All Cookies" button is clicked. After a short delay the page will reload and anchor at the top of the page.
+The text will update if the "Clear All Cookies" button is clicked. After a short delay the page will reload and position contents at the top of the page.
 
 ### To Top Button
 

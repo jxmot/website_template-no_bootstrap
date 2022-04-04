@@ -24,7 +24,7 @@ After some research, experimentation, and playing around I put together what you
 * Must be responsive
 * Must work, the navigation menu must operate and select targets
 * Must work with or without the "logo" component of the navigation bar
-* Must be usable as a *basic* starting point for other projects
+* Must be usable as a *basic* starting point for other web page projects
 
 It was also quite frustrating just *finding* **working** examples of a non-Bootstrap "responsive" page with a navigation menu. Too often I'd find something that(*pick one or more of the following...*):
 

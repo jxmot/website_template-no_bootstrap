@@ -79,6 +79,8 @@ This demonstrates *dynamic loading* of CSS files. There is a collection of CSS f
     </figure>
 </div>
 
+**NOTE:** If the cookie consent was *accepted* the theme choice will be saved to a cookie. If the consent is *declined* then no cookie will be saved. When the page loads if the consent cookie is present then the theme cookie is read and it's contents contain the theme CSS file name and the ID of the radio button that selected it.
+
 ## Develop and Debug
 
 This was created out of necessity. I was testing on my phone and couldn't find my USB cable for *remote debugging*. And I needed to see some run-time variables and test results. This "devdebug" output is optional and is off by default. To enable it add `devdebug` in the query:
