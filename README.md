@@ -86,3 +86,6 @@ Functions and globally used variables are also named so that their *purpose* and
 # Continue
 
 To [chapter 2 - Features](CH2.md)...
+
+---
+<img src="http://webexperiment.info/extcounter/mdcount.php?id=website_template-no_bootstrap">
