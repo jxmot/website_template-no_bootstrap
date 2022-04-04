@@ -16,7 +16,7 @@ const browserinfo = getBrowser();
 //
 // use this to debug bad browser adjustments
 // const badbrowser = browserinfo.mask;
-const badbrowser = (browserMasks[FIREFOX][BMASK] | browserMasks[MOBILE][BMASK]);
+const badbrowser = (browserMasks[FIREFOX][BMASK] | browserMasks[GECKO][BMASK] | browserMasks[MOBILE][BMASK]);
 
 //devDebug();
 
