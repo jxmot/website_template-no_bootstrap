@@ -7,7 +7,7 @@
 
 ## Reusing Features
 
-This section is a guide to extracting and reusing some of the features in other projects. 
+This section is a guide to extracting and reusing some of the features found here in other projects. 
 
 ### Cookie Consent
 
@@ -210,7 +210,10 @@ $().ready(() => {
 
 Browser detection consists of the following:
 
-* 
+* HTML - **none**
+* CSS - **none**
+* JavaScript - `getbrowser.js`
+
 
 
 **Edit Before Using:**
@@ -219,11 +222,50 @@ Browser detection consists of the following:
 
 There are a number of "adjustment" functions that are called when an undesirable browser is detected:
 
-* `adjustBody()` - Currently not used, otherwise it would adjust the font size.
-* `adjustSection()` - Follow this function call with `hdrheight = $('.nav-header').height();`. 
-* `adjustToTop()` - 
-* `adjustFooter()` - 
-* `adjustCookies()` - 
+* `nobs.js:adjustBody()` - Currently not used, otherwise it would adjust the font size.
+* `nobs.js:adjustSection()` - 
+* `nobs.js:adjustNav()` - Follow this function call with `hdrheight = $('.nav-header').height();`. 
+* `totop.js:adjustToTop()` - 
+* `nobs.js:adjustFooter()` - 
+* `nobs-lightbox.js:adjustLBox()` - 
+* `cookies.js:adjustCookies()` - 
+
+
+**`nobs.js:`**
+```javascript
+$().ready(() => {
+    // this is the best place to get the height of the 
+    // <header> that contains the nav menu.
+    hdrheight = $('.nav-header').height();
+    // Set the bottom padding for ${pagetop}, all of the pages'
+    // content goes inside. The <header> and <footer> must 
+    // stay contain all of ${pagetop}
+    $(`${pagetop}`).css('padding-bottom', ($('#page_footer').height() + ($('#page_footer').height() * 0.15)) + 'px');
+
+    // if we're being viewed in a "bad" browser 
+    // then make the necessary adjustments
+    if(badbrowser === browserinfo.mask) {
+        // <body> adjustments 
+//        adjustBody();
+        // <section> adjustments
+        adjustSection();
+        // <nav> adjustments 
+        adjustNav();
+        hdrheight = $('.nav-header').height();
+        // to-top button
+        adjustToTop();
+        // <footer> adjustments
+        adjustFooter();
+        // lightbox adjustments
+        adjustLBox();
+        // don't adjust the cookie consent unless 
+        // it is present
+        if(typeof adjustCookies === 'function') {
+            adjustCookies();
+        }
+    }
+});
+```
 
 ## Adding Features
 
