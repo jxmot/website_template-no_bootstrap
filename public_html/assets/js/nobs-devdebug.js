@@ -110,7 +110,7 @@ function devDebug() {
                     let werewas = (deld > 1 ? 'cookies were' : 'cookie was');
                     $('#dd_cookies_list').append(`<li>${deld} ${werewas} deleted</li>`);
                     const tdelay = 5000;
-                    $('#dd_cookies_list').append(`<li>This page will reload in ${tdelay} seconds...</li>`);
+                    $('#dd_cookies_list').append(`<li>This page will reload in ${tdelay/1000} seconds...</li>`);
                     setTimeout(function() {
                         window.location.href = '';
                         window.location.reload();
