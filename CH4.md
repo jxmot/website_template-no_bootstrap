@@ -1,11 +1,13 @@
 <h1 align="center">Website Template - NO BOOTSTRAP<h1>
-<p align="center">Chapter 5<p>
+<p align="center">Chapter 4<p>
 
 # Modification Guidelines
 
 ## Where to Start
 
 ## Reusing Features
+
+This section is a guide to extracting and reusing some of the features in other projects. 
 
 ### Cookie Consent
 
@@ -47,12 +49,13 @@ This is the HTML for the Cookie Consent dialog:
 
 * The consent dialog is positioned with `.cookie-con` (found in `cookies.css`). It's currently set at a fixed position  `3.1rem`*above* the bottom of the viewport to give room for the footer. Edit as necessary.
 * Change the text between the `<p id="cookie_con_text" class="cookie-con-text"></p>` tags.
+* Call `hasConsent()` as needed to manage the use of other cookies and/or features.
 
 **Example of Cookie Use:**
 
 The visibility of the consent dialog and responses to the "Accept" or "DECLINE" buttons are managed in `cookies.js`. 
 
-Using the "theme" selection as an example 
+Using the "theme" selection as an example here is how 
 Checking the consent cookie and 
 
 theme cookie when the page is ready:
@@ -60,12 +63,19 @@ theme cookie when the page is ready:
 
 ```pseudocode
 When the page is ready:
-  Test for the presence of hasConsent() and if found then read the consent cookie, if true then
+  If hasConsent() is present and it returns true then
     Read the theme cookie
     If the theme cookie is present then
-      Parse the cookie data and - 
-        Apply the CSS file that it specifies.
-        Select the radio button that it specifies.
+      Parse the cookie data
+      Apply the CSS file that it specifies
+      Select the radio button that it specifies
+    End If
+  End If
+  
+  Wait for a theme selection 
+    Load the selected theme
+    If hasConsent() is present and it returns true then
+      Save the theme cookie
     End If
 End
 ```
@@ -115,6 +125,8 @@ This feature can be reused very easily. It consists of three parts:
 * CSS - `nobs-totop.css`
 * JavaScript - `totop.js`
 
+The HTML portion (a `<button>`) is located in the `<footer>`:
+
 ```html
     <!-- Page Footer -->
     <footer id="page_footer" class="footer">
@@ -126,9 +138,92 @@ This feature can be reused very easily. It consists of three parts:
     </footer>
 ```
 
+**NOTE:** For reuse, copy the `nobs-totop.css` to `toptop.css` and edit the colors to *not* use CSS variables. Unless you're reusing the theme CSS files. 
+
+If you're going to reuse it without a footer you will need to wrap the `<button>` in a `<div>` and use the following 
+CSS - 
+
+```css
+.totop-div {
+  bottom: 0;
+  position: fixed;
+  width: 100vw;
+  height: 3rem;
+}
+```
+
+```html
+<div class="totop-div">
+  <button id="gototop_button" class="gototop" onclick="jumpToTop()" title="Go to top of page">
+    <span id="gototop_span" class="gototop-span">&#9650;</span>
+  </button>
+</div>
+```
+
 **Edit Before Using:**
 
+The "To Top" CSS file has been named with `nobs_` because it references colors in the palette and theme CSS files. You could rename it to `totop.css` and change the colors from CSS variables to actual values.
 
+**Usage Example:**
+
+```javascript
+// this will contain the height of .nav-header 
+var hdrheight = -1;
+// this function uses hdrheight to calculate 
+// where to jump. it allows for the height of 
+// the nav bar.
+function nobs_scrollTo(href) {
+    var goTo = '';
+    // let's close the nav menu...
+    $('#nav-togg')[0].checked = false;
+    // has the header height been obtained yet?
+    if(hdrheight !== -1) {
+        if(href.charAt(0) === '#') {
+            goTo = href;
+        } else {
+            let tmp = href.split("#");
+            goTo = '#'+tmp[1];
+        }
+        $('html').stop(true).animate({
+            scrollTop: ($(goTo).position().top - hdrheight)
+        },450); // NOTE: Any value greater than ~450 will cause 
+                // the scroll to miss its target. Why?
+    } else consolelog('nobs_scrollTo() - bad hdrheight');
+};
+
+// When the user clicks on the button, scroll to the top of the document
+function jumpToTop() {
+    //nobs_scrollTo('#main');
+    nobs_scrollTo(`${pagetop}`);
+};
+```
+
+```javascript
+$().ready(() => {
+    // this is the best place to get the height of the 
+    // <header> that contains the nav menu.
+    hdrheight = $('.nav-header').height();
+});
+```
+
+### Browser Detection
+
+Browser detection consists of the following:
+
+* 
+
+
+**Edit Before Using:**
+
+#### Acting on Detection Results
+
+There are a number of "adjustment" functions that are called when an undesirable browser is detected:
+
+* `adjustBody()` - Currently not used, otherwise it would adjust the font size.
+* `adjustSection()` - Follow this function call with `hdrheight = $('.nav-header').height();`. 
+* `adjustToTop()` - 
+* `adjustFooter()` - 
+* `adjustCookies()` - 
 
 ## Adding Features
 
