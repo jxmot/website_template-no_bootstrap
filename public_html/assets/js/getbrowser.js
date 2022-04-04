@@ -40,13 +40,15 @@ const browserMasks = [
     ,['Edge',    0x0010]
     ,['Chrome',  0x0020]
     ,['Blink',   0x0040]
-    ,['BYPASS_B',0x0080]
+    ,['Gecko',   0x0080]
+// 0x0100,0x0200,0x0400 - available for use
+    ,['BYPASS_B',0x0800]
 // Device:
-//    String     Mask
-    ,['tablet',  0x0100]
-    ,['mobile',  0x0200]
-    ,['desktop', 0x0400]
-    ,['BYPASS_D',0x0800]
+//    String      Mask
+    ,['tablet',  0x1000]
+    ,['mobile',  0x2000]
+    ,['desktop', 0x4000]
+    ,['BYPASS_D',0x8000]
 ];
 // indices for browserMasks[]
 const OPERA    = 0;
