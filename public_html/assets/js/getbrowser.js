@@ -140,3 +140,15 @@ function getBrowser() {
     }
     return ret;
 };
+
+function getBrowserPrefix() {
+  var prefix = (Array.prototype.slice
+  .call(window.getComputedStyle(document.documentElement, ""))
+  .join("") 
+  .match(/-(moz|webkit|ms)-/))[1];
+  // MOZ - FIREFOX (GECKO ENGINE)
+  // WEBKIT - CHROME, SAFARI, OPERA, EDGE (WEBKIT ENGINE)
+  // MS - OLD INTERNET EXPLORER & EDGE (TRIDENT ENGINE)
+  // NOTE - OLD OPERA VERSIONS USE PRESTO ENGINE. PREFIX IS -O
+  return prefix;
+};
