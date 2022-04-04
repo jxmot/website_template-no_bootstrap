@@ -18,7 +18,7 @@ const browserinfo = getBrowser();
 // const badbrowser = browserinfo.mask;
 const badbrowser = (browserMasks[FIREFOX][BMASK] | browserMasks[MOBILE][BMASK]);
 
-devDebug();
+//devDebug();
 
 // running with or without the logo?
 var mklogo = getLogoChoice();
@@ -88,6 +88,7 @@ $().ready(() => {
 
     loadGallery();
 
+    devDebug();
     /*
         wait for a click from any menu item... 
     */
