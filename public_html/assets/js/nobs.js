@@ -3,9 +3,12 @@
 
     Author: https://github.com/jxmot
     Repository: https://github.com/jxmot/website_template-no_bootstrap
+
+    Requires: getbrowser.js
 */
 const pagetop = '#main';
-// let's see which browser is being used
+// let's see which browser is being used (getBrowser() 
+// is found in getbrowser.js)
 const browserinfo = getBrowser();
 // FireFox mobile is an oddball. It does not render 
 // pages the same as Chrome mobile. When #devdebug is 
@@ -26,7 +29,7 @@ if(mklogo.logo === true) {
     $('.menu a').addClass('menu-item-pad-no_logo');
 }
 
-// this will contain the height of #nav-header 
+// this will contain the height of .nav-header 
 var hdrheight = -1;
 // this function uses hdrheight to calculate 
 // where to jump. it allows for the height of 
@@ -50,9 +53,8 @@ function nobs_scrollTo(href) {
     } else consolelog('nobs_scrollTo() - bad hdrheight');
 };
 
-// When the user clicks on the button, scroll to the top of the document
+// When the user clicks on the to-top button, scroll to the top of the document
 function jumpToTop() {
-    //nobs_scrollTo('#main');
     nobs_scrollTo(`${pagetop}`);
 };
 
