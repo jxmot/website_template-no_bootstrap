@@ -1,0 +1,42 @@
+
+.splash {
+    background-color: black;
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+
+    position: fixed;
+    z-index: 999;
+
+    animation: splash-opacity 5s forwards;
+}
+
+@keyframes splash-opacity {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.splash-img {
+    content: url("../../no_bootstrap.png");
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
+}
+
+.splash-text {
+    position: relative;
+    top: 15%;
+    transform: translateY(-50%);
+
+    color: white;
+}
