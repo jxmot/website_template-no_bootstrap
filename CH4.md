@@ -41,6 +41,11 @@ A tiny bit of HTML is required, place it above the <nav> to cover the entire vie
     <!-- Navigation Bar -->
 ```
 
+**Edit Before Using:**
+
+* In `.splash-img` change the image, or remove the `<img>`.
+* In `.splash` change the background color.
+
 ### Cookie Consent
 
 This feature can be reused very easily. It consists of three parts:
