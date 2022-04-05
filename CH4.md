@@ -17,6 +17,30 @@ Modifying what is here is up to you. Most everything is commented, or documented
 
 This section is a guide to extracting and reusing some of the features found here in other projects. 
 
+### Welcome Splash
+
+This feature can be reused very easily. It consists of three parts:
+
+* HTML - *details below*
+* CSS - `splash.css`
+* JavaScript - `splash.js`
+
+A tiny bit of HTML is required, place it above the <nav> to cover the entire viewport:
+
+```html
+<body>
+    <!-- Initial Splash, covers the entire viewing area 
+    including the navbar, and then fades to transparent 
+    An event is captured in splash.js where this <div> is 
+    set to "display:none;".
+    -->
+    <div id="top_splash" class="splash">
+        <h3 class="splash-text">Ready for use! NO BOOTSTRAP!!</h3>
+        <img class="splash-img">
+    </div>
+    <!-- Navigation Bar -->
+```
+
 ### Cookie Consent
 
 This feature can be reused very easily. It consists of three parts:

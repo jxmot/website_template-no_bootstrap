@@ -3,6 +3,18 @@
 
 # Features
 
+## Welcome Splash
+
+When the page is loaded a *splash* is display for about 5 seconds. It contains a heading and an image.
+
+<div align="center">
+    <figure>
+        <img src="./mdimg/sshot-splash.jpg" style="width:50%;border: 2px solid black"; alt="Desktop Screenshot with Cookie Consent" txt="Desktop Screenshot with Cookie Consent"/>
+        <br>
+        <figcaption><strong>Desktop Screenshot with Cookie Consent</strong></figcaption>
+    </figure>
+</div>
+
 ## Cookie Consent
 
 The cookie consent and the use of cookies is independent of the rest of the HTML/CSS/JavaScript. If you want to quickly disable the consent and use of cookies then edit `index.html` and comment out the line - 
