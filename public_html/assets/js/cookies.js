@@ -1,4 +1,6 @@
 /*
+    cookies.js - Cookie managent functions
+
     Cookies:
         makeCookie()        - creates a cookie
         getCookie()         - get a cookie
@@ -14,6 +16,9 @@
 
     Good cookie description, but the tutorial is junk - 
         https://www.w3resource.com/javascript/cookies/introduction-cookies.php
+
+    Author: https://github.com/jxmot
+    Repository: https://github.com/jxmot/website_template-no_bootstrap
 */
 const default_cookie_expire = 5;
 

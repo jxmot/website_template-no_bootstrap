@@ -1,3 +1,10 @@
+/*
+    cookies.css - Styling for the cookie consent dialog
+
+    Author: https://github.com/jxmot
+    Repository: https://github.com/jxmot/website_template-no_bootstrap
+*/
+
 /* https://angrytools.com/css-grid/ */
 
 /* cookies */
@@ -77,6 +84,11 @@
     Button Styles 
 
     Used https://cssbuttons.app/
+
+    Modified to combine CSS from 2 buttons into 
+    common class(es).
+
+    Coloring is done with button specific classes.
 */
 .cookie-con-button {
     width: 6em;
