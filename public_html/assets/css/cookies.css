@@ -14,6 +14,16 @@
     border-radius: 1rem;
 }
 
+@media (min-width: 1040px) {
+    .cookie-con {
+        width: 70%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
 .cookie-con-body {
     margin-left: 2rem;
     margin-right: 2rem;
