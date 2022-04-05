@@ -12,7 +12,7 @@
     Cookie Info:
         https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies
 
-        Good cookie description, but the tutorial is junk - 
+    Good cookie description, but the tutorial is junk - 
         https://www.w3resource.com/javascript/cookies/introduction-cookies.php
 */
 const default_cookie_expire = 5;
