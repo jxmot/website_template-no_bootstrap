@@ -13,7 +13,24 @@
     position: fixed;
     z-index: 999;
 
-    animation: splash-opacity 5s forwards;
+    -webkit-animation: splash-opacity 5s forwards;
+
+            animation: splash-opacity 5s forwards;
+}
+
+@-webkit-keyframes splash-opacity {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes splash-opacity {

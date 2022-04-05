@@ -31,6 +31,7 @@ body {
 
     background-color: var(--nav-header-bgcolor);
     box-shadow: 0 5px var(--nav-header-bgcolor);
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     width: 100%;
@@ -67,7 +68,8 @@ body {
 
 .logo-img {
     width: 50px;
-    clip-path: circle(25px at center);
+    -webkit-clip-path: circle(25px at center);
+            clip-path: circle(25px at center);
     content: url("../../no_bootstrap.png");
 }
 
@@ -79,7 +81,8 @@ body {
     }
     .logo-img {
         width: 80px;
-        clip-path: circle(37px at center);
+        -webkit-clip-path: circle(37px at center);
+                clip-path: circle(37px at center);
     }
 }
 
@@ -98,6 +101,8 @@ body {
         top: 0;
         position: relative;
         float: right;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
         width: fit-content;
     }
 }
@@ -275,9 +280,6 @@ body {
 .home-bg {
     z-index: -1;
     background:url("https://picsum.photos/1920/1080") no-repeat center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size:cover;
 }
 
