@@ -1,5 +1,5 @@
 /*
-    splash.js - CSS for the "Welcome Splash"
+    splash.js - JS for the "Welcome Splash"
 
     Author: https://github.com/jxmot
     Repository: https://github.com/jxmot/website_template-no_bootstrap
