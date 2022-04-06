@@ -72,7 +72,7 @@ The "lorem ipsum" content was obtained at - <https://baconipsum.com/>
 * [Autoprefixer](<https://github.com/postcss/autoprefixer>) and on [npmjs](<https://www.npmjs.com/package/autoprefixer>) - The CSS files in this repository have been process with Autoprefixer, it will add or remove browser prefixes.
 * [CSS Grid Layout Generator](<https://angrytools.com/css-grid/>) - Easy to use, I looked at a few grid generators and this one has the cleanest UI.
 
-If you would like to use the Autoprefixer I have it ready for installation. Go to my [README](utils/autoprefixer/README.md) for more information.
+If you would like to use the Autoprefixer I have it ready for installation. Go to my [Autoprefixer README](utils/autoprefixer/README.md) for more information.
 
 ## File Organization
 
