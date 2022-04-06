@@ -16,6 +16,8 @@ Install Autoprefixer:
 npm install postcss postcss-cli autoprefixer
 ```
 
+There *might be* some error messages during the installation. But everything *should be* OK. 
+
 ## Run
 
 First copy your CSS files into the `autoprefixer/in` folder. 
