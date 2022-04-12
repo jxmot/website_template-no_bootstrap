@@ -1,0 +1,3 @@
+[submodule "utils/htaccess-minifier"]
+	path = utils/htaccess-minifier
+	url = https://github.com/jxmot/htaccess-minifier.git
