@@ -12,9 +12,14 @@
 
     position: fixed;
     z-index: 999;
+}
 
+.splash-animate {
     -webkit-animation: splash-opacity 5s forwards;
             animation: splash-opacity 5s forwards;
+
+    -webkit-animation-delay: 3.5s;
+            animation-delay: 3.5s;
 }
 
 @-webkit-keyframes splash-opacity {
