@@ -1,5 +1,15 @@
+# NOTE: This is a development & test version of an 
+# htaccess file. 
+
+# no caching
 <IfModule mod_headers.c>
     Header set Cache-Control "no-cache, no-store, must-revalidate"
     Header set Pragma "no-cache"
     Header set Expires 0
+</IfModule>
+
+# enable compression for specified resource types
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript
+    AddOutputFilterByType DEFLATE font/ttf image/webp image/jpeg image/png
 </IfModule>
