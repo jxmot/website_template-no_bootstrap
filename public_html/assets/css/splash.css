@@ -1,6 +1,11 @@
 /*
     splash.css - CSS for the "Welcome Splash"
 
+    See Also:
+        splash.js - hides the #top_splash after the 
+        animation is ended
+
+
     Author: https://github.com/jxmot
     Repository: https://github.com/jxmot/website_template-no_bootstrap
 */
