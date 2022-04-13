@@ -58,7 +58,10 @@
 }
 
 .splash-img {
-    content: url("../../no_bootstrap.png");
+    content: url("../../nobs-800x800.png");
+    max-height: 300px;
+    max-width: 300px;
+
     position: relative;
     top: 40%;
     transform: translateY(-50%);
