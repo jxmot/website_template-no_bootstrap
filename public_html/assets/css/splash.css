@@ -23,8 +23,8 @@
     -webkit-animation: splash-opacity 5s forwards;
             animation: splash-opacity 5s forwards;
     /* this delay allows splash-img-blur to finish first */
-    -webkit-animation-delay: 3.5s;
-            animation-delay: 3.5s;
+    -webkit-animation-delay: 1.5s;
+            animation-delay: 1.5s;
 }
 
 @-webkit-keyframes splash-opacity {
