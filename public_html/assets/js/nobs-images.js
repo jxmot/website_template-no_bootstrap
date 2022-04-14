@@ -18,7 +18,7 @@
 */
 const all_images = {
     gallery: [
-        // path to image, "alt" text (caption for lightbox)
+        // path to thumbnail image, "alt" text (caption for gallery, not used)
         ['https://picsum.photos/seed/abcd/300/200',''],
         ['https://picsum.photos/seed/efgh/300/200','Padlocks on a Fence'],
         ['https://picsum.photos/seed/ijkl/300/200',''],
@@ -59,27 +59,41 @@ const all_images = {
 const indentX3 = '            ';
 const indentX4 = '                ';
 
-function loadGallery(gallery = all_images.gallery) {
+function loadGallery(overimg = false, gallery = all_images.gallery) {
     var htmlout = '';
     $('#gallery').html(htmlout);
     for(idx = 0; idx < gallery.length; idx++) {
         htmlout += indentX3 + `<div class="grid-img-cell lb-cursor" onclick="disableScrolling();lb_openModal(${idx + 1});">` + "\n";
+
         htmlout += indentX3 + `    <img class="gallery-img" src="${gallery[idx][0]}">` + "\n";
-        var ovtext = '' + (idx + 1) + getOrdinal(idx + 1);
-        htmlout += indentX3 + `    <div class="text-overimg">${ovtext}</div>` + "\n";
+
+        if(overimg === true) {
+            let ovtext = '' + (idx + 1) + getOrdinal(idx + 1);
+            htmlout += indentX3 + `    <div class="text-overimg">${ovtext}</div>` + "\n";
+        }
         htmlout += indentX3 + '</div>\n';
     }
     $('#gallery').html(htmlout);
 };
 
-function loadSlides(slides = all_images.gallery) {
+function unloadGallery() {
+    $('#gallery').html('');
+};
+
+function loadSlides(slides = (all_images.lightbox === undefined ? all_images.gallery : all_images.lightbox)) {
     var htmlout = '';
     $('#modal_slides').html('');
     for(idx = 0; idx < slides.length; idx++) {
         htmlout += indentX4 + '<div class="lb-slides">' + "\n";
         htmlout += indentX4 + `    <div class="lb-numbertext">${idx + 1} / ${slides.length}</div>` + "\n";
-        htmlout += indentX4 + `    <img class="lb-img" src="${slides[idx][0]}" alt="${slides[idx][1]}">` + "\n";
-        htmlout += indentX4 + '</div>' + "\n";
+
+        htmlout += indentX4;
+        if(slides[idx][1] === '')
+            htmlout += `    <img class="lb-img" src="${slides[idx][0]}">`;
+        else
+            htmlout += `    <img class="lb-img" src="${slides[idx][0]}" alt="${slides[idx][1]}">`;
+
+        htmlout += "\n" + indentX4 + '</div>' + "\n";
     }
     $('#modal_slides').html(htmlout);
 };
