@@ -68,6 +68,11 @@
 .lb-img {
     width: 80%;
     height: 80%;
+
+    padding: 0.25rem;
+/* palette */
+    background-color: #fff;
+    border-radius: 0.25rem;
 }
 
 @media (min-width: 768px) {
