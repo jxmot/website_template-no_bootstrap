@@ -131,6 +131,9 @@ select {
 textarea {
     overflow: auto;
     vertical-align: top;
+    /* jxmot
+    by default a text area will use a monospace font */
+    font-family: inherit;
 }
 
 [type="search"] {
