@@ -61,6 +61,9 @@ function showToTop() {
 // called as needed after the page has loaded, this will 
 // adjust the size of the to-top button. (Firefox SUCKS!)
 function adjustToTop() {
+    // this is necessary because the default value is 
+    // too large and in FF mobile it won't be seen
+    scroll_travel = 0.05;
     // the values of these adjustments are dependant 
     // on the values in .gototop(totop.css)
     document.getElementById('gototop_button').style.right  = '5%';

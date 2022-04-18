@@ -5,16 +5,22 @@
     Author: https://github.com/jxmot
     Repository: https://github.com/jxmot/website_template-no_bootstrap
 */
-.gototop {
-    display: none;    
+.gototop-page {
     position: fixed;
+    bottom: 5%;
+    right: 5%;
+}
 
-    /* location on page */
+.gototop-footer {
+    /* location on page, within its container */
     position: absolute;
     top: 50%;
     right: 10%;
     transform: translate(-50%, -50%);
+}
 
+.gototop {
+    display: none;    
     /* placement and colors */
     z-index: 99;  
     border: 1px solid var(--totop-border-color);
