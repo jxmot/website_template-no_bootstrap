@@ -87,12 +87,23 @@
     color: var(--lightbox-modal-caption-color);
 }
 
+.lb-buttons {
+    width: 80%;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .lb-buttons {
+        width: 60%;
+    }
+}
+
 /* Next & previous buttons */
 .lb-prev,
 .lb-next {
     cursor: pointer;
-    position: absolute;
-    width: auto;
     margin-top: 2.5%;
     color: var(--lightbox-modal-next);
     font-weight: bold;
@@ -107,23 +118,12 @@
 
 /* Position the "previous button" to the left */
 .lb-prev {
-    left: 10%;
+    float: left;
 }
 
 /* Position the "next button" to the right */
 .lb-next {
-    right: 10%;
-}
-
-@media (min-width: 768px) {
-    /* Position the "previous button" to the left */
-    .lb-prev {
-        left: 20%;
-    }
-    /* Position the "next button" to the right */
-    .lb-next {
-        right: 20%;
-    }
+    float: right;
 }
 
 /* On hover, add a black background color with a little bit see-through */
