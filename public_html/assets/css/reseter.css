@@ -230,6 +230,10 @@ details {
     display: block;
 }
 
+summary {
+    display: list-item;
+}
+
 dialog {
     background-color: inherit;
     border: solid;
@@ -250,10 +254,6 @@ dialog {
 
 dialog:not([open]) {
     display: none;
-}
-
-summary {
-    display: list-item;
 }
 
 canvas {
