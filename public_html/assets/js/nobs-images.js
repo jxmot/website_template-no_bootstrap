@@ -65,7 +65,11 @@ function loadGallery(overimg = false, gallery = all_images.gallery) {
     for(idx = 0; idx < gallery.length; idx++) {
         htmlout += indentX3 + `<div class="grid-img-cell lb-cursor" onclick="disableScrolling();lb_openModal(${idx + 1});">` + "\n";
 
-        htmlout += indentX3 + `    <img class="gallery-img" src="${gallery[idx][0]}">` + "\n";
+        htmlout += indentX4;
+        if(gallery[idx][1] === '')
+            htmlout += `    <img class="gallery-img" src="${gallery[idx][0]}">`;
+        else
+            htmlout += `    <img class="gallery-img" src="${gallery[idx][0]}" alt="${gallery[idx][1]}">`;
 
         if(overimg === true) {
             let ovtext = '' + (idx + 1) + getOrdinal(idx + 1);
