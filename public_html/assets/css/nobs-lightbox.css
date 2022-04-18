@@ -9,7 +9,7 @@
 */
 /* The Modal (background) */
 .lb-modal {
-    z-index: 1;
+    z-index: 100;
 
     display: none;
     position: fixed;
