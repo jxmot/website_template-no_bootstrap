@@ -14,11 +14,13 @@
     --nav-menu-text: var(--white);
 
     --nav-logo-text: var(--white);
+    --nav-logo-text-hover: var(--white);
 
     --nav-menu-hamb-hover-bgcolor: var(--grey);
     --nav-menu-hamb-hover-color: var(--black);
     /* this actually the color of the hambuger icon */
     --nav-hambicon-bgcolor: var(--yellowish);
+    --nav-hambicon-bgcolor-hover: var(--transparent);
 
     --footer-text: var(--white);
     --footer-bgcolor: var(--nav-header-bgcolor);
@@ -35,6 +37,8 @@
     --contact-form-form-focus: var(--bright-green);
     --contact-form-form-input-border:  var(--black);
     --contact-form-form-button-bgcolor: var(--light-grey);
+
+    --gallery-img-bg-color: var(--black);
 
     --lightbox-modal-bgcolor: var(--black);
     --lightbox-modal-content-bgcolor:  var(--white);
