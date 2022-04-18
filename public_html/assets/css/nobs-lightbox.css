@@ -67,18 +67,15 @@
 
 .lb-img {
     width: 80%;
-    height: 80%;
-
+    max-width: 550px;
     padding: 0.25rem;
-/* palette */
-    background-color: #fff;
+    background-color: var(--gallery-img-bg-color);
     border-radius: 0.25rem;
 }
 
 @media (min-width: 768px) {
     .lb-img {
         width: 60%;
-        height: 60%;
     }
 }
 
