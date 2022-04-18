@@ -1,4 +1,4 @@
-/*  nobs-alt-4.css - A color scheme, replaces nobs-default.css
+/*  nobs-alt_4.css - A color scheme, replaces nobs-default.css
 
     Author: https://github.com/jxmot
     Repository: https://github.com/jxmot/website_template-no_bootstrap
@@ -35,6 +35,8 @@
     --contact-form-form-focus:  var(--gold);
     --contact-form-form-input-border:  var(--black);
     --contact-form-form-button-bgcolor: var(--light-grey);
+
+    --gallery-img-bg-color: var(--black);
 
     --lightbox-modal-bgcolor: var(--black);
     --lightbox-modal-content-bgcolor:  var(--white);
