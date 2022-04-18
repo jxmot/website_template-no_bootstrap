@@ -3,7 +3,7 @@
     Author: https://github.com/jxmot
     Repository: https://github.com/jxmot/website_template-no_bootstrap
 */
-.gallery {
+.gallery-grid {
     display: grid;
 
     grid-template-columns: 1fr 1fr;
@@ -23,7 +23,7 @@
 }
 
 @media (min-width: 768px) {
-    .gallery {
+    .gallery-grid {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
     }
