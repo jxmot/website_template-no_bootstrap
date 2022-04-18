@@ -55,7 +55,9 @@
 
 .cookie-con-text {
     font-size: small;
-    font-weight: 900;
+/* Change, depending on font used. */
+    /* font-weight: 900; */
+    font-weight: bold;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
 }
