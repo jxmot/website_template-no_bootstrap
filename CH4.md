@@ -185,11 +185,10 @@ This feature can be reused very easily. It consists of three parts:
 The HTML portion (a `<button>`) is located in the `<footer>`:
 
 ```html
-    <!-- Page Footer -->
+    <!-- Page Footer & ToTop Button -->
     <footer id="page_footer" class="footer">
         <h3 class="footer-text"><a href="https://github.com/jxmot" target=_blank>github.com/jxmot</a></h3>
-        <!-- kept in the footer & keep it anchored with CSS -->
-        <button id="gototop_button" class="gototop" onclick="jumpToTop()" title="Go to top of page">
+        <button id="gototop_button" class="gototop gototop-footer" onclick="jumpToTop()" title="Go to top of page">
             <span id="gototop_span" class="gototop-span">&#9650;</span>
         </button>
     </footer>
@@ -197,24 +196,13 @@ The HTML portion (a `<button>`) is located in the `<footer>`:
 
 **NOTE:** For reuse, copy the `nobs-totop.css` to `toptop.css` and edit the colors to *not* use CSS variables. Unless you're reusing the theme CSS files. 
 
-If you're going to reuse it without a footer you will need to wrap the `<button>` in a `<div>` and use the following 
-CSS - 
-
-```css
-.totop-div {
-  bottom: 0;
-  position: fixed;
-  width: 100vw;
-  height: 3rem;
-}
-```
+If you want use the button without the footer first comment out (*or remove*) the `<footer>` stuff and umcomment this - 
 
 ```html
-<div class="totop-div">
-  <button id="gototop_button" class="gototop" onclick="jumpToTop()" title="Go to top of page">
-    <span id="gototop_span" class="gototop-span">&#9650;</span>
-  </button>
-</div>
+    <!-- ToTop Button Only
+    <button id="gototop_button" class="gototop gototop-page" onclick="jumpToTop()" title="Go to top of page">
+        <span id="gototop_span" class="gototop-span">&#9650;</span>
+    </button> -->
 ```
 
 **Edit Before Using:**
@@ -277,6 +265,8 @@ Browser detection consists of the following:
 * JavaScript - `getbrowser.js`
 
 **Edit Before Using:**
+
+* **TBD**
 
 #### Acting on Detection Results
 
@@ -401,6 +391,8 @@ function adjustCookies() {
 ```
 
 ## Adding Features
+
+**"WORK IN PROGRESS"**
 
 # The End!
 

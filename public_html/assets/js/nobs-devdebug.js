@@ -117,6 +117,8 @@ function devDebug() {
                     }, tdelay);
                 }
             });
+        } else {
+            $('#dd_cookies').css('display','none');
         }
     }
 };

@@ -52,6 +52,10 @@ body {
     margin-left: 10px;
 }
 
+.nav-logo:hover {
+    color: var(--nav-logo-text-hover);
+}
+
 @media (min-width: 768px) {
     .nav-logo {
         font-size: 60px;
@@ -94,6 +98,9 @@ body {
     transition: max-height .5s ease-out;
 }
 
+/* change the value depending on the number of
+ items in the menu
+*/
 @media (min-width: 768px) {
     .nav{
         max-height: none;
@@ -121,6 +128,9 @@ body {
     color: var(--nav-menu-hamb-hover-color);
 }
 
+/* change the value depending on the number of
+ items in the menu
+*/
 @media (min-width: 768px) {
     .menu {
         margin-top: 0;
@@ -152,6 +162,9 @@ body {
     padding: 10px 30px 10px 30px;
 }
 
+/* change the value depending on the number of
+ items in the menu
+*/
 @media (min-width: 768px) {
     .menu-item-pad-logo {
         padding: 30px 15px 30px 15px;
@@ -167,12 +180,27 @@ body {
     float: right;
 }
 
+.nav-icon-border {
+    margin-top: .25rem;
+    margin-right: .25rem;
+    border: 2px solid var(--nav-hambicon-bgcolor);
+    border-radius: 0.25rem;    
+}
+
+.nav-icon:hover {
+    background: var(--nav-hambicon-bgcolor-hover);
+}
+
 .nav-icon-no_logo {
     padding: 20px 20px;
 }
 
 .nav-icon-logo {
     padding: 20px 20px;
+}
+
+.nav-icon-pad {
+    padding: 1rem .5rem;
 }
 
 .nav-icon-line {
@@ -242,6 +270,16 @@ body {
 
     padding-top: 1rem;
     padding-bottom: 1rem;
+}
+
+.section-title {
+    font-size: 1.9em;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.section-text {
 }
 
 /* needed because reseter.css adjusted <ul> and <ol> */

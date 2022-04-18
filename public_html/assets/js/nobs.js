@@ -18,15 +18,15 @@ const browserinfo = getBrowser();
 // const badbrowser = browserinfo.mask;
 const badbrowser = (browserMasks[FIREFOX][BMASK] | browserMasks[GECKO][BMASK] | browserMasks[MOBILE][BMASK]);
 
-//devDebug();
-
 // running with or without the logo?
-var mklogo = getLogoChoice();
-if(mklogo.logo === true) {
-    setLogo(mklogo);
-} else {
-    $('#nav-close').addClass('nav-icon-no_logo');
-    $('.menu a').addClass('menu-item-pad-no_logo');
+if(typeof getLogoChoice === 'function') {
+    let mklogo = getLogoChoice();
+    if(mklogo.logo === true) {
+        setLogo(mklogo);
+    } else {
+        $('#nav-close').addClass('nav-icon-no_logo');
+        $('.menu a').addClass('menu-item-pad-no_logo');
+    }
 }
 
 // this will contain the height of .nav-header 

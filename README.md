@@ -16,6 +16,7 @@ After some (*ok, more than just "some"*) frustration getting Bootstrap to cooper
 * Not all browsers(or platforms!) produce the same results
 * Bootstrap CSS is an excellent CSS framework, but too complicated and too much overhead for basic needs
 * I'm tired of it lol
+* By comparison, Bootstrap requires more HTML than without it to achieve the same results
 
 ## The Result
 
@@ -82,10 +83,12 @@ If you would like to use the Autoprefixer I have it ready for installation. Go t
 / ──public_html
     └───assets
         ├───css
+        ├───jq
         └───js
 ```
 * `public_html` - `index.html` and favicon image files
 * `public_html/assets/css` - all CSS files
+* `public_html/assets/jq` - contains `jquery-3.6.0.min.js`
 * `public_html/assets/js` - all JavaScript files
 
 ### Naming Conventions

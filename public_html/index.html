@@ -115,7 +115,7 @@
                 The same is true for the lightbox. But the HTML is created when an image in 
                 the gallery has been selected.
             </p>
-            <div id="gallery" class="gallery">
+            <div id="gallery" class="gallery-grid">
             </div>
             <p>
                 Bacon ipsum dolor amet tail turkey fugiat, culpa boudin qui shoulder minim ad laboris tempor ea burgdoggen. Fugiat kielbasa pancetta, frankfurter occaecat kevin et chuck biltong turkey anim meatloaf ea short loin. Capicola laboris minim esse, anim ullamco incididunt tail buffalo burgdoggen landjaeger. Venison boudin veniam cillum, nulla tempor eiusmod excepteur flank. Nostrud frankfurter dolore pork loin, sausage ex porchetta fatback. Swine hamburger fugiat eu. Velit reprehenderit culpa non corned beef consectetur sint pancetta salami shoulder meatloaf ut cupim.
@@ -260,8 +260,11 @@
             <!-- caption under the image -->
             <span id="lb_caption" class="lb-caption">.</span>
             <!-- left & right buttons -->
-            <a class="lb-prev" onclick="lb_plusSlides(-1)">&#10094;<small>&#10094;&#10094;&#10094;</small></a>
-            <a class="lb-next" onclick="lb_plusSlides(1)"><small>&#10095;&#10095;&#10095;</small>&#10095;</a>
+            <div class="lb-buttons">
+                <a class="lb-prev" onclick="lb_plusSlides(-1)">&#10094;<small>&#10094;&#10094;&#10094;</small></a>
+                <a class="lb-next" onclick="lb_plusSlides(1)"><small>&#10095;&#10095;&#10095;</small>&#10095;</a>
+                <div style="clear: both;"></div>
+            </div>
         </div>
     </div>
     <!-- Cookie Consent -->
@@ -287,15 +290,19 @@
             </div>
         </div>
     </div>
-    <!-- Page Footer -->
+    <!-- Page Footer & ToTop Button -->
     <footer id="page_footer" class="footer">
         <h3 class="footer-text"><a href="https://github.com/jxmot" target=_blank>github.com/jxmot</a></h3>
-        <!-- kept in the footer & keep it anchored with CSS -->
-        <button id="gototop_button" class="gototop" onclick="jumpToTop()" title="Go to top of page">
-            <!-- &#9650; \25B2 -->
+        <button id="gototop_button" class="gototop gototop-footer" onclick="jumpToTop()" title="Go to top of page">
             <span id="gototop_span" class="gototop-span">&#9650;</span>
         </button>
     </footer>
+
+    <!-- ToTop Button Only
+    <button id="gototop_button" class="gototop gototop-page" onclick="jumpToTop()" title="Go to top of page">
+        <span id="gototop_span" class="gototop-span">&#9650;</span>
+    </button> -->
+
     <!-- Stuff that makes it work :) 
          The order is important, do not change it.
 
