@@ -272,6 +272,16 @@ body {
     padding-bottom: 1rem;
 }
 
+.section-title {
+    font-size: 1.9em;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.section-text {
+}
+
 /* needed because reseter.css adjusted <ul> and <ol> */
 .section-body ul {
     margin-left: 2rem;
