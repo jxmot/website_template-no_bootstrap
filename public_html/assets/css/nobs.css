@@ -94,6 +94,9 @@ body {
     transition: max-height .5s ease-out;
 }
 
+/* change the value depending on the number of
+ items in the menu
+*/
 @media (min-width: 768px) {
     .nav{
         max-height: none;
@@ -121,6 +124,9 @@ body {
     color: var(--nav-menu-hamb-hover-color);
 }
 
+/* change the value depending on the number of
+ items in the menu
+*/
 @media (min-width: 768px) {
     .menu {
         margin-top: 0;
@@ -152,6 +158,9 @@ body {
     padding: 10px 30px 10px 30px;
 }
 
+/* change the value depending on the number of
+ items in the menu
+*/
 @media (min-width: 768px) {
     .menu-item-pad-logo {
         padding: 30px 15px 30px 15px;
