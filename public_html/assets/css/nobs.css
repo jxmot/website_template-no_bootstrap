@@ -180,12 +180,27 @@ body {
     float: right;
 }
 
+.nav-icon-border {
+    margin-top: .25rem;
+    margin-right: .25rem;
+    border: 2px solid var(--nav-hambicon-bgcolor);
+    border-radius: 0.25rem;    
+}
+
+.nav-icon:hover {
+    background: var(--nav-hambicon-bgcolor-hover);
+}
+
 .nav-icon-no_logo {
     padding: 20px 20px;
 }
 
 .nav-icon-logo {
     padding: 20px 20px;
+}
+
+.nav-icon-pad {
+    padding: 1rem .5rem;
 }
 
 .nav-icon-line {
