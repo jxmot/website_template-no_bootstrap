@@ -44,7 +44,10 @@ function nobs_scrollTo(href) {
             goTo = href;
         } else {
             let tmp = href.split("#");
-            goTo = '#'+tmp[1];
+            if(tmp[1].length > 0)
+                goTo = '#'+tmp[1];
+            else 
+                goTo = pagetop;
         }
         $('html').stop(true).animate({
             scrollTop: ($(goTo).position().top - hdrheight)
