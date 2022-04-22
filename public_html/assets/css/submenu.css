@@ -1,0 +1,31 @@
+.navitem-top{
+    display: block;
+    color: var(--nav-menu-text);
+    cursor: pointer;
+}
+
+navitem-top:hover {
+    background-color: var(--nav-menu-hamb-hover-bgcolor);
+    color: var(--nav-menu-hamb-hover-color);
+}
+
+@media (min-width: 768px) {
+    /* menu item highlight */
+    .navitem-top:hover {
+        background-color: var(--transparent);
+        color: var(--nav-menu-text-hover);
+    }
+}
+
+.submenu {
+    /* display: none; */
+    list-style: none;
+    z-index: 50;
+    color: var(--nav-menu-text);
+/*
+    position: absolute;
+    left: 0;
+    width: 200px;
+    margin-top: 1rem;
+*/
+}

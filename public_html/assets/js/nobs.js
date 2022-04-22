@@ -26,6 +26,7 @@ if(typeof getLogoChoice === 'function') {
     } else {
         $('#nav-close').addClass('nav-icon-no_logo');
         $('.menu a').addClass('menu-item-pad-no_logo');
+        $('.menu > li > span').addClass('menu-item-pad-no_logo');
     }
 }
 
@@ -147,7 +148,17 @@ $().ready(() => {
 
         // scroll to the target ID, and place it just 
         // below nav bar (when inactive).
-        nobs_scrollTo(event.target.href);
+        if(event.target.href !== undefined)
+            nobs_scrollTo(event.target.href);
+        else {
+            if($('#' + event.target.id + ' + ul.submenu').css('display') === 'none') {
+                $('#' + event.target.id + ' + ul.submenu').css('display', 'inline-block');
+                $('#' + event.target.id + ' .subarrow').html('&#9206;');
+            } else {
+                $('#' + event.target.id + ' + ul.submenu').css('display', 'none');
+                $('#' + event.target.id + ' .subarrow').html('&#9207;');
+            }
+        }
     });
 
     // handle theme selections...

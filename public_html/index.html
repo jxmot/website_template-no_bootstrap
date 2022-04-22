@@ -65,13 +65,29 @@
         <label id="nav-close" class="nav-icon" for="nav-togg">
             <span class="nav-icon-line"></span>
         </label>
+
+
+
         <!-- Menu -->
+        <link rel="stylesheet" href="./assets/css/submenu.css">
         <nav id="nav-menu" class="nav">
             <ul class="menu">
                 <li><a id="home" class="navitem" href="#home">Home</a></li>
                 <li><a id="nav1" class="navitem" href="#navtarg1">Gallery</a></li>
-                <li><a id="nav2" class="navitem" href="#navtarg2">Themes</a> </li>
+                <li><a id="nav2" class="navitem" href="#navtarg2">Themes</a></li>
                 <li><a id="nav3" class="navitem" href="#navtarg3">Contact</a></li>
+
+                <li>
+                    <span id="navsub1" class="navitem navitem-top">
+                        <span class="subarrow">&#9207;</span>
+                        SubMenu
+                    </span>
+                    <ul id="submenu1" class="submenu" style="display: none;">
+                        <li><a id="navsub_1" class="navitem navitem-sub" href="#">Sub 1</a></li>
+                        <li><a id="navsub_2" class="navitem navitem-sub" href="#">Sub 2</a></li>
+                        <li><a id="navsub_3" class="navitem navitem-sub" href="#">Sub 3</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </div>

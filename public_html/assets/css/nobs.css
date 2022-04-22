@@ -136,7 +136,7 @@ body {
         margin-top: 0;
     }
 
-    .menu li {
+    .menu > li {
         float: left;
     }
 

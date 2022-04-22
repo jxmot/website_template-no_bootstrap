@@ -65,11 +65,13 @@ function setLogo(choice) {
         // we're called from somewhere else.
         $('#nav-close').addClass('nav-icon-no_logo');
         $('.menu a').addClass('menu-item-pad-no_logo');
+        $('.menu > li > span').addClass('menu-item-pad-no_logo');
     } else {
         switch(choice.type) {
             case 'icon':
                 $('#nav-close').addClass('nav-icon-logo');
                 $('.menu a').addClass('menu-item-pad-logo');
+                $('.menu > li > span').addClass('menu-item-pad-logo');
 
                 // the image is set in nobs.css:.logo-img
                 $('#nav_logo_choice_icon').show();
@@ -92,6 +94,7 @@ function setLogo(choice) {
             default:
                 $('#nav-close').addClass('nav-icon-no_logo');
                 $('.menu a').addClass('menu-item-pad-no_logo');
+                $('.menu > li > span').addClass('menu-item-pad-no_logo');
                 break;
         }
     }
