@@ -24,7 +24,7 @@ if(typeof getLogoChoice === 'function') {
     if(mklogo.logo === true) {
         setLogo(mklogo);
     } else {
-        $('#nav-close').addClass('nav-icon-no_logo');
+        $('#nav_close').addClass('nav-icon-no_logo');
         $('.menu a').addClass('menu-item-pad-no_logo');
         $('.menu > li > span').addClass('menu-item-pad-no_logo');
     }
@@ -38,7 +38,7 @@ var hdrheight = -1;
 function nobs_scrollTo(href) {
     var goTo = '';
     // let's close the nav menu...
-    $('#nav-togg')[0].checked = false;
+    $('#nav_togg')[0].checked = false;
     // has the header height been obtained yet?
     if(hdrheight !== -1) {
         if(href.charAt(0) === '#') {

@@ -229,25 +229,25 @@ body {
     top: -5px;
 }
 
-#nav-togg {
+#nav_togg {
     display: none;
 }
 
 /* Toggle menu icon */
-#nav-togg:checked ~ nav {
+#nav_togg:checked ~ nav {
     max-height: 100%;
 }
 
-#nav-togg:checked ~ .nav-icon .nav-icon-line {
+#nav_togg:checked ~ .nav-icon .nav-icon-line {
     background:  var(--transparent);
 }
 
-#nav-togg:checked ~ .nav-icon .nav-icon-line::before {
+#nav_togg:checked ~ .nav-icon .nav-icon-line::before {
     transform: rotate(-45deg);
     top:0;
 }
 
-#nav-togg:checked ~ .nav-icon .nav-icon-line::after {
+#nav_togg:checked ~ .nav-icon .nav-icon-line::after {
     transform: rotate(45deg);
     top:0;
 }
