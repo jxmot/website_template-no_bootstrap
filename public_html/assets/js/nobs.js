@@ -151,11 +151,11 @@ $().ready(() => {
         if(event.target.href !== undefined)
             nobs_scrollTo(event.target.href);
         else {
-            if($('#' + event.target.id + ' + ul.submenu').css('display') === 'none') {
-                $('#' + event.target.id + ' + ul.submenu').css('display', 'inline-block');
+            if($('#' + event.target.id + ' + div.submenu').css('display') === 'none') {
+                $('#' + event.target.id + ' + div.submenu').css('display', 'inline-block');
                 $('#' + event.target.id + ' .subarrow').html('&#9206;');
             } else {
-                $('#' + event.target.id + ' + ul.submenu').css('display', 'none');
+                $('#' + event.target.id + ' + div.submenu').css('display', 'none');
                 $('#' + event.target.id + ' .subarrow').html('&#9207;');
             }
         }
