@@ -21,6 +21,9 @@ window.onscroll = function() {onWindowScroll()};
 // A percentage of document size, if scrolled past this
 // point the 'to top' button will be displayed. Adjust 
 // as needed.
+// NOTE: Firefox mobile treats "const" as it should and 
+// will cause an error. But desktop and Chrome(both) will 
+// allow assigning a new value to a "const".
 const scroll_travel = 0.05;
 // keeps redundant execution to a minimum
 var isToTop = false;
@@ -63,7 +66,7 @@ function showToTop() {
 function adjustToTop() {
     // this is necessary because the default value is 
     // too large and in FF mobile it won't be seen
-    scroll_travel = 0.05;
+//    scroll_travel = 0.05;
     // the values of these adjustments are dependant 
     // on the values in .gototop(totop.css)
     document.getElementById('gototop_button').style.right  = '5%';
