@@ -126,15 +126,15 @@ function adjustCookies() {
 };
 
 $().ready(() => {
-    if(hasConsent() === false) {
-        $('#cookie_con').css('display', 'block');
-        $('.cookie-con-button').click(function(event) {
-            if(event.target.id === 'cc_accbutton') {
-                makeCookie(default_cookie_name, true);
-            }
-            // even if the user does not consent we 
-            // will hide the consent request (for now)
-            $('#cookie_con').css('display', 'none');
-        });
-    }
+//    if(hasConsent() === false) {
+//        $('#cookie_con').css('display', 'block');
+//        $('.cookie-con-button').click(function(event) {
+//            if(event.target.id === 'cc_accbutton') {
+//                makeCookie(default_cookie_name, true);
+//            }
+//            // even if the user does not consent we 
+//            // will hide the consent request (for now)
+//            $('#cookie_con').css('display', 'none');
+//        });
+//    }
 });
